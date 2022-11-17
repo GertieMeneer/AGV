@@ -1,5 +1,9 @@
 package Sensors;
 
+import TI.*;
+
+import static TI.PinMode.Input;
+
 public class Tentacles {
     private int GPIOpin;
 
@@ -9,10 +13,6 @@ public class Tentacles {
     }
 
     private boolean checkTentacle() {
-        if(BoeBot.digitalRead(GPIOpin) == true) {
-            return true;
-        } else {
-            return false;
-        }
+        return BoeBot.digitalRead(GPIOpin);
     }
 }
