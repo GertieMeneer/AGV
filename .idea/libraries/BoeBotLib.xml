@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="BoeBotLib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../BoeBotLib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../BoeBotLib.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

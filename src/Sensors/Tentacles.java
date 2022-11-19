@@ -12,7 +12,7 @@ public class Tentacles {
         BoeBot.setMode(GPIOpin, Input);
     }
 
-    private boolean checkTentacle() {
+    public boolean checkTentacle() {
         return BoeBot.digitalRead(GPIOpin);
     }
 }
