@@ -1,6 +1,5 @@
-package Sensors;
+package sensors;
 import TI.BoeBot;
-import TI.*;
 
 import static TI.PinMode.Input;
 

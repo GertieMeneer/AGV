@@ -1,7 +1,4 @@
-package Servos;
-import TI.*;
-import TI.BoeBot;
-import TI.PinMode;
+package servos;
 import TI.Servo;
 
 public class GrijpArm {

@@ -1,5 +1,4 @@
-package Servos;
-import TI.BoeBot;
+package servos;
 import TI.*;
 
 public class ServoWheel {
@@ -9,16 +8,13 @@ public class ServoWheel {
 
     public ServoWheel(){}
 
-
-
     public void driveForwards(){
         if(this.isInside){
             this.leftWheel.update(1700);
             this.rightWheel.update(1300);
         }else{
-            this.leftWheel.update(1550);
-            this.rightWheel.update(1450);
+            this.leftWheel.update(1540);
+            this.rightWheel.update(1460);
         }
-
     }
 }
