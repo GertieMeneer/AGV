@@ -4,7 +4,7 @@ public class Main {
     }
 
     public void test() {
-        System.out.println("ServoWheel");
+        System.out.println("Wheel");
     }
 
 
