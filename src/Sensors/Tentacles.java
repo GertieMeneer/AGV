@@ -15,4 +15,5 @@ public class Tentacles {
     public boolean checkTentacle() {
         return BoeBot.digitalRead(GPIOpin);
     }
+
 }
