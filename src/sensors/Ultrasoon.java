@@ -19,7 +19,7 @@ public class Ultrasoon {
 
     public boolean checkDistance() {
         BoeBot.digitalWrite(echoPin, true);
-        BoeBot.wait(1);
+        BoeBot.wait(1);     //if int pulse = -2 or sensor doesnt work: change this to: BoeBot.uwait(1);
         BoeBot.digitalWrite(echoPin, false);
         int pulse = BoeBot.pulseIn(triggerPin, true, 10000);
         if(pulse < 1000) {      //1000 is the distance between object and sensor
