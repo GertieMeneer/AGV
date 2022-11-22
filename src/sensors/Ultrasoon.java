@@ -17,7 +17,7 @@ public class Ultrasoon {
         BoeBot.setMode(echoPin, Output);
     }
 
-    private boolean checkDistance() {
+    public boolean checkDistance() {
         BoeBot.digitalWrite(echoPin, true);
         BoeBot.wait(1);
         BoeBot.digitalWrite(echoPin, false);
