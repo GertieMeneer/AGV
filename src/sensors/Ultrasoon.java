@@ -9,6 +9,7 @@ public class Ultrasoon {
 
     private int triggerPin;
     private int echoPin;
+    private int distance;
 
     public Ultrasoon(int triggerPin, int echoPin) {
         this.triggerPin = triggerPin;
@@ -22,10 +23,18 @@ public class Ultrasoon {
         BoeBot.wait(1);     //if int pulse = -2 or sensor doesnt work: change this to: BoeBot.uwait(1);
         BoeBot.digitalWrite(echoPin, false);
         int pulse = BoeBot.pulseIn(triggerPin, true, 10000);
-        if(pulse < 1000) {      //1000 is the distance between object and sensor
+        if(pulse < this.distance) {      //1000 is the distance between object and sensor
             return true;
         }
         return false;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
+
+    public int getDistance() {
+        return this.distance;
     }
 
 
