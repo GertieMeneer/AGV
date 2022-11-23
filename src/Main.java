@@ -32,10 +32,12 @@ public class Main {
         Servo rightWheel = new Servo(12);
         Servo leftWheel = new Servo(13);
 
-        if(!ultrasoon.checkDistance() && !driving) {
-            rightWheel.update(2000);
-            leftWheel.update(1000);
-            driving = true;
+        if(ultrasoon.checkDistance()) {
+            if(!driving) {
+                rightWheel.update(2000);
+                leftWheel.update(1000);
+                driving = true;
+            }
 //            errorLED.Set(true);
         } else {
             rightWheel.update(1500);

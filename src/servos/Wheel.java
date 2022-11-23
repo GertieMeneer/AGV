@@ -10,30 +10,20 @@ public class Wheel {
         this.GPIOpin = GPIOpin;
     }
 
-//    public boolean isInside() {
-//        return false;
-//    }
-
-
-    public int speed() {
-
-//        if (isInside()) {          Dit is het idee voor later.
-//            return 40;
-//        } else {
-//            return 200;
-//        }
-        return 1700;
+    public void driveForwardFullSpeed() {
+        if(this.GPIOpin == 12) {
+            this.wheel.update(2500);
+        } else {
+            this.wheel.update(500);
+        }
     }
 
-    public void rollForwards() {
-
-        this.wheel.update(1700);
-
-//        if (this.GPIOpin == 12) {                    // niet robuust, maar ik kon geen andere manier bedenken.
-//            this.wheel.update(1500 - speed());
-//        } else if (this.GPIOpin == 13) {
-//            this.wheel.update(1500 + speed());
-//        }
+    public void driveForwardSlowSpeed() {
+        if(this.GPIOpin == 12) {
+            this.wheel.update(2000);
+        } else {
+            this.wheel.update(1000);
+        }
     }
 
     public void emergencyBrake() {
