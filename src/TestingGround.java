@@ -1,10 +1,5 @@
 import TI.BoeBot;
-import additional.LED;
-import sensors.Ultrasoon;
 import servos.GrabingCrane;
-import servos.Wheel;
-
-import java.awt.image.PixelGrabber;
 
 public class TestingGround {
     public static void main(String[] args) {
@@ -21,8 +16,8 @@ public class TestingGround {
 //
 //        LED errorLED = new LED(0,  true);
 //
-//        Wheel rightWheel = new Wheel(12);
-//        Wheel leftWheel = new Wheel(13);
+//        Drive rightWheel = new Drive(12);
+//        Drive leftWheel = new Drive(13);
 //
 //        if(ultrasoon.checkDistance()) {
 //            rightWheel.emergencyBrake();
