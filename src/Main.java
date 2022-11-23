@@ -1,33 +1,49 @@
 import TI.BoeBot;
+import TI.Servo;
 import additional.LED;
 import sensors.Ultrasoon;
 import servos.Wheel;
 
+import static TI.PinMode.Input;
+import static TI.PinMode.Output;
+
 public class Main {
     public static void main(String[] args) {
-        //put test code here or make new method :D
+//        //put test code here or make new method :D
+        while(true) {
+//            Servo s1 = new Servo(12);
+//            Servo s2 = new Servo(13);
+//            s1.update(1500);
+//            s2.update(1500);
+            testMethode();
+        }
     }
 
     public static void testMethode() {
-        Ultrasoon ultrasoon = new Ultrasoon(9, 10);
+        boolean driving = false;
 
-        LED errorLED = new LED(0,  true);
+        Ultrasoon ultrasoon = new Ultrasoon(1, 0, 1000);
 
-        Wheel rightWheel = new Wheel(12);
-        Wheel leftWheel = new Wheel(13);
+//        LED errorLED = new LED(10,  true);
 
-        if(ultrasoon.checkDistance()) {
-            rightWheel.emergencyBrake();
-            leftWheel.emergencyBrake();
-            errorLED.Set(true);
+//        Wheel rightWheel = new Wheel(12);
+//        Wheel leftWheel = new Wheel(13);
+
+        Servo rightWheel = new Servo(12);
+        Servo leftWheel = new Servo(13);
+
+        if(!ultrasoon.checkDistance() && !driving) {
+            rightWheel.update(2000);
+            leftWheel.update(1000);
+            driving = true;
+//            errorLED.Set(true);
         } else {
-            rightWheel.rollForwards();
-            leftWheel.rollForwards();
-            errorLED.Set(false);
+            rightWheel.update(1500);
+            leftWheel.update(1500);
+            driving = false;
+//            errorLED.Set(false);
         }
 
         BoeBot.wait(50);
     }
-
-
 }

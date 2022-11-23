@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d1640d9c-aaad-4d84-9097-7f048c8a34ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGV/Servos/GrijpArm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGV/Servos/ServoWheel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sensors/Ultrasoon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/Ultrasoon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servos/Wheel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servos/Wheel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="481">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,10 +33,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sensors/Ultrasoon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
+            <state relative-caret-position="476">
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#944#945#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1025#1026#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servos/GrabingCrane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="408">
               <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="e#118#119#0" expanded="true" />
@@ -60,11 +69,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/additional/Speaker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servos/Wheel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="170">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
                 <element signature="e#797#798#0" expanded="true" />
                 <element signature="e#836#837#0" expanded="true" />
               </folding>
@@ -111,12 +131,12 @@
         <option value="$PROJECT_DIR$/src/servos/Wheels.java" />
         <option value="$PROJECT_DIR$/src/servos/LeftWheel.java" />
         <option value="$PROJECT_DIR$/src/sensors/Tentacles.java" />
-        <option value="$PROJECT_DIR$/src/sensors/Ultrasoon.java" />
         <option value="$PROJECT_DIR$/src/servos/GrijpArm.java" />
         <option value="$PROJECT_DIR$/src/servos/grabingCrane.java" />
         <option value="$PROJECT_DIR$/src/servos/GrabingCrane.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/servos/Wheel.java" />
+        <option value="$PROJECT_DIR$/src/sensors/Ultrasoon.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -135,8 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,10 +181,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1669135386066" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1669204844929" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../IdeaProjects/TMCProjects/2017_avans_ti_breda-OGP1-2022/boeobeobot" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -229,13 +249,27 @@
       <option name="project" value="LOCAL" />
       <updated>1669135186816</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated ultrasoon class">
+      <created>1669199310337</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669199310337</updated>
+    </task>
+    <task id="LOCAL-00007" summary="made speaker class">
+      <created>1669199362279</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669199362279</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12260128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -255,13 +289,13 @@
       <window_info anchor="bottom" id="TMC Test Results" order="10" weight="0.3295129" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.5045386" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.5045386" visible="true" weight="0.32896176" />
       <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="right" id="TMC Project List" order="4" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="TMC Project List" order="4" weight="0.32995737" />
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
@@ -274,33 +308,32 @@
     <MESSAGE value="added ultrasone class v1" />
     <MESSAGE value="created test method" />
     <MESSAGE value="updated GrabingCrane class" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated GrabingCrane class" />
+    <MESSAGE value="updated ultrasoon class" />
+    <MESSAGE value="made speaker class" />
+    <option name="LAST_COMMIT_MESSAGE" value="made speaker class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/servos/Wheels.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/sensors/Tentacles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="15" column="106" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/Ultrasoon.java">
+    <entry file="file://$PROJECT_DIR$/src/additional/Speaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servos/GrabingCrane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="408">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="e#118#119#0" expanded="true" />
@@ -318,19 +351,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servos/Wheel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
             <element signature="e#797#798#0" expanded="true" />
             <element signature="e#836#837#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/Tentacles.java">
+    <entry file="file://$PROJECT_DIR$/src/sensors/Ultrasoon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="106" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
+        <state relative-caret-position="476">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

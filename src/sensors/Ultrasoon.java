@@ -4,6 +4,7 @@ import TI.BoeBot;
 
 import static TI.PinMode.Input;
 import static TI.PinMode.Output;
+import static java.lang.Enum.valueOf;
 
 public class Ultrasoon {
 
@@ -11,19 +12,21 @@ public class Ultrasoon {
     private int echoPin;
     private int distance;
 
-    public Ultrasoon(int triggerPin, int echoPin) {
+    public Ultrasoon(int triggerPin, int echoPin, int distance) {
         this.triggerPin = triggerPin;
         this.echoPin = echoPin;
-        BoeBot.setMode(triggerPin, Input);
-        BoeBot.setMode(echoPin, Output);
+        this.distance = distance;
     }
 
     public boolean checkDistance() {
-        BoeBot.digitalWrite(echoPin, true);
-        BoeBot.wait(1);     //if int pulse = -2 or sensor doesnt work: change this to: BoeBot.uwait(1);
-        BoeBot.digitalWrite(echoPin, false);
-        int pulse = BoeBot.pulseIn(triggerPin, true, 10000);
-        if(pulse < this.distance) {      //1000 is the distance between object and sensor
+        BoeBot.setMode(this.echoPin, Input);
+        BoeBot.setMode(this.triggerPin, Output);
+        BoeBot.digitalWrite(triggerPin, true);
+        BoeBot.uwait(1);
+        BoeBot.digitalWrite(triggerPin, false);
+        int pulse = BoeBot.pulseIn(echoPin, true, 10000);
+        System.out.println(pulse);
+        if(pulse < this.distance) {
             return true;
         }
         return false;

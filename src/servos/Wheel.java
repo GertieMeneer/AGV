@@ -22,16 +22,18 @@ public class Wheel {
 //        } else {
 //            return 200;
 //        }
-        return 40;
+        return 1700;
     }
 
     public void rollForwards() {
 
-        if (this.GPIOpin == 12) {                    // niet robuust, maar ik kon geen andere manier bedenken.
-            this.wheel.update(1500 - speed());
-        } else if (this.GPIOpin == 13) {
-            this.wheel.update(1500 + speed());
-        }
+        this.wheel.update(1700);
+
+//        if (this.GPIOpin == 12) {                    // niet robuust, maar ik kon geen andere manier bedenken.
+//            this.wheel.update(1500 - speed());
+//        } else if (this.GPIOpin == 13) {
+//            this.wheel.update(1500 + speed());
+//        }
     }
 
     public void emergencyBrake() {
