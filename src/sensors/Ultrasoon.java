@@ -29,6 +29,9 @@ public class Ultrasoon {
         if(pulse < this.distance) {
             return true;
         }
+        if(pulse > 9000) {
+            return false;
+        }
         return false;
     }
 
