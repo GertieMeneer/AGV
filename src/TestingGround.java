@@ -6,7 +6,7 @@ import servos.Wheel;
 
 import java.awt.image.PixelGrabber;
 
-public class Main {
+public class TestingGround {
     public static void main(String[] args) {
         //put test code here or make new method :D
         GrabingCrane.close();
