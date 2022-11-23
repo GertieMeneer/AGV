@@ -1,27 +1,37 @@
 package servos;
+import TI.BoeBot;
 import TI.Servo;
 
 public class GrabingCrane {
 
-    private int pin;
-
-    public GrabingCrane(int pin) {
-        this.pin = pin;
-    }
-
-    public void close() {
-
-    }
-
-    public void open() {
-
-    }
-
-//do we also need a move method? f.e move up, move down etc.
-
-    public void testMethod() {
+    public static void Open() {
         Servo grijphaak = new Servo(14);
-        grijphaak.update(2300); // 12 rechterwiel boven 1500 achteruit. andere precies omgekeerd, grijparm 1700 dicht, 2300 open
+        grijphaak.update(2300);
     }
+
+    public static void close() {
+        Servo grijphaak = new Servo(14);
+        grijphaak.update(1675);
+    }
+
+    public static void slowlyOpen() {
+        Servo grijphaak = new Servo(14);
+        for (int i = 1700; i < 2300; i++) {
+            grijphaak.update(i);
+            BoeBot.wait(1);
+        }
+    }
+
+    public static void slowlyclose() {
+        Servo grijphaak = new Servo(14);
+        for (int i = 2300; i > 1675; i--) {
+            grijphaak.update(i);
+            BoeBot.wait(1);
+        }
+    }
+//    public void testMethod() {
+//
+//        grijphaak.update(2300); // 12 rechterwiel boven 1500 achteruit. andere precies omgekeerd, grijparm 1700 dicht, 2300 open
+//    }
 }
 
