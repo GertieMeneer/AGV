@@ -8,7 +8,7 @@ public class TestingGround {
         BoeBot.wait(1000);
         GrabingCrane.slowlyOpen();
         BoeBot.wait(1000);
-        GrabingCrane.slowlyclose();
+        GrabingCrane.slowlyClose();
     }
 
 //    public static void testMethode() {

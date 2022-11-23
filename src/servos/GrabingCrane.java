@@ -4,7 +4,7 @@ import TI.Servo;
 
 public class GrabingCrane {
 
-    public static void Open() {
+    public static void open() {
         Servo grijphaak = new Servo(14);
         grijphaak.update(2300);
     }
@@ -22,7 +22,7 @@ public class GrabingCrane {
         }
     }
 
-    public static void slowlyclose() {
+    public static void slowlyClose() {
         Servo grijphaak = new Servo(14);
         for (int i = 2300; i > 1675; i--) {
             grijphaak.update(i);
