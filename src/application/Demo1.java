@@ -6,7 +6,7 @@ import additional.LED;
 import sensors.Ultrasoon;
 import servos.GrabingCrane;
 
-public class Demo1 {
+public class  Demo1 {
     public static void main(String[] args) {
         distanceDrivingDemo();          //demo for driving and stopping when object
         BoeBot.wait(1000);
