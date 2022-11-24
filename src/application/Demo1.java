@@ -10,14 +10,15 @@ import hardware.servos.Wheel;
 
 public class Demo1 {
     public static void main(String[] args) {
-        distanceDrivingDemo();          //demo for driving and stopping when object
+//        distanceDrivingDemo();          //demo for driving and stopping when object
 //        BoeBot.wait(1000);
 //        grabingCraneDemo();             //demo for grabingcrane: opening/closing slowely and fast
+        Wheel.ForwardAcceleratingMaxSpeed();
+        distanceDrivingDemo();
     }
 
     public static void distanceDrivingDemo() {
         Timer t1 = new Timer(1000);
-        boolean driving = false;
         Ultrasoon ultrasoon = new Ultrasoon(1, 0, 1000);
 
         while (true) {

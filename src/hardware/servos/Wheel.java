@@ -1,16 +1,9 @@
 package hardware.servos;
 
 import TI.*;
+import hardware.additional.NeoPixels;
 
 public class Wheel {
-    private int GPIOpin;
-    private Servo wheel = new Servo(this.GPIOpin);
-
-
-
-    public Wheel(int GPIOpin) {
-        this.GPIOpin = GPIOpin;
-    }
 
     public static void driveForwardFullSpeed() {
         Servo rightWheel = new Servo(12);
@@ -18,6 +11,7 @@ public class Wheel {
 
         rightWheel.update(2000);
         leftWheel.update(1000);
+        NeoPixels.forwardWhite();
     }
 
     public static void driveForwardSlowSpeed() {
@@ -26,6 +20,7 @@ public class Wheel {
 
         rightWheel.update(1540);
         leftWheel.update(1460);
+        NeoPixels.forwardWhite();
     }
 
     public static void emergencyBrake() {
@@ -34,5 +29,17 @@ public class Wheel {
 
         rightWheel.update(1500);
         leftWheel.update(1500);
+        NeoPixels.allRed();
+    }
+
+    public static void ForwardAcceleratingMaxSpeed() {
+        Servo rightWheel = new Servo(12);
+        Servo leftWheel = new Servo(13);
+
+        for (int i = 0; i < 500; i++) {
+            rightWheel.update(1500+i);
+            leftWheel.update(1500-i);
+            BoeBot.wait(75);
+        }
     }
 }
