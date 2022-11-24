@@ -38,7 +38,7 @@ public class Demo1 {
                 leftWheel.update(1500);
                 driving = false;
 //                errorLED.Set(true);
-                for (int i = 0; i < 6; i++) {
+                for (int i = 0; i < 6 ; i++) {
                     BoeBot.rgbSet(i, Color.red);
                 }
                 BoeBot.rgbShow();
