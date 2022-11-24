@@ -1,7 +1,7 @@
 import TI.BoeBot;
 import TI.Servo;
-import additional.LED;
-import sensors.Ultrasoon;
+import hardware.additional.LED;
+import hardware.sensors.Ultrasoon;
 
 import static TI.PinMode.Output;
 

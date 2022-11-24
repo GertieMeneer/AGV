@@ -1,4 +1,4 @@
-package Hardware.additional;
+package hardware.additional;
 
 import TI.BoeBot;
 import TI.PWM;

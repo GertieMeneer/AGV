@@ -1,4 +1,4 @@
-package demos;
+package application;
 
 import TI.BoeBot;
 import TI.Servo;
