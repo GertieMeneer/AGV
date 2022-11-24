@@ -5,10 +5,14 @@ import TI.Servo;
 public class GrabbingCrane {
     private final Servo servo;
     private int pin;
+    private int currentAngle;
+    private int targetAngle;
 
     public GrabbingCrane(int pin) {
         this.pin = pin;
         this.servo= new Servo(pin);
+        this.currentAngle = 0;
+        this.targetAngle = 0;
     }
 
     public void open() {
@@ -32,7 +36,28 @@ public class GrabbingCrane {
             BoeBot.wait(1);
         }
     }
-//    public void testMethod() {
+
+    public void update(){
+        if (targetAngle != currentAngle){
+            if (currentAngle < targetAngle){
+                currentAngle++;
+            }
+            if (currentAngle > targetAngle){
+                currentAngle--;
+            }
+            servo.update(1675 + currentAngle);
+            BoeBot.wait(1);
+        }
+    }
+
+    public void setTargetAngle(int targetAngle) {
+        if (targetAngle < 0 || targetAngle > 2300){
+            targetAngle = currentAngle;
+        }
+        this.targetAngle = targetAngle;
+    }
+
+    //    public void testMethod() {
 //
 //        grijphaak.update(2300); // 12 rechterwiel boven 1500 achteruit. andere precies omgekeerd, grijparm 1700 dicht, 2300 open
 //    }
