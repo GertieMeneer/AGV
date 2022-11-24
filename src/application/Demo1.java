@@ -2,11 +2,12 @@ package application;
 
 import TI.BoeBot;
 import TI.Servo;
-import additional.LED;
-import sensors.Ultrasoon;
-import servos.GrabingCrane;
 
-public class Demo1 {
+import hardware.additional.LED;
+import hardware.sensors.Ultrasoon;
+import hardware.servos.GrabingCrane;
+
+public class  Demo1 {
     public static void main(String[] args) {
         distanceDrivingDemo();          //demo for driving and stopping when object
         BoeBot.wait(1000);
