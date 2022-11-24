@@ -2,9 +2,11 @@ package application;
 
 import TI.BoeBot;
 import TI.Servo;
+import TI.Timer;
 import hardware.additional.NeoPixels;
 import hardware.sensors.Ultrasoon;
 import hardware.servos.GrabingCrane;
+import hardware.servos.Wheel;
 
 public class Demo1 {
     public static void main(String[] args) {
@@ -14,21 +16,21 @@ public class Demo1 {
     }
 
     public static void distanceDrivingDemo() {
+        Timer t1 = new Timer(1000);
         boolean driving = false;
         Ultrasoon ultrasoon = new Ultrasoon(1, 0, 1000);
 
-        Servo rightWheel = new Servo(12);
-        Servo leftWheel = new Servo(13);
         while (true) {
             if (!ultrasoon.checkDistance()) {
-                    rightWheel.update(2000);
-                    leftWheel.update(1000);
+                if(t1.timeout()) {
+                    Wheel.driveForwardSlowSpeed();
                     NeoPixels.allBlack();
                     NeoPixels.forwardWhite();
+                }
             } else {
-                rightWheel.update(1500);
-                leftWheel.update(1500);
+                Wheel.emergencyBrake();
                 NeoPixels.allRed();
+                t1.mark();
             }
             BoeBot.wait(100);
         }
