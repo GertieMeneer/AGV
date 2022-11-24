@@ -1,6 +1,7 @@
-package hardware.servos;
+package interfacing;
 
 import hardware.additional.NeoPixels;
+import hardware.servos.Wheel;
 
 public class Drive {
     private Wheel rightWheel;
