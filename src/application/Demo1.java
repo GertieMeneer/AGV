@@ -2,11 +2,9 @@ package application;
 
 import TI.BoeBot;
 import TI.Servo;
-import hardware.additional.LED;
+import hardware.additional.NeoPixels;
 import hardware.sensors.Ultrasoon;
 import hardware.servos.GrabingCrane;
-
-import java.awt.*;
 
 public class Demo1 {
     public static void main(String[] args) {
@@ -25,23 +23,17 @@ public class Demo1 {
         while (true) {
             if (!ultrasoon.checkDistance()) {
                 if (!driving) {
+
                     rightWheel.update(2000);
                     leftWheel.update(1000);
-                    for (int i = 0; i < 6; i++) {
-                        BoeBot.rgbSet(i, Color.black);
-                    }
-                    BoeBot.rgbShow();
+                    NeoPixels.allBlack();
+                    NeoPixels.forwardWhite();
                 }
-//                errorLED.Set(false);
             } else {
                 rightWheel.update(1500);
                 leftWheel.update(1500);
                 driving = false;
-//                errorLED.Set(true);
-                for (int i = 0; i < 6 ; i++) {
-                    BoeBot.rgbSet(i, Color.red);
-                }
-                BoeBot.rgbShow();
+                NeoPixels.allRed();
 
             }
             BoeBot.wait(100);
