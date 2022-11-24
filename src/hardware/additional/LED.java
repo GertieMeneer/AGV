@@ -1,4 +1,4 @@
-package additional;
+package hardware.additional;
 
 import TI.BoeBot;
 import TI.PWM;
@@ -33,6 +33,7 @@ public class LED {
 //    the set method can also change the LED to the other mode if the other value
 
     public void Set (boolean power){
+        BoeBot.setMode(pin, PinMode.Output);
         if (isPWM == true){
             BoeBot.setMode(pin, PinMode.Output);
             isPWM = false;

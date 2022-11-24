@@ -1,4 +1,4 @@
-package servos;
+package hardware.servos;
 import TI.BoeBot;
 import TI.Servo;
 
