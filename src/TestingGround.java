@@ -1,5 +1,5 @@
 import TI.BoeBot;
-import servos.GrabingCrane;
+import Hardware.servos.GrabingCrane;
 
 public class TestingGround {
     public static void main(String[] args) {

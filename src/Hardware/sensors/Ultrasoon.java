@@ -1,10 +1,9 @@
-package sensors;
+package Hardware.sensors;
 
 import TI.BoeBot;
 
 import static TI.PinMode.Input;
 import static TI.PinMode.Output;
-import static java.lang.Enum.valueOf;
 
 public class Ultrasoon {
 

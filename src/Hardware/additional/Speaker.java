@@ -1,4 +1,4 @@
-package additional;
+package Hardware.additional;
 
 import TI.BoeBot;
 

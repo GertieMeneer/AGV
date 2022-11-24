@@ -1,11 +1,6 @@
 import TI.BoeBot;
 import TI.Servo;
-import additional.LED;
-import sensors.Ultrasoon;
-import servos.Wheel;
-
-import static TI.PinMode.Input;
-import static TI.PinMode.Output;
+import Hardware.sensors.Ultrasoon;
 
 public class Main {
     public static void main(String[] args) {
