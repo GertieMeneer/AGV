@@ -5,13 +5,13 @@ import TI.BoeBot;
 import static TI.PinMode.Input;
 import static TI.PinMode.Output;
 
-public class Ultrasoon {
+public class Ultrasone {
 
     private int triggerPin;
     private int echoPin;
     private int distance;
 
-    public Ultrasoon(int triggerPin, int echoPin, int distance) {
+    public Ultrasone(int triggerPin, int echoPin, int distance) {
         this.triggerPin = triggerPin;
         this.echoPin = echoPin;
         this.distance = distance;

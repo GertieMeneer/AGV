@@ -1,49 +1,60 @@
 package application;
 
 import TI.BoeBot;
-import TI.Servo;
 import TI.Timer;
 import hardware.additional.NeoPixels;
-import hardware.sensors.Ultrasoon;
-import hardware.servos.GrabingCrane;
-import hardware.servos.Wheel;
+import hardware.sensors.Ultrasone;
+import interfacing.Drive;
+import hardware.servos.GrabbingCrane;
 
 public class Demo1 {
     public static void main(String[] args) {
-        distanceDrivingDemo();          //demo for driving and stopping when object
+        new Demo1();
+
+//        distanceDrivingDemo();          //demo for driving and stopping when object
 //        BoeBot.wait(1000);
 //        grabingCraneDemo();             //demo for grabingcrane: opening/closing slowely and fast
+//        Wheel.ForwardAcceleratingMaxSpeed();
+//        distanceDrivingDemo();
     }
 
-    public static void distanceDrivingDemo() {
-        Timer t1 = new Timer(1000);
-        boolean driving = false;
-        Ultrasoon ultrasoon = new Ultrasoon(1, 0, 1000);
+    public Demo1() {
+        distanceDrivingDemo();
+    }
+
+    public void distanceDrivingDemo() {
+        Drive drive = new Drive();
+
+        Timer t1 = new Timer(750);
+        Timer t2 = new Timer(1000);
+        Ultrasone ultrasoon = new Ultrasone(1, 0, 1000);
 
         while (true) {
             if (!ultrasoon.checkDistance()) {
                 if(t1.timeout()) {
-                    Wheel.driveForwardSlowSpeed();
                     NeoPixels.allBlack();
                     NeoPixels.forwardWhite();
+                    drive.driveForwardSlowSpeed();
                 }
             } else {
-                Wheel.emergencyBrake();
+                drive.emergencyBrake();
                 NeoPixels.allRed();
                 t1.mark();
             }
-            BoeBot.wait(100);
+            drive.update();
+            BoeBot.wait(1);
         }
     }
 
-    public static void grabingCraneDemo() {
-        GrabingCrane.open();
+    public void grabingCraneDemo() {
+        GrabbingCrane crane = new GrabbingCrane(14);
+        crane.open();
         BoeBot.wait(1000);
-        GrabingCrane.slowlyClose();
+        crane.slowlyClose();
         BoeBot.wait(1000);
-        GrabingCrane.slowlyOpen();
+        crane.slowlyOpen();
         BoeBot.wait(1000);
-        GrabingCrane.close();
+        crane.close();
         BoeBot.wait(1000);
     }
 }

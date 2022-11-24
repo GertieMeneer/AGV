@@ -22,16 +22,20 @@ public class NeoPixels {
 
     public static void forwardWhite() {
         BoeBot.rgbSet(4, Color.white);
+        BoeBot.rgbSet(1, Color.white);
         BoeBot.rgbShow();
     }
 
     public static void leftWhite() {
         BoeBot.rgbSet(3, Color.white);
+        BoeBot.rgbSet(2, Color.white);
         BoeBot.rgbShow();
     }
 
     public static void rightWhite() {
         BoeBot.rgbSet(5, Color.white);
+        BoeBot.rgbSet(0, Color.white);
+
         BoeBot.rgbShow();
     }
 }
