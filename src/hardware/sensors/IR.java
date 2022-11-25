@@ -2,11 +2,14 @@ package hardware.sensors;
 
 public class IR {
 
-    private int pin = 3;
+    private int pin;
 
-    public IR() {
-
+    public IR(int pin) {
+        this.pin = pin;
     }
 
-
+    public int readIR() {
+        //returns value received by IR
+        return 0;
+    }
 }

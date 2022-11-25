@@ -1,8 +1,20 @@
 package hardware.sensors;
 
+import TI.BoeBot;
+
 public class Lightsensor {
-    //from back:
-    //left: 3, 4, 5
-    //middle: 6, 7, 8
-    //right: 9, 10, 11
+
+    private int pin;
+
+    public Lightsensor(int pin) {
+        this.pin = pin;
+    }
+
+    public boolean checkLine() {
+        int sensorValue = BoeBot.analogRead(this.pin);  //reads the sensor value from given pin
+        if (sensorValue > 900) {        //checks for a line and returns true when there is one
+            return true;
+        }
+        return false;
+    }
 }

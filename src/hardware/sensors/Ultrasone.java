@@ -25,8 +25,10 @@ public class Ultrasone {
         BoeBot.digitalWrite(triggerPin, true);                  //generating pulse
         BoeBot.uwait(1);
         BoeBot.digitalWrite(triggerPin, false);
+
         int pulse = BoeBot.pulseIn(echoPin, true, 10000);   //reading pulse, future update: calculating distance in cm
         System.out.println(pulse);                                  //printing pulse for debugging/information
+
         if (pulse < this.distance) {                                 //returning true or false depending on distance
             return true;
         }                                                           //lets method know if there is an object when it calls this method
