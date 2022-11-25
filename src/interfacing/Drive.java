@@ -28,8 +28,8 @@ public class Drive {
     }
 
     public void emergencyBrake() {
-        rightWheel.setTargetSpeed(0);
-        leftWheel.setTargetSpeed(0);
+        rightWheel.emergencyBrake();
+        leftWheel.emergencyBrake();
         NeoPixels.allRed();
     }
 

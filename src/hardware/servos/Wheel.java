@@ -29,6 +29,11 @@ public class Wheel {
 
     }
 
+    public void emergencyBrake(){
+        servo.update(1500);
+        this.currentSpeed = 0;
+    }
+
     public void setTargetSpeed(int targetSpeed) {
         this.targetSpeed = targetSpeed;
     }
