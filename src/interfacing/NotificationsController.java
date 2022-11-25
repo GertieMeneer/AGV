@@ -1,41 +1,46 @@
-package hardware.additional;
+package interfacing;
 
 import TI.BoeBot;
 
 import java.awt.*;
+import java.util.ArrayList;
 
-public class NeoPixels {
+public class NotificationsController {
 
-    public static void allRed() {
+    public NotificationsController() {
+    }
+
+    public void allRed() {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.red);
         }
         BoeBot.rgbShow();
     }
 
-    public static void allBlack() {
+    public void allBlack() {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.black);
         }
         BoeBot.rgbShow();
     }
 
-    public static void forwardWhite() {
+    public void forwardWhite() {
         BoeBot.rgbSet(4, Color.white);
         BoeBot.rgbSet(1, Color.white);
         BoeBot.rgbShow();
     }
 
-    public static void leftWhite() {
+    public void leftWhite() {
         BoeBot.rgbSet(3, Color.white);
         BoeBot.rgbSet(2, Color.white);
         BoeBot.rgbShow();
     }
 
-    public static void rightWhite() {
+    public void rightWhite() {
         BoeBot.rgbSet(5, Color.white);
         BoeBot.rgbSet(0, Color.white);
 
         BoeBot.rgbShow();
     }
+
 }
