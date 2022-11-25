@@ -2,12 +2,13 @@ package application;
 
 import TI.BoeBot;
 import TI.Timer;
-import hardware.additional.NeoPixel;
 import hardware.sensors.Ultrasone;
 import interfacing.Drive;
 import hardware.servos.GrabbingCrane;
+import interfacing.NotificationsController;
 
 public class Demo1 {
+
     public static void main(String[] args) {
         new Demo1();
 
@@ -24,7 +25,7 @@ public class Demo1 {
 
     public void distanceDrivingDemo() {
         Drive drive = new Drive();
-
+        NotificationsController notify = new NotificationsController();
         Timer t1 = new Timer(750);
         Timer t2 = new Timer(1000);
         Ultrasone ultrasoon = new Ultrasone(1, 0, 1000);
@@ -32,13 +33,13 @@ public class Demo1 {
         while (true) {
             if (!ultrasoon.checkDistance()) {
                 if(t1.timeout()) {
-                    NeoPixel.allBlack();
-                    NeoPixel.forwardWhite();
+                    notify.allBlack();
+                    notify.forwardWhite();
                     drive.driveForwardSlowSpeed();
                 }
             } else {
                 drive.emergencyBrake();
-                NeoPixel.allRed();
+                notify.allRed();
                 t1.mark();
             }
             drive.update();

@@ -7,6 +7,9 @@ import java.util.ArrayList;
 
 public class NotificationsController {
 
+    public NotificationsController() {
+    }
+
     public void allRed() {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.red);
