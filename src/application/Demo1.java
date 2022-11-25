@@ -2,7 +2,7 @@ package application;
 
 import TI.BoeBot;
 import TI.Timer;
-import hardware.additional.NeoPixels;
+import hardware.additional.NeoPixel;
 import hardware.sensors.Ultrasone;
 import interfacing.Drive;
 import hardware.servos.GrabbingCrane;
@@ -32,13 +32,13 @@ public class Demo1 {
         while (true) {
             if (!ultrasoon.checkDistance()) {
                 if(t1.timeout()) {
-                    NeoPixels.allBlack();
-                    NeoPixels.forwardWhite();
+                    NeoPixel.allBlack();
+                    NeoPixel.forwardWhite();
                     drive.driveForwardSlowSpeed();
                 }
             } else {
                 drive.emergencyBrake();
-                NeoPixels.allRed();
+                NeoPixel.allRed();
                 t1.mark();
             }
             drive.update();

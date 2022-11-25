@@ -1,6 +1,5 @@
 package interfacing;
 
-import hardware.additional.NeoPixels;
 import hardware.servos.GrabbingCrane;
 import hardware.servos.Wheel;
 
@@ -18,19 +17,16 @@ public class Drive {
     public void driveForwardFullSpeed() {
         rightWheel.setTargetSpeed(500);
         leftWheel.setTargetSpeed(-500);
-        NeoPixels.forwardWhite();
     }
 
     public void driveForwardSlowSpeed() {
         rightWheel.setTargetSpeed(40);
         leftWheel.setTargetSpeed(-40);
-        NeoPixels.forwardWhite();
     }
 
     public void emergencyBrake() {
         rightWheel.emergencyBrake();
         leftWheel.emergencyBrake();
-        NeoPixels.allRed();
     }
 
     public void update() {

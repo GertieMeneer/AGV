@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d1640d9c-aaad-4d84-9097-7f048c8a34ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Demo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hardware/additional/NeoPixels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/additional/NeoPixel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfacing/Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfacing/Drive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfacing/NotificationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfacing/NotificationsController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,12 +16,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+            <state relative-caret-position="285">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,12 +30,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java">
+        <entry file="file://$PROJECT_DIR$/src/hardware/additional/NeoPixel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+            <state relative-caret-position="170">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#130#131#0" expanded="true" />
+                <element signature="e#179#180#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/interfacing/NotificationsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="595">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -87,20 +107,23 @@
         <option value="$PROJECT_DIR$/src/testing.java" />
         <option value="$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java" />
         <option value="$PROJECT_DIR$/src/hardware/sensors/IR.java" />
-        <option value="$PROJECT_DIR$/src/hardware/additional/NeoPixels.java" />
         <option value="$PROJECT_DIR$/src/hardware/servos/GrabingCrane.java" />
-        <option value="$PROJECT_DIR$/src/hardware/servos/Wheel.java" />
         <option value="$PROJECT_DIR$/src/application/Demo1.java" />
         <option value="$PROJECT_DIR$/src/hardware/servos/Drive.java" />
-        <option value="$PROJECT_DIR$/src/interfacing/Drive.java" />
         <option value="$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java" />
+        <option value="$PROJECT_DIR$/src/interfacing/CollisionController.java" />
+        <option value="$PROJECT_DIR$/src/hardware/servos/Wheel.java" />
+        <option value="$PROJECT_DIR$/src/interfacing/Drive.java" />
+        <option value="$PROJECT_DIR$/src/hardware/additional/NeoPixels.java" />
+        <option value="$PROJECT_DIR$/src/hardware/additional/NeoPixel.java" />
+        <option value="$PROJECT_DIR$/src/interfacing/NotificationsController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1028" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1029" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -110,8 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,10 +193,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1669303515502" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1669375755669" />
     <property name="last_opened_file_path" value="C:/../IdeaProjects/TMCProjects/2017_avans_ti_breda-OGP1-2022/boeobeobot" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -376,7 +399,7 @@
     <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1409396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -391,7 +414,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32896176" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32896176" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" weight="0.32664755" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" weight="0.3252149" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.49626866" side_tool="true" weight="0.32896176" />
       <window_info anchor="bottom" id="TMC Test Results" order="10" sideWeight="0.49946696" weight="0.32896176" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -463,16 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/additional/NeoPixels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Demo1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -506,10 +519,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
+    <entry file="file://$PROJECT_DIR$/src/interfacing/CollisionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        <state relative-caret-position="85">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -518,17 +538,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="595">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java">
+    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+        <state relative-caret-position="285">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/NotificationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/additional/NeoPixel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
           </folding>
         </state>
       </provider>
