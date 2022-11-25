@@ -1,7 +1,6 @@
 package interfacing;
 
 import TI.BoeBot;
-import hardware.additional.NeoPixel;
 
 import java.awt.*;
 import java.util.ArrayList;
