@@ -12,12 +12,6 @@ public class Demo1 {
 
     public static void main(String[] args) {
         new Demo1();
-
-//        distanceDrivingDemo();          //demo for driving and stopping when object
-//        BoeBot.wait(1000);
-//        grabingCraneDemo();             //demo for grabingcrane: opening/closing slowely and fast
-//        Wheel.ForwardAcceleratingMaxSpeed();
-//        distanceDrivingDemo();
     }
 
     public Demo1() {
@@ -30,23 +24,10 @@ public class Demo1 {
         while (true) {
             if (collide.isClose()){
                 //emergencyBrake();
-            }
-            if(!collide.isClose()){
+            } else {
                 //deaccelerate;
             }
         }
-    }
-
-    public void grabingCraneDemo() {
-        GrabbingCrane crane = new GrabbingCrane(14);
-        crane.open();
-        BoeBot.wait(1000);
-        crane.slowlyClose();
-        BoeBot.wait(1000);
-        crane.slowlyOpen();
-        BoeBot.wait(1000);
-        crane.close();
-        BoeBot.wait(1000);
     }
 }
 
