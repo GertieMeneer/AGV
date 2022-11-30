@@ -1,13 +1,5 @@
 package application;
 
-import TI.BoeBot;
-import TI.Timer;
-import hardware.sensors.Ultrasone;
-import interfacing.CollisionController;
-import interfacing.Drive;
-import hardware.servos.GrabbingCrane;
-import interfacing.NotificationsController;
-
 public class Demo1 {
 
     public static void main(String[] args) {
