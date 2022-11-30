@@ -11,10 +11,10 @@ public class Ultrasone {
     private int echoPin;
     private int distance;
 
-    public Ultrasone(int triggerPin, int echoPin) {
+    public Ultrasone(int triggerPin, int echoPin, int distance) {
         this.triggerPin = triggerPin;
         this.echoPin = echoPin;
-        this.distance = 1000;
+        this.distance = distance;
     }
 
 

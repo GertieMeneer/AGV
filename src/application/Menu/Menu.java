@@ -1,8 +1,5 @@
 package application.Menu;
 
-import application.Menu.MenuActions.Debug;
-import application.Menu.MenuActions.IDKeentest;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

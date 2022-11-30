@@ -12,7 +12,7 @@ public class CollisionController {
     private int distanceBorder;
 
     public CollisionController() {
-        this.ultrasone = new Ultrasone(0,1);
+        this.ultrasone = new Ultrasone(0,1, 1000);
     }
 
     public boolean isClose(){

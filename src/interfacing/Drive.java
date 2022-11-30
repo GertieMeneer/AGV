@@ -24,6 +24,17 @@ public class Drive {
         leftWheel.setTargetSpeed(-40);
     }
 
+    public void driveBackwardSlowSpeed() {
+        rightWheel.setTargetSpeed(-40);
+        leftWheel.setTargetSpeed(40);
+    }
+
+    public void slowStop() {
+        rightWheel.setTargetSpeed(0);
+        leftWheel.setTargetSpeed(0);
+    }
+
+
     public void emergencyBrake() {
         rightWheel.emergencyBrake();
         leftWheel.emergencyBrake();
@@ -33,5 +44,13 @@ public class Drive {
         leftWheel.update();
         rightWheel.update();
         crane.update();
+    }
+
+    public void close() {
+        crane.setTargetAngle(0);
+    }
+
+    public void open() {
+        crane.setTargetAngle(1675);
     }
 }
