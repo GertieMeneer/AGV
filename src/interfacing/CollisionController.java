@@ -14,7 +14,7 @@ public class CollisionController {
     }
 
     public boolean checkEmergency(){
-        ultrasone.setDistance(1000);
+        ultrasone.setDistance(500);
         if (ultrasone.checkDistance() <= ultrasone.getDistance()){  // change name of the first distance
             return true;
         }else{
