@@ -3,30 +3,40 @@ package hardware.servos;
 import TI.*;
 
 public class Wheel {
-    private int GPIOpin;
-    private Servo wheel = new Servo(this.GPIOpin);
+    private final int pin;
+    private final Servo servo;
+    private int currentSpeed;
+    private int targetSpeed;
 
-    public Wheel(int GPIOpin) {
-        this.GPIOpin = GPIOpin;
+    public Wheel(int pin) {
+        this.pin = pin;
+        this.servo = new Servo(pin);
+        this.currentSpeed = 0;
+        this.targetSpeed = 0;
     }
 
-    public void driveForwardFullSpeed() {
-        if(this.GPIOpin == 12) {
-            this.wheel.update(2500);
-        } else {
-            this.wheel.update(500);
+    public void update() {
+        if(targetSpeed != currentSpeed) {
+            if (currentSpeed < targetSpeed) {
+                currentSpeed++;
+            }
+
+            if (currentSpeed > targetSpeed) {
+                currentSpeed--;
+            }
+            servo.update(1500 + currentSpeed);
         }
+
     }
 
-    public void driveForwardSlowSpeed() {
-        if(this.GPIOpin == 12) {
-            this.wheel.update(2000);
-        } else {
-            this.wheel.update(1000);
-        }
+    public void emergencyBrake(){
+        servo.update(1500);
+        this.currentSpeed = 0;
     }
 
-    public void emergencyBrake() {
-        this.wheel.update(1500);
+    public void setTargetSpeed(int targetSpeed) {
+        this.targetSpeed = targetSpeed;
     }
+
+
 }
