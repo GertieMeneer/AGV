@@ -8,16 +8,14 @@ import static TI.PinMode.Output;
 
 public class CollisionController {
     private Ultrasone ultrasone;
-    private int distance;
-    private int distanceBorder;
 
     public CollisionController() {
-        this.ultrasone = new Ultrasone(0,1, 1000);
+        this.ultrasone = new Ultrasone(0,1);
     }
 
-    public boolean isClose(){
-
-        if (this.distance <= ultrasone.getDistance()){  // change name of the first distance
+    public boolean checkEmergency(){
+        ultrasone.setDistance(1000);
+        if (ultrasone.checkDistance() <= ultrasone.getDistance()){  // change name of the first distance
             return true;
         }else{
             return false;
