@@ -14,14 +14,13 @@ public class Ultrasone {
     public Ultrasone(int triggerPin, int echoPin) {
         this.triggerPin = triggerPin;
         this.echoPin = echoPin;
-        this.distance = distance;
+
+        BoeBot.setMode(this.echoPin, Input);                        //setting pinmodes, doesnt work in constructor
+        BoeBot.setMode(this.triggerPin, Output);
     }
 
 
     public int checkDistance() {
-        BoeBot.setMode(this.echoPin, Input);                        //setting pinmodes, doesnt work in constructor
-        BoeBot.setMode(this.triggerPin, Output);
-
         BoeBot.digitalWrite(triggerPin, true);                  //generating pulse
         BoeBot.uwait(1);
         BoeBot.digitalWrite(triggerPin, false);
@@ -37,7 +36,7 @@ public class Ultrasone {
     }
 
     public int getDistance() {
-        return distance;
+        return this.distance;
     }
 
 }

@@ -8,7 +8,7 @@ public class Lightsensor {
 
     public Lightsensor(int pin) {
         this.pin = pin;
-    }
+    } //linkerlijnvolger 5, middelste 7, rechter 6.
 
     public boolean checkLine() {
         int sensorValue = BoeBot.analogRead(this.pin);  //reads the sensor value from given pin
