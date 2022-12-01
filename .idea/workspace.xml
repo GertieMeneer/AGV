@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b872d533-ec71-4718-a60c-05902a76c4c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/hardware/additional/LED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/additional/LED.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" afterDir="false" />
+    <list default="true" id="d1640d9c-aaad-4d84-9097-7f048c8a34ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hardware/additional/Bluetooth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfacing/IRController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hardware/sensors/IR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/sensors/IR.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,52 +17,59 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/interfacing/CollisionController.java">
+        <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Demo1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hardware/additional/LED.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="304">
+              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java">
+        <entry file="file://$PROJECT_DIR$/src/hardware/sensors/IR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+            <state relative-caret-position="255">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <folding>
+                <element signature="e#91#92#0" expanded="true" />
+                <element signature="e#121#122#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/Debug.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/Menu/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hardware/additional/Bluetooth.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/IDKeentest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -69,29 +77,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/interfacing/NotificationsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java">
+        <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
+        <entry file="file://$PROJECT_DIR$/src/interfacing/CollisionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="68">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/interfacing/IRController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -113,39 +127,50 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/interfacing/NotificationsController.java" />
-        <option value="$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java" />
-        <option value="$PROJECT_DIR$/src/application/Menu/MenuAction.java" />
-        <option value="$PROJECT_DIR$/src/application/Demo1.java" />
-        <option value="$PROJECT_DIR$/src/application/Menu/MenuActions/IDKeentest.java" />
-        <option value="$PROJECT_DIR$/src/application/Menu/MenuTest.java" />
-        <option value="$PROJECT_DIR$/src/application/Menu/Menu.java" />
+        <option value="$PROJECT_DIR$/src/Servo.java" />
+        <option value="$PROJECT_DIR$/src/Servos/GrijpArm.java" />
+        <option value="$PROJECT_DIR$/src/Sensors/Tentacles.java" />
+        <option value="$PROJECT_DIR$/src/Servos/ServoWheel.java" />
+        <option value="$PROJECT_DIR$/src/servos/ServoWheel.java" />
+        <option value="$PROJECT_DIR$/src/servos/ServoMotoren.java" />
+        <option value="$PROJECT_DIR$/src/servos/ServoEngines.java" />
+        <option value="$PROJECT_DIR$/src/servos/Wheels.java" />
+        <option value="$PROJECT_DIR$/src/servos/LeftWheel.java" />
+        <option value="$PROJECT_DIR$/src/sensors/Tentacles.java" />
+        <option value="$PROJECT_DIR$/src/servos/GrijpArm.java" />
+        <option value="$PROJECT_DIR$/src/servos/grabingCrane.java" />
+        <option value="$PROJECT_DIR$/src/servos/Wheel.java" />
+        <option value="$PROJECT_DIR$/src/additional/Speaker.java" />
+        <option value="$PROJECT_DIR$/src/servos/GrabingCrane.java" />
+        <option value="$PROJECT_DIR$/src/additional/LED.java" />
+        <option value="$PROJECT_DIR$/src/TestingGround.java" />
         <option value="$PROJECT_DIR$/src/Demo1.java" />
-        <option value="$PROJECT_DIR$/src/interfacing/Drive.java" />
-        <option value="$PROJECT_DIR$/src/application/Menu/MenuActions/Debug.java" />
-        <option value="$PROJECT_DIR$/src/interfacing/CollisionController.java" />
-        <option value="$PROJECT_DIR$/src/hardware/additional/LED.java" />
-        <option value="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" />
+        <option value="$PROJECT_DIR$/src/sensors/Ultrasoon.java" />
+        <option value="$PROJECT_DIR$/src/demos/Demo1.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/application/Demo1.java" />
+        <option value="$PROJECT_DIR$/src/testing.java" />
+        <option value="$PROJECT_DIR$/src/hardware/Updatable.java" />
         <option value="$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java" />
+        <option value="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" />
+        <option value="$PROJECT_DIR$/src/hardware/sensors/IR.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="980" />
-    <option name="height" value="1030" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,12 +181,20 @@
             <path>
               <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
               <item name="AGV" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
               <item name="AGV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AGV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuActions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
@@ -200,13 +233,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1669899926827" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1669911953532" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../IdeaProjects/TMCProjects/2017_avans_ti_breda-OGP1-2022/boeobeobot" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -221,60 +254,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MenuTest">
-    <configuration name="MenuTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.Menu.MenuTest" />
-      <module name="AGV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="application.Menu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MenuTest" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b872d533-ec71-4718-a60c-05902a76c4c5" name="Default Changelist" comment="" />
+      <changelist id="d1640d9c-aaad-4d84-9097-7f048c8a34ee" name="Default Changelist" comment="" />
       <created>1668684264164</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668684264164</updated>
       <workItem from="1669033297828" duration="58000" />
-      <workItem from="1669807870105" duration="2029000" />
-      <workItem from="1669813038115" duration="4178000" />
     </task>
-    <task id="LOCAL-00001" summary="Aanpassing">
-      <created>1669888902377</created>
+    <task id="LOCAL-00001" summary="added comments to tentacles class">
+      <created>1669108443363</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1669888902378</updated>
+      <updated>1669108443363</updated>
     </task>
-    <task id="LOCAL-00002" summary="Aanpassing">
-      <created>1669889159302</created>
+    <task id="LOCAL-00002" summary="added ultrasone class v1">
+      <created>1669134344859</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1669889159302</updated>
+      <updated>1669134344859</updated>
     </task>
-    <task id="LOCAL-00003" summary="Aanpassing">
-      <created>1669889281193</created>
+    <task id="LOCAL-00003" summary="created test method">
+      <created>1669134732520</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1669889281193</updated>
+      <updated>1669134732520</updated>
     </task>
     <task id="LOCAL-00004" summary="created test method">
       <created>1669134852192</created>
@@ -360,73 +371,44 @@
       <option name="project" value="LOCAL" />
       <updated>1669280805843</updated>
     </task>
-    <task id="LOCAL-00016" summary="Neopixels working">
-      <created>1669288847141</created>
+    <task id="LOCAL-00016" summary="made it working!!!!!!">
+      <created>1669287594545</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1669288847141</updated>
+      <updated>1669287594545</updated>
     </task>
-    <task id="LOCAL-00017" summary="if minder, skill issue">
-      <created>1669289150381</created>
+    <task id="LOCAL-00017" summary="made it working!!!!!!">
+      <created>1669289190311</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1669289150381</updated>
+      <updated>1669289190311</updated>
     </task>
-    <task id="LOCAL-00018" summary="wheel updates en t1 voor seocnden bedenk tijd">
-      <created>1669290259062</created>
+    <task id="LOCAL-00018" summary="made lightsensor class">
+      <created>1669405928816</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1669290259062</updated>
+      <updated>1669405928816</updated>
     </task>
-    <task id="LOCAL-00019" summary="Wheel updates en accelratiing schit">
-      <created>1669291227548</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1669291227548</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Wheel updates en accelratiing schit">
-      <created>1669299612860</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1669299612860</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Wheel updates en accelratiing schit">
-      <created>1669299815982</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1669299815982</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Wheel updates en accelratiing schit">
-      <created>1669303533787</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1669303533787</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Wheel updates en accelratiing schit">
-      <created>1669377046084</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1669377046084</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11509000" />
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -435,19 +417,19 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3283582" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32896176" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32896176" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" weight="0.32378224" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.49626866" side_tool="true" weight="0.32896176" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49626866" visible="true" weight="0.23169398" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49520257" weight="0.32459018" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50373137" side_tool="true" visible="true" weight="0.23169398" />
       <window_info anchor="bottom" id="TMC Test Results" order="10" sideWeight="0.49946696" weight="0.32896176" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.50373137" weight="0.22222222" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49946696" weight="0.3283582" />
+      <window_info anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.50373137" weight="0.32896176" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49946696" weight="0.32896176" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -459,47 +441,22 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14979757" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3283582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32896176" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32896176" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" weight="0.32504147" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.49626866" side_tool="true" weight="0.32896176" />
-      <window_info anchor="bottom" id="TMC Test Results" order="10" sideWeight="0.49946696" weight="0.32896176" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.50373137" weight="0.22222222" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49946696" weight="0.3283582" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="TMC Project List" order="4" weight="0.32995737" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Database" order="9" />
-    </layout-to-restore>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aanpassing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aanpassing" />
+    <MESSAGE value="added comments to tentacles class" />
+    <MESSAGE value="added ultrasone class v1" />
+    <MESSAGE value="created test method" />
+    <MESSAGE value="updated GrabingCrane class" />
+    <MESSAGE value="updated ultrasoon class" />
+    <MESSAGE value="made speaker class" />
+    <MESSAGE value="updated ultrasoon code" />
+    <MESSAGE value="updated wheel class" />
+    <MESSAGE value="refinements" />
+    <MESSAGE value="fixed ultrasonic sensor" />
+    <MESSAGE value="new update" />
+    <MESSAGE value="made it working!!!!!!" />
+    <MESSAGE value="made lightsensor class" />
+    <option name="LAST_COMMIT_MESSAGE" value="made lightsensor class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/servos/Wheels.java" />
@@ -514,43 +471,41 @@
     <entry file="file://$PROJECT_DIR$/AGV.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/IR.java">
+    <entry file="file://$PROJECT_DIR$/src/hardware/additional/LED.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/Updatable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/additional/NeoPixel.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/IDKeentest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/testing.java" />
-    <entry file="file://$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java">
+    <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="612">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Demo1.java" />
+    <entry file="file://$PROJECT_DIR$/src/testing.java" />
+    <entry file="file://$PROJECT_DIR$/src/hardware/Updatable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="94" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -561,102 +516,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Menu/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
+        <state relative-caret-position="68">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#show#0;class#Menu#0" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/Debug.java">
+    <entry file="file://$PROJECT_DIR$/src/hardware/additional/Bluetooth.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Demo1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/interfacing/NotificationsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/additional/LED.java">
+    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/interfacing/CollisionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java">
+    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        <state relative-caret-position="304">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/IDKeentest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/IRController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/IR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <element signature="e#91#92#0" expanded="true" />
+            <element signature="e#121#122#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

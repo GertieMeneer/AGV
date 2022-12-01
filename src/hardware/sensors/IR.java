@@ -8,8 +8,12 @@ public class IR {
         this.pin = pin;
     }
 
+    public boolean receivesSignal() {
+        //checks for IR pulse, if a pulse: read the pulse, then take action
+    }
+
     public int readIR() {
-        //returns value received by IR
+        //reads IR value if pulse detected
         return 0;
     }
 }

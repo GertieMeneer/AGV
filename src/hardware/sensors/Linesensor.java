@@ -2,11 +2,11 @@ package hardware.sensors;
 
 import TI.BoeBot;
 
-public class Lightsensor {
+public class Linesensor {
 
     private int pin;
 
-    public Lightsensor(int pin) {
+    public Linesensor(int pin) {
         this.pin = pin;
     } //linkerlijnvolger 5, middelste 7, rechter 6.
 
