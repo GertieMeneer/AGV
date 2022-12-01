@@ -10,7 +10,7 @@ public class CollisionController {
     private Ultrasone ultrasone;
 
     public CollisionController() {
-        this.ultrasone = new Ultrasone(0,1);
+        this.ultrasone = new Ultrasone(1,2);
     }
 
     public boolean checkEmergency(){
