@@ -17,9 +17,9 @@ public class Debug implements MenuAction {
         Drive drive = new Drive();
         CollisionController collisionController = new CollisionController();
 
-        if(collisionController.checkBrake()) {
+        if(collisionController.checkNormalStop()) {
             drive.slowStop();
-        } else if (collisionController.checkEmergency()){
+        } else if (collisionController.checkEmergencyStop()){
             drive.emergencyBrake();
         } else {
             drive.driveForwardSlowSpeed();
