@@ -9,24 +9,21 @@ import static TI.PinMode.Output;
 
 public class CollisionController {
     private Ultrasone ultrasone;
+    private Drive drive = new Drive();
 
     public CollisionController() {
         this.ultrasone = new Ultrasone(1, 2);
     }
 
-    public boolean checkEmergencyStop() {
-        if (ultrasone.checkDistance() <= 500) {  // change name of the first distance
-            return true;
-        } else {
-            return false;
+    public void stopClose() {
+        if (this.ultrasone.checkDistance() <= 500) {  // change name of the first distance
+           this.drive.emergencyBrake();
         }
     }
 
-    public boolean checkNormalStop() {
-        if (ultrasone.checkDistance() > 500 && ultrasone.checkDistance() <= 1000) {
-            return true;
-        }else {
-            return false;
+    public void stopFar() {
+        if (this.ultrasone.checkDistance() > 500 && this.ultrasone.checkDistance() <= 1000) {
+            this.drive.slowStop();
         }
     }
 }
