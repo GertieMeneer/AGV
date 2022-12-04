@@ -10,6 +10,7 @@ public class IR {
 
     public boolean receivesSignal() {
         //checks for IR pulse, if a pulse: read the pulse, then take action
+        return false;
     }
 
     public int readIR() {

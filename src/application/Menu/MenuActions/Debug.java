@@ -2,6 +2,7 @@ package application.Menu.MenuActions;
 
 import application.Menu.MenuAction;
 import hardware.sensors.Ultrasone;
+import interfacing.CollisionController;
 import interfacing.Drive;
 
 public class Debug implements MenuAction {
@@ -14,12 +15,11 @@ public class Debug implements MenuAction {
     @Override
     public void action() {
         Drive drive = new Drive();
-        Ultrasone ultrasoneClose = new Ultrasone(3, 4, 1000);
-        Ultrasone ultrasoneFar = new Ultrasone(3, 4, 500);
+        CollisionController collisionController = new CollisionController();
 
-        if(ultrasoneClose.checkDistance()) {
+        if(collisionController.checkBrake()) {
             drive.slowStop();
-        } else if (ultrasoneFar.checkDistance()){
+        } else if (collisionController.checkEmergency()){
             drive.emergencyBrake();
         } else {
             drive.driveForwardSlowSpeed();

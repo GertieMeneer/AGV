@@ -22,4 +22,13 @@ public class CollisionController {
         }
     }
 
+    public boolean checkBrake() {
+        ultrasone.setDistance(1000);
+        if (ultrasone.checkDistance() <= ultrasone.getDistance()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
