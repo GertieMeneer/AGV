@@ -26,7 +26,7 @@ public class Ultrasone {
 
     public int checkDistance() {
 
-        int pulse = BoeBot.pulseIn(echoPin, true, 10000);   //reading pulse, future update: calculating distance in cm
+        int pulse = BoeBot.pulseIn(this.echoPin, true, 10000);   //reading pulse, future update: calculating distance in cm
         System.out.println(pulse);                                  //printing pulse for debugging/information
 
         return pulse;
