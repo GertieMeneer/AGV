@@ -12,7 +12,7 @@ public class CollisionController {
     private Drive drive = new Drive();
 
     public CollisionController() {
-        this.ultrasone = new Ultrasone(1, 2);
+        this.ultrasone = new Ultrasone(11, 10);
     }
 
     public void stopClose() {
