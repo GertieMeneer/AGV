@@ -1,6 +1,9 @@
 package interfacing;
 
-public class ButtonController {
+public class OverrideController {
+
+    public OverrideController() {
+    }
 
     public void emergencyStop() {
         Drive drive = new Drive();
