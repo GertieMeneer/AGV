@@ -3,27 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d1640d9c-aaad-4d84-9097-7f048c8a34ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/application/Demo1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/application/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/application/Menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/application/Menu/MenuActions/Debug.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/application/Menu/MenuActions/Debug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/application/Menu/MenuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/application/Menu/MenuTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/additional/LED.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardware/additional/LED.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/additional/NeoPixels.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/additional/Speaker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/IR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/IR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/Lightsensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/Tentacles.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/Ultrasone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/Ultrasone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/Ultrasoon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/servos/GrabingCrane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/interfacing/CollisionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/interfacing/CollisionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/interfacing/Drive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/interfacing/Drive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/testing.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Menu/MenuActions/Debug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Menu/MenuActions/Debug.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfacing/CollisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfacing/CollisionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hardware/additional/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/additional/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hardware/servos/Wheel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/servos/Wheel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfacing/Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfacing/Drive.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,11 +20,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Demo1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+                <state relative-caret-position="272">
+                  <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -53,9 +36,23 @@
             <entry file="file://$PROJECT_DIR$/src/interfacing/OverrideController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
-                  <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+                  <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
                   <folding>
                     <element signature="method#OverrideController#0;class#OverrideController#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/hardware/additional/Button.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#120#121#0" expanded="true" />
+                    <element signature="e#150#151#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -86,11 +83,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+                <state relative-caret-position="156">
+                  <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
                 </state>
               </provider>
             </entry>
@@ -148,8 +145,12 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+                <state relative-caret-position="139">
+                  <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#786#787#0" expanded="true" />
+                    <element signature="e#806#807#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -169,8 +170,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+                <state relative-caret-position="153">
+                  <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1322#1323#0" expanded="true" />
@@ -225,14 +226,14 @@
         <option value="$PROJECT_DIR$/src/hardware/sensors/Lightsensor.java" />
         <option value="$PROJECT_DIR$/src/hardware/sensors/IR.java" />
         <option value="$PROJECT_DIR$/src/interfacing/ButtonController.java" />
-        <option value="$PROJECT_DIR$/src/hardware/servos/Wheel.java" />
-        <option value="$PROJECT_DIR$/src/hardware/additional/Button.java" />
         <option value="$PROJECT_DIR$/src/hardware/sensors/Linesensor.java" />
         <option value="$PROJECT_DIR$/src/application/Menu/MenuActions/Debug.java" />
         <option value="$PROJECT_DIR$/src/interfacing/CollisionController.java" />
-        <option value="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" />
         <option value="$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java" />
+        <option value="$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java" />
+        <option value="$PROJECT_DIR$/src/hardware/servos/Wheel.java" />
         <option value="$PROJECT_DIR$/src/interfacing/Drive.java" />
+        <option value="$PROJECT_DIR$/src/hardware/additional/Button.java" />
         <option value="$PROJECT_DIR$/src/Demo1.java" />
       </list>
     </option>
@@ -286,6 +287,13 @@
               <item name="AGV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="additional" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AGV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
               <item name="sensors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,7 +320,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1670234088551" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1670326729016" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -339,7 +347,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668684264164</updated>
       <workItem from="1669033297828" duration="58000" />
-      <workItem from="1670318982097" duration="3569000" />
+      <workItem from="1670318982097" duration="7878000" />
     </task>
     <task id="LOCAL-00001" summary="added comments to tentacles class">
       <created>1669108443363</created>
@@ -481,11 +489,25 @@
       <option name="project" value="LOCAL" />
       <updated>1670230306427</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="gezeik half gefixt">
+      <created>1670322630893</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670322630893</updated>
+    </task>
+    <task id="LOCAL-00022" summary="gezeik half gefixt">
+      <created>1670323822332</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670323822332</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5097000" />
+    <option name="totallyTimeSpent" value="9406000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,7 +521,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14979757" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14979757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -585,7 +607,8 @@
     <MESSAGE value="made it working!!!!!!" />
     <MESSAGE value="made lightsensor class" />
     <MESSAGE value="Pins verandert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pins verandert" />
+    <MESSAGE value="gezeik half gefixt" />
+    <option name="LAST_COMMIT_MESSAGE" value="gezeik half gefixt" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/servos/Wheels.java" />
@@ -645,27 +668,10 @@
     <entry file="file://$PROJECT_DIR$/src/interfacing/LineController.java" />
     <entry file="file://$PROJECT_DIR$/src/interfacing/IRController.java" />
     <entry file="file://$PROJECT_DIR$/src/interfacing/ButtonController.java" />
-    <entry file="file://$PROJECT_DIR$/src/hardware/additional/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Linesensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/OverrideController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="method#OverrideController#0;class#OverrideController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,35 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Demo1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/.idea/libraries/BoeBotLib.jar!/TI/BoeBot.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -776,8 +753,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Ultrasone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="156">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding>
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/OverrideController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="method#OverrideController#0;class#OverrideController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/additional/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#120#121#0" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Demo1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

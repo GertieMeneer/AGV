@@ -1,6 +1,7 @@
 package hardware.additional;
 
 import TI.BoeBot;
+import TI.PinMode;
 
 public class Button {
     private int pin;
@@ -10,6 +11,8 @@ public class Button {
     }
 
     public boolean check() {
+        BoeBot.setMode(this.pin, PinMode.Input);
+
         if (BoeBot.digitalRead(this.pin)) {
             return true;
         } else {

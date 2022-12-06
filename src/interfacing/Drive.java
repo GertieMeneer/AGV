@@ -67,15 +67,13 @@ public class Drive {
     }
 
     public void turnDegrees(int degree, int turnSpeed) {
-        Servo rightWheel = new Servo(13);
-        Servo leftWheel = new Servo(12);
 
         if (turnSpeed < 0) {
-            leftWheel.update(1494 + turnSpeed);
-            rightWheel.update(1500 + turnSpeed);
+            leftWheel.setSpeed(turnSpeed);
+            rightWheel.setSpeed(turnSpeed);
         } else {
-            rightWheel.update(1500 - turnSpeed);
-            leftWheel.update(1494 - turnSpeed);
+            rightWheel.setSpeed(turnSpeed);
+            leftWheel.setSpeed(turnSpeed);
         }
 
         if (degree == 90){

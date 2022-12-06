@@ -34,6 +34,10 @@ public class Wheel {
         this.currentSpeed = 0;
     }
 
+    public void setSpeed(int speed) {
+        servo.update(speed);
+    }
+
     public void setTargetSpeed(int targetSpeed) {
         this.targetSpeed = targetSpeed;
     }
