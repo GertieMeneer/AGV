@@ -7,6 +7,7 @@ public class Drive {
     private Wheel rightWheel;
     private Wheel leftWheel;
     private GrabbingCrane crane;
+    private boolean isClosed = false;
 
     public Drive() {
         rightWheel = new Wheel(12);
@@ -17,27 +18,32 @@ public class Drive {
     public void driveForwardFullSpeed() {
         rightWheel.setTargetSpeed(500);
         leftWheel.setTargetSpeed(-500);
+        update();
     }
 
     public void driveForwardSlowSpeed() {
         rightWheel.setTargetSpeed(40);
         leftWheel.setTargetSpeed(-40);
+        update();
     }
 
     public void driveBackwardSlowSpeed() {
         rightWheel.setTargetSpeed(-40);
         leftWheel.setTargetSpeed(40);
+        update();
     }
 
     public void slowStop() {
         rightWheel.setTargetSpeed(0);
         leftWheel.setTargetSpeed(0);
+        update();
     }
 
 
     public void emergencyBrake() {
         rightWheel.emergencyBrake();
         leftWheel.emergencyBrake();
+        update();
     }
 
     public void update() {
@@ -48,9 +54,17 @@ public class Drive {
 
     public void close() {
         crane.setTargetAngle(0);
+        isClosed = true;
+        crane.update();
     }
 
     public void open() {
         crane.setTargetAngle(1675);
+        isClosed = false;
+        crane.update();
+    }
+
+    public boolean isClosed() {
+        return isClosed;
     }
 }

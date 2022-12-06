@@ -26,4 +26,14 @@ public class CollisionController {
             this.drive.slowStop();
         }
     }
+
+    public void checkDistance() {
+        if(this.ultrasone.checkDistance() < 500) {
+            drive.emergencyBrake();
+        } else if (this.ultrasone.checkDistance() < 1000) {
+            drive.slowStop();
+        } else {
+            drive.driveForwardSlowSpeed();
+        }
+    }
 }
