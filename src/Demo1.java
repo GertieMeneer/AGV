@@ -18,7 +18,7 @@ public class Demo1 {
 
         while (true) {
             System.out.println(ultrasone.checkDistance());
-            BoeBot.wait(100);
+            BoeBot.wait(50);
         }
     }
 }
