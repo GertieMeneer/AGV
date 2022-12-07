@@ -32,7 +32,7 @@ public class LED {
 //    with the set Method you can also choose to put in either a boolean or an integer.
 //    the set method can also change the LED to the other mode if the other value
 
-    public void Set (boolean power){
+    public void set (boolean power){
         BoeBot.setMode(pin, PinMode.Output);
         if (isPWM == true){
             BoeBot.setMode(pin, PinMode.Output);
@@ -41,7 +41,7 @@ public class LED {
         BoeBot.digitalWrite(this.pin, power);
     }
 
-    public void Set (int power){
+    public void set (int power){
         if (isPWM == false){
             BoeBot.setMode(pin, PinMode.PWM);
             isPWM = true;
