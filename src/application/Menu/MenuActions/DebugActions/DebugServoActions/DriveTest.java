@@ -20,7 +20,7 @@ public class DriveTest implements MenuAction {
         Timer t2 = new Timer(10000);
         Timer t3 = new Timer(10000);
         Timer t4 = new Timer(10000);
-        Timer t5 = new Timer(10000);
+        Timer t5 = new Timer(3000);
 
         t4.mark();
 
