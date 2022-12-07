@@ -23,7 +23,7 @@ public class GrabbingCrane {
             if (currentAngle > targetAngle) {
                 currentAngle--;
             }
-            servo.update(1675 + currentAngle);
+            servo.update(500 + currentAngle);
             BoeBot.wait(1);
         }
     }
@@ -33,10 +33,10 @@ public class GrabbingCrane {
             targetAngle = currentAngle;
         }
         this.targetAngle = targetAngle;
+        update();
     }
 
     public int getCurrentAngle() {
         return currentAngle;
     }
 }
-
