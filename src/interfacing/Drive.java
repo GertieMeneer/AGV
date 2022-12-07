@@ -56,13 +56,17 @@ public class Drive {
 
     public void close() {
         crane.setTargetAngle(0);
-        isClosed = true;
+        if(crane.getCurrentAngle() == 0) {
+            isClosed = true;
+        }
         crane.update();
     }
 
     public void open() {
         crane.setTargetAngle(1675);
-        isClosed = false;
+        if(crane.getCurrentAngle() == 1675) {
+            isClosed = false;
+        }
         crane.update();
     }
 

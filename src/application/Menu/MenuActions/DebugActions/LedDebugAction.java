@@ -1,11 +1,13 @@
 package application.Menu.MenuActions.DebugActions;
 
+import application.Menu.Menu;
 import application.Menu.MenuAction;
 
-public class ButtonActions implements MenuAction {
+public class LedDebugAction implements MenuAction {
+
     @Override
     public String getName() {
-        return "Test button";
+        return "Test de Leds";
     }
 
     @Override

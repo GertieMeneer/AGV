@@ -2,14 +2,15 @@ package application.Menu.MenuActions.DebugActions;
 
 import application.Menu.MenuAction;
 
-public class LedActions implements MenuAction {
+public class LedDebug implements MenuAction {
+
     @Override
     public String getName() {
-        return "Test Led";
+        return "Dit test de leds";
     }
 
     @Override
     public void action() {
-
+//        Zet hier de action
     }
 }

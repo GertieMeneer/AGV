@@ -24,4 +24,8 @@ public class SubMenuDebug implements MenuAction {
     public void action() {
         this.debugMenu.show(scanner);
     }
+
+//    public static Menu createServoDebug(Scanner scanner) {
+////        Menu
+////    }
 }

@@ -34,5 +34,9 @@ public class GrabbingCrane {
         }
         this.targetAngle = targetAngle;
     }
+
+    public int getCurrentAngle() {
+        return currentAngle;
+    }
 }
 
