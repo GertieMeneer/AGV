@@ -19,7 +19,7 @@ public class FinalCode implements MenuAction {
         NotificationsController notificationsController =  new NotificationsController();
         CollisionController collisionController = new CollisionController();
         OverrideController overrideController = new OverrideController();
-        PathTracker pathTracker = new PathTracker();
+//        PathTracker pathTracker = new PathTracker();
 
 //Hier komt de uiteindelijke code
     }

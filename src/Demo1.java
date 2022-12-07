@@ -3,12 +3,14 @@ import TI.PinMode;
 import TI.Servo;
 import TI.Timer;
 import hardware.additional.Button;
+import hardware.sensors.Linesensor;
 import hardware.sensors.Ultrasone;
 import hardware.servos.GrabbingCrane;
 import hardware.servos.Wheel;
-import interfacing.CollisionController;
-import interfacing.Drive;
-import interfacing.OverrideController;
+import interfacing.*;
+
+import java.nio.file.Path;
+import java.util.List;
 
 public class Demo1 {
 
@@ -17,40 +19,21 @@ public class Demo1 {
     }
 
     public Demo1() {
-
+        PathTracker pt = new PathTracker();
+        CollisionController collisionController = new CollisionController();
 //        Drive drive = new Drive();
+//
+//        drive.turnRight();
+//        BoeBot.wait(5000);
 
-        while (true) {
-//            BoeBot.setMode(14, PinMode.Output);
-//            Servo g = new Servo(14);
-////            g.update(100);
-//            for (int i = 500; i < 2000; i++) {
-//                g.update(i);
-//                System.out.println(i);
-//                BoeBot.wait(3);
-//            }
-            GrabbingCrane crane = new GrabbingCrane(14);
-            crane.setTargetAngle(0);
-            BoeBot.wait(3000);
-            crane.setTargetAngle(2000);
-            BoeBot.wait(3000);
-//            drive.close();
-//            BoeBot.wait(3000);
-//            System.out.println(" close");
-//            drive.open();
-//            BoeBot.wait(3000);
-//            System.out.println(" Open");
-//            drive.driveForwardSlowSpeed();
-//            Servo s1 = new Servo(13);
-//            Servo s2 = new Servo(12);
-//            Servo s3 = new Servo(14);
-//            s1.update(2000);
-//            s2.update(1000);
-//            BoeBot.wait(10);
+        while(true) {
+            pt.checkLine();
+            BoeBot.wait(50);
+            collisionController.checkDistance();
+            BoeBot.wait(50);
+
         }
+
+
     }
 }
-
-
-
-

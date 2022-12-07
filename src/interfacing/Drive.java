@@ -92,4 +92,25 @@ public class Drive {
     public boolean isClosed() {
         return isClosed;
     }
+
+    public void turnLeft() {
+        leftWheel.emergencyBrake();
+        rightWheel.slow();
+        update();
+//        BoeBot.wait(5);
+//        driveForwardSlowSpeed();
+    }
+
+    public void turnRight() {
+        rightWheel.emergencyBrake();
+        leftWheel.slow();
+        update();
+//        BoeBot.wait(5);
+//        driveForwardSlowSpeed();
+    }
+
+    public void setSpeedForward() {
+        rightWheel.setSpeed(1550);
+        leftWheel.setSpeed(1450);
+    }
 }

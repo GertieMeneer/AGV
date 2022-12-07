@@ -30,7 +30,7 @@ public class CollisionController {
     public void checkDistance() {
         if(this.ultrasone.checkDistance() < 500) {
             drive.emergencyBrake();
-        } else if (this.ultrasone.checkDistance() < 1000) {
+        } else if (this.ultrasone.checkDistance() < 1500) {
             drive.slowStop();
         } else {
             drive.driveForwardSlowSpeed();

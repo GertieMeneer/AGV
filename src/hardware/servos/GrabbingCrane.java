@@ -1,5 +1,6 @@
 package hardware.servos;
 import TI.BoeBot;
+import TI.PinMode;
 import TI.Servo;
 
 public class GrabbingCrane {
@@ -13,14 +14,15 @@ public class GrabbingCrane {
         this.servo = new Servo(pin);
         this.currentAngle = 0;
         this.targetAngle = 0;
+        BoeBot.setMode(this.pin, PinMode.Output);
     }
 
     public void update() {
         if (targetAngle != currentAngle) {
-            if (currentAngle < targetAngle) {
+            while(currentAngle < targetAngle) {
                 currentAngle++;
             }
-            if (currentAngle > targetAngle) {
+            while(currentAngle > targetAngle) {
                 currentAngle--;
             }
             servo.update(500 + currentAngle);
@@ -29,7 +31,7 @@ public class GrabbingCrane {
     }
 
     public void setTargetAngle(int targetAngle) {
-        if (targetAngle < 0 || targetAngle > 2300) {
+        if (targetAngle <= 0 || targetAngle > 2300) {
             targetAngle = currentAngle;
         }
         this.targetAngle = targetAngle;

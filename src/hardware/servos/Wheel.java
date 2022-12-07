@@ -30,9 +30,19 @@ public class Wheel {
     }
 
     public void emergencyBrake(){
-        servo.update(1500);
         this.currentSpeed = 0;
+        update();
     }
+
+    public void slow() {
+        if(this.pin == 12) {
+            this.currentSpeed = 25;
+        } else {
+            this.currentSpeed = -25;
+        }
+        update();
+    }
+
 
     public void setSpeed(int speed) {
         servo.update(speed);
