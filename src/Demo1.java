@@ -22,6 +22,7 @@ public class Demo1 {
     private IR remote = new IR(2);
     private Drive drive = new Drive();
     private Bluetooth bluetooth = new Bluetooth();
+    private Crane crane = new Crane(14);
 
     public static void main(String[] args) {
         new Demo1();
@@ -29,12 +30,18 @@ public class Demo1 {
 
     public Demo1() {
         while (true) {
-            collisionController.checkDistsanceCart();
-            remote.readIRLes();
             pt.checkLine();
-            BoeBot.wait(50);
-            collisionController.checkDistance();
-            bluetooth.readBluetoothModule();
+
+//            crane.open();
+//            BoeBot.wait(3000);
+            crane.close();
+//            BoeBot.wait(3000);
+
+//            collisionController.checkDistance();
+
+//            bluetooth.readBluetoothModule();
+//            BoeBot.wait(1);
+
         }
     }
 }

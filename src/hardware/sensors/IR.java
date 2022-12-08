@@ -55,26 +55,36 @@ public class IR {
     private int translate (int values[]){
         int number = 0;
         int bitCounter = 1;
-        ArrayList<Integer> name = new ArrayList<>();
         for (int value : values) {
-            if (value > 1000){
-                name.add(1);
-            } else if (value < 1000 && value > 0){
-                name.add(0);
-            } else{
-                name.add(-1);
+            if(value > 1000) {
+                number|=bitCounter;
             }
+            if(value < 0) {
+                return 0;
+            }
+            bitCounter <<= 1;
         }
-
-        for (Integer value : name) {
-            number += value * bitCounter;
-            bitCounter = bitCounter + 8;
-        }
-        if(number < 0) {
-            return 0;
-        }
-        System.out.println(number);
-
         return number;
+//        ArrayList<Integer> name = new ArrayList<>();
+//        for (int value : values) {
+//            if (value > 1000){
+//                name.add(1);
+//            } else if (value < 1000 && value > 0){
+//                name.add(0);
+//            } else{
+//                name.add(-1);
+//            }
+//        }
+//
+//        for (Integer value : name) {
+//            number += value * bitCounter;
+//            bitCounter = bitCounter + 8;
+//        }
+//        if(number < 0) {
+//            return 0;
+//        }
+//        System.out.println(number);
+//
+//        return number;
     }
 }

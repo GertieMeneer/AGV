@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class BluetoothPC {
     public static void main(String[] args) {
-        SerialPort serialPort = new SerialPort("COM8");
+        SerialPort serialPort = new SerialPort("COM5");
         try {
             serialPort.openPort();
             serialPort.setParams(SerialPort.BAUDRATE_115200,
