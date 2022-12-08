@@ -17,6 +17,11 @@ public class IR {
         BoeBot.setMode(pin2, PinMode.Output);
     }
 
+    public IR(int pin1) {
+        this.pin1 = pin1;
+        BoeBot.setMode(pin1, PinMode.Input);
+    }
+
     public int readIR() {
         //returns value received by IR
         int number = 0;
