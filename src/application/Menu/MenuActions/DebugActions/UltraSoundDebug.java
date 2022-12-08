@@ -29,12 +29,4 @@ public class UltraSoundDebug {
 
 
     }
-
-    public static void main(String[] args) {
-        UltraSoundDebug usd = new UltraSoundDebug();
-        while(true){
-            usd.debug();
-        }
-
-    }
 }
