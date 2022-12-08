@@ -19,7 +19,6 @@ public class Drive {
         rightWheel.setTargetSpeed(500);
         leftWheel.setTargetSpeed(-500);
         update();
-        neopixels.allOff();
         neopixels.forwardWhite();
 
     }
@@ -36,7 +35,6 @@ public class Drive {
         rightWheel.setTargetSpeed(-40);
         leftWheel.setTargetSpeed(40);
         update();
-        neopixels.allOff();
         neopixels.backwardsWhite();
     }
 
@@ -44,7 +42,7 @@ public class Drive {
         rightWheel.setTargetSpeed(0);
         leftWheel.setTargetSpeed(0);
         update();
-//        neopixels.
+        neopixels.allOff();
     }
 
 
@@ -52,7 +50,6 @@ public class Drive {
         rightWheel.emergencyBrake();
         leftWheel.emergencyBrake();
         update();
-        neopixels.allOff();
         neopixels.allRed();
     }
 
@@ -60,22 +57,6 @@ public class Drive {
         leftWheel.update();
         rightWheel.update();
     }
-
-//    public void close() {
-//        crane.setTargetAngle(0);
-//        if(crane.getCurrentAngle() == 0) {
-//            isClosed = true;
-//        }
-//        crane.update();
-//    }
-
-//    public void open() {
-//        crane.setTargetAngle(1675);
-//        if(crane.getCurrentAngle() == 1675) {
-//            isClosed = false;
-//        }
-//        crane.update();
-//    }
 
     public void turnDegrees(int degree) {
         int turnSpeed = 500;
@@ -122,8 +103,12 @@ public class Drive {
     public void setSpeedForward() {
         rightWheel.setSpeed(1550);
         leftWheel.setSpeed(1450);
-        neopixels.allOff();
         neopixels.forwardWhite();
+    }
 
+    public void setSpeedBackward() {
+        rightWheel.setSpeed(1450);
+        leftWheel.setSpeed(1550);
+        neopixels.backwardsWhite();
     }
 }
