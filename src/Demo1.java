@@ -2,6 +2,7 @@ import TI.BoeBot;
 import TI.PinMode;
 import TI.Servo;
 import TI.Timer;
+import hardware.additional.Bluetooth;
 import hardware.additional.Button;
 import hardware.sensors.Linesensor;
 import hardware.sensors.Ultrasone;
@@ -21,17 +22,19 @@ public class Demo1 {
     public Demo1() {
         PathTracker pt = new PathTracker();
         CollisionController collisionController = new CollisionController();
-        OverrideController button = new OverrideController(10);
+//        OverrideController button = new OverrideController(10);
+        BluetoothController bluetoothController = new BluetoothController("COM8");
+        Bluetooth bluetooth = new Bluetooth();
 
         while(true) {
-            pt.checkLine();
-            BoeBot.wait(50);
-            collisionController.checkDistance();
-            BoeBot.wait(50);
-            button.checkButton();
-            BoeBot.wait(50);
-            // bluetooth checke
-            //ir checken
+//            pt.checkLine();
+//            BoeBot.wait(50);
+//            collisionController.checkDistance();
+//            BoeBot.wait(50);
+//            button.checkButton();
+//            BoeBot.wait(50);
+            bluetooth.readBluetoothModule();
+            BoeBot.wait(1);
 
         }
 

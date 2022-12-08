@@ -18,7 +18,7 @@ public class FinalCode implements MenuAction {
         Drive drive =  new Drive();
         NotificationsController notificationsController =  new NotificationsController();
         CollisionController collisionController = new CollisionController();
-        OverrideController overrideController = new OverrideController();
+        OverrideController overrideController = new OverrideController(1);
 //        PathTracker pathTracker = new PathTracker();
 
 //Hier komt de uiteindelijke code

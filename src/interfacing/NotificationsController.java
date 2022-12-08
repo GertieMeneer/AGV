@@ -39,7 +39,13 @@ public class NotificationsController {
     public void rightWhite() {
         BoeBot.rgbSet(5, Color.white);
         BoeBot.rgbSet(0, Color.white);
+        BoeBot.rgbShow();
+    }
 
+    public void allBlue() {
+        for (int i = 0; i < 6; i++) {
+            BoeBot.rgbSet(i, Color.blue);
+        }
         BoeBot.rgbShow();
     }
 
