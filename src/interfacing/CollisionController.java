@@ -10,9 +10,7 @@ import static TI.PinMode.Output;
 public class CollisionController {
     private Ultrasone ultrasone;
     private Drive drive = new Drive();
-    //    private Timer t1 = new Timer(5000);
-//    private Timer t2 = new Timer(1000);
-    private Crane crane = new Crane(14);
+    private Timer timer = new Timer(50);
 
     public CollisionController() {
         this.ultrasone = new Ultrasone(11, 10);
