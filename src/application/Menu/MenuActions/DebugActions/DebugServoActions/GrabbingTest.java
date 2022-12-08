@@ -17,15 +17,15 @@ public class GrabbingTest implements MenuAction {
         t1.mark();
         while (true) {
 
-            if (drive.isClosed()) {
-                drive.open();
-            } else {
-                drive.close();
-            }
-
-            if (t1.timeout()) {
-                break;
+//            if (drive.isClosed()) {
+//                drive.open();
+//            } else {
+//                drive.close();
+//            }
+//
+//            if (t1.timeout()) {
+//                break;
             }
         }
     }
-}
+

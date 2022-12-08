@@ -17,7 +17,7 @@ public class NotificationsController {
         BoeBot.rgbShow();
     }
 
-    public void allBlack() {
+    public void allOff() {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.black);
         }
@@ -25,8 +25,16 @@ public class NotificationsController {
     }
 
     public void forwardWhite() {
-        BoeBot.rgbSet(4, Color.white);
+        for (int i = 3; i < 6; i++) {
+            BoeBot.rgbSet(i, Color.white);
+        }
+        BoeBot.rgbShow();
+    }
+
+    public void backwardsWhite() {
+        BoeBot.rgbSet(0, Color.white);
         BoeBot.rgbSet(1, Color.white);
+        BoeBot.rgbSet(2, Color.white);
         BoeBot.rgbShow();
     }
 

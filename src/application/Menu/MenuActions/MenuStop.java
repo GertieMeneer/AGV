@@ -11,6 +11,6 @@ public class MenuStop {
 
     public void Stop() {
         drive.emergencyBrake();
-        notificationsController.allBlack();
+        notificationsController.allOff();
     }
 }

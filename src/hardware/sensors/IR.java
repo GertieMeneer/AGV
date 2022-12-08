@@ -11,7 +11,7 @@ public class IR {
     private int pin;
 
     public IR(int pin1) {
-        this.pin = pin;
+        this.pin = pin1;
         BoeBot.setMode(pin1, PinMode.Input);
         BoeBot.setMode(6, PinMode.Output);
 
@@ -37,9 +37,8 @@ public class IR {
 
     }
 
-    public int[] readIRLes() {
+    public int readIRLes() {
         IR ir = new IR(2);
-        System.out.println("Listening....");
         while (true) {
             int pulseLen = BoeBot.pulseIn(2, false, 6000);
             if (pulseLen > 2000) {
@@ -66,9 +65,6 @@ public class IR {
                 name.add(-1);
             }
         }
-        System.out.println(name);
-
-
 
         for (Integer value : name) {
             number += value * bitCounter;

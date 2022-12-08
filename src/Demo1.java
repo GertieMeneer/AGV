@@ -11,53 +11,43 @@ import hardware.servos.GrabbingCrane;
 import hardware.servos.Wheel;
 import interfacing.*;
 
+import java.awt.*;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Demo1 {
+    private NotificationsController controller = new NotificationsController();
+    private Drive drive = new Drive();
 
     public static void main(String[] args) {
         new Demo1();
     }
 
     public Demo1() {
-        PathTracker pt = new PathTracker();
-        CollisionController collisionController = new CollisionController();
-        IR remote = new IR(2);
-        Drive drive = new Drive();
-        Bluetooth bluetooth = new Bluetooth();
-        Servo wheel = new Servo(12);
-
-        Wheel wheel2 = new Wheel (12);
-
-        drive.setSpeedForward();
-        BoeBot.wait(1000);
-
-
-        while (true) {
-            drive.slowStop();
+//        PathTracker pt = new PathTracker();
+//            CollisionController collisionController = new CollisionController();
+//        IR remote = new IR(2);
+//        Drive drive = new Drive();
+//        Bluetooth bluetooth = new Bluetooth();
+//        drive.setSpeedForward();
+//        BoeBot.wait(1000);
+//
+//
+//        while (true) {
 //            drive.driveForwardSlowSpeed();
-
 //            remote.readIRLes();
-//            BoeBot.wait(10);
+////            BoeBot.wait(1);
 //            pt.checkLine();
 //            BoeBot.wait(50);
 //            collisionController.checkDistance();
-//            BoeBot.wait(100);
+////            BoeBot.wait(1);
 //            bluetooth.readBluetoothModule();
-//            BoeBot.wait(50);
-//            drive.driveForwardFullSpeed();
-//            drive.driveForwardSlowSpeed();
-//            drive.driveForwardFullSpeed();
-//            BoeBot.wait(1000);
-//            drive.slowStop();
-//            BoeBot.wait(1000);
-//            drive.driveForwardFullSpeed();
-            BoeBot.wait(10);
-        }
-
+////            BoeBot.wait(1);
+//        }
+//
 
     }
+
 
 }

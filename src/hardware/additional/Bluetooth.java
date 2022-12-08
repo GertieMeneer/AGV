@@ -18,7 +18,7 @@ public class Bluetooth {
                 LEDController.allBlue();
             }
             if(data == 50) {
-                LEDController.allBlack();
+                LEDController.allOff();
             }
         }
     }
