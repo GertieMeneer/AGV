@@ -21,16 +21,17 @@ public class Demo1 {
     public Demo1() {
         PathTracker pt = new PathTracker();
         CollisionController collisionController = new CollisionController();
-//        Drive drive = new Drive();
-//
-//        drive.turnRight();
-//        BoeBot.wait(5000);
+        OverrideController button = new OverrideController(10);
 
         while(true) {
             pt.checkLine();
             BoeBot.wait(50);
             collisionController.checkDistance();
             BoeBot.wait(50);
+            button.checkButton();
+            BoeBot.wait(50);
+            // bluetooth checke
+            //ir checken
 
         }
 
