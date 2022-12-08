@@ -23,7 +23,7 @@ public class UltraSoundDebug {
             }else if (pulseTranslation > 1000 && pulseTranslation < 2500){
                 nc.allBlue();
             }else{
-                nc.allBlack();
+                nc.allOff();
             }
             BoeBot.wait(200);
 
