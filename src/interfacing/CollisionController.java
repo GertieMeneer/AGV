@@ -15,18 +15,6 @@ public class CollisionController {
         this.ultrasone = new Ultrasone(11, 10);
     }
 
-    public void stopClose() {
-        if (this.ultrasone.checkDistance() <= 500) {  // change name of the first distance
-           this.drive.emergencyBrake();
-        }
-    }
-
-    public void stopFar() {
-        if (this.ultrasone.checkDistance() > 500 && this.ultrasone.checkDistance() <= 1000) {
-            this.drive.slowStop();
-        }
-    }
-
     public void checkDistance() {
         if(this.ultrasone.checkDistance() < 500) {
             drive.emergencyBrake();
