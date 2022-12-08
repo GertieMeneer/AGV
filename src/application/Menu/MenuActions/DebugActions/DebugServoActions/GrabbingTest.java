@@ -2,6 +2,7 @@ package application.Menu.MenuActions.DebugActions.DebugServoActions;
 
 import TI.Timer;
 import application.Menu.MenuAction;
+import interfacing.Crane;
 import interfacing.Drive;
 
 public class GrabbingTest implements MenuAction {
@@ -12,20 +13,20 @@ public class GrabbingTest implements MenuAction {
 
     @Override
     public void action() {
-        Drive drive = new Drive();
+        Crane crane = new Crane(14);
         Timer t1 = new Timer(5000);
         t1.mark();
         while (true) {
 
-//            if (drive.isClosed()) {
-//                drive.open();
-//            } else {
-//                drive.close();
-//            }
-//
-//            if (t1.timeout()) {
-//                break;
+            if (crane.getStatus()) {
+                crane.open();
+            } else {
+                crane.close();
+            }
+            if (t1.timeout()) {
+                break;
             }
         }
     }
+}
 

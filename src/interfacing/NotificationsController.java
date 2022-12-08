@@ -32,7 +32,8 @@ public class NotificationsController {
     }
 
     public void backwardsWhite() {
-        BoeBot.rgbSet(0, Color.white);
+        BoeBot.rgbSet(0
+                , Color.white);
         BoeBot.rgbSet(1, Color.white);
         BoeBot.rgbSet(2, Color.white);
         BoeBot.rgbShow();
