@@ -70,7 +70,8 @@ public class Drive {
         crane.update();
     }
 
-    public void turnDegrees(int degree, int turnSpeed) {
+    public void turnDegrees(int degree) {
+        int turnSpeed = 500;
 
         if (turnSpeed < 0) {
             leftWheel.setSpeed(turnSpeed);

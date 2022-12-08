@@ -17,6 +17,7 @@ public class Wheel {
 
     public void update() {
         if(targetSpeed != currentSpeed) {
+
             if (currentSpeed < targetSpeed) {
                 currentSpeed++;
             }
@@ -24,21 +25,22 @@ public class Wheel {
             if (currentSpeed > targetSpeed) {
                 currentSpeed--;
             }
-            servo.update(1500 + currentSpeed);
         }
+        servo.update(1500 + currentSpeed);
 
     }
 
     public void emergencyBrake(){
         this.currentSpeed = 0;
+        this.targetSpeed = 0;
         update();
     }
 
     public void slow() {
         if(this.pin == 12) {
-            this.currentSpeed = 25;
+            this.targetSpeed = 25;
         } else {
-            this.currentSpeed = -25;
+            this.targetSpeed = -25;
         }
         update();
     }
