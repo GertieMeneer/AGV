@@ -11,7 +11,6 @@ public class Bluetooth {
 
     public void readBluetoothModule() {
         if (serial.available() > 0) {
-            System.out.println("yesss yess yess concecten dsucsjlefysy6");
             int data = serial.readByte();
             System.out.println(data);
 
