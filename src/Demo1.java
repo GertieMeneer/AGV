@@ -17,37 +17,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Demo1 {
-    private NotificationsController controller = new NotificationsController();
+    private PathTracker pt = new PathTracker();
+    private CollisionController collisionController = new CollisionController();
+    private IR remote = new IR(2);
     private Drive drive = new Drive();
+    private Bluetooth bluetooth = new Bluetooth();
 
     public static void main(String[] args) {
         new Demo1();
     }
 
     public Demo1() {
-//        PathTracker pt = new PathTracker();
-//            CollisionController collisionController = new CollisionController();
-//        IR remote = new IR(2);
-//        Drive drive = new Drive();
-//        Bluetooth bluetooth = new Bluetooth();
-//        drive.setSpeedForward();
-//        BoeBot.wait(1000);
-//
-//
-//        while (true) {
-//            drive.driveForwardSlowSpeed();
-//            remote.readIRLes();
-////            BoeBot.wait(1);
-//            pt.checkLine();
-//            BoeBot.wait(50);
-//            collisionController.checkDistance();
-////            BoeBot.wait(1);
-//            bluetooth.readBluetoothModule();
-////            BoeBot.wait(1);
-//        }
-//
-
+        while (true) {
+            collisionController.checkDistsanceCart();
+            remote.readIRLes();
+            pt.checkLine();
+            BoeBot.wait(50);
+            collisionController.checkDistance();
+            bluetooth.readBluetoothModule();
+        }
     }
-
-
 }

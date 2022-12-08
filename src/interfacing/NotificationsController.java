@@ -63,4 +63,12 @@ public class NotificationsController {
         BoeBot.rgbShow();
     }
 
+    public void allWhite() {
+        allOff();
+        for (int i = 0; i < 6; i++) {
+            BoeBot.rgbSet(i, Color.white);
+        }
+        BoeBot.rgbShow();
+    }
+
 }

@@ -9,6 +9,7 @@ public class Drive {
     private Wheel rightWheel;
     private Wheel leftWheel;
     private NotificationsController neopixels = new NotificationsController();
+    private Crane crane = new Crane(14);
 
     public Drive() {
         rightWheel = new Wheel(12);
@@ -110,5 +111,15 @@ public class Drive {
         rightWheel.setSpeed(1450);
         leftWheel.setSpeed(1550);
         neopixels.backwardsWhite();
+    }
+
+    public void getCart() {
+        neopixels.allWhite();
+        turnDegrees(90);
+        crane.open();
+        driveBackwardSlowSpeed();
+        BoeBot.wait(1000);
+        emergencyBrake();
+        crane.close();
     }
 }
