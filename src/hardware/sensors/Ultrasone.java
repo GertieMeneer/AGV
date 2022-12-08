@@ -25,9 +25,12 @@ public class Ultrasone {
         BoeBot.uwait(1);
         BoeBot.digitalWrite(triggerPin, false);
 
-        int pulse = BoeBot.pulseIn(this.echoPin, true, 10000);   //reading pulse, future update: calculating distance in cm
-        System.out.println(pulse);
+        int pulse = BoeBot.pulseIn(this.echoPin, true, 10000);//reading pulse, future update: calculating distance in cm
 
+        if (pulse < 30){
+            pulse = 1501;
+        }
+//        System.out.println(pulse);
 
         return pulse;
     }

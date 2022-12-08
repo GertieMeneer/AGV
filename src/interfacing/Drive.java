@@ -24,8 +24,8 @@ public class Drive {
     }
 
     public void driveForwardSlowSpeed() {
-        rightWheel.setTargetSpeed(40);
-        leftWheel.setTargetSpeed(-40);
+        rightWheel.setTargetSpeed(20);
+        leftWheel.setTargetSpeed(-20);
         update();
     }
 
