@@ -22,7 +22,7 @@ public class OverrideController {
     private void emergencyStop() {
         Drive drive = new Drive();
         drive.emergencyBrake();
-        drive.open();
+//        drive.open();
         BoeBot.wait(10000);  //for now a wait so that problem can be fixed
     }
 }

@@ -13,12 +13,11 @@ public class Bluetooth {
         if (serial.available() > 0) {
             int data = serial.readByte();
             System.out.println(data);
-
             if(data == 100) {
                 LEDController.allBlue();
             }
             if(data == 50) {
-                LEDController.allBlack();
+                LEDController.allOff();
             }
         }
     }
