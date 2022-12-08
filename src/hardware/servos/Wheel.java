@@ -48,6 +48,11 @@ public class Wheel {
 
     public void setSpeed(int speed) {
         servo.update(speed);
+        if (this.pin == 13) {
+            this.currentSpeed = -50;
+        } else {
+            this.currentSpeed = 50;
+        }
     }
 
     public void setTargetSpeed(int targetSpeed) {
