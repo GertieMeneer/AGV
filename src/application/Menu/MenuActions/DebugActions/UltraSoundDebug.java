@@ -25,8 +25,14 @@ public class UltraSoundDebug {
             }else{
                 nc.allOff();
             }
-            BoeBot.wait(200);
+            BoeBot.wait(50);
+    }
 
+    public static void main(String[] args) {
+        UltraSoundDebug usd = new UltraSoundDebug();
+        while (true){
+            usd.debug();
+        }
 
     }
 }

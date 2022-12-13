@@ -1,7 +1,6 @@
 package interfacing;
 
 import TI.Servo;
-import hardware.Updatable;
 import hardware.servos.GrabbingCrane;
 
 public class Crane {
