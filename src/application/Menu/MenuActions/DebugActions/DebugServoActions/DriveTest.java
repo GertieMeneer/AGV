@@ -26,17 +26,17 @@ public class DriveTest implements MenuAction {
 
         while (true) {
             if (t4.timeout()) {
-                drive.driveForwardSlowSpeed();
+//                drive.driveForwardSlowSpeed();
                 t1.mark();
             }
 
             if (t1.timeout()) {
-                drive.slowStop();
+//                drive.slowStop();
                 t2.mark();
             }
 
             if (t2.timeout()) {
-                drive.driveForwardFullSpeed();
+//                drive.driveForwardFullSpeed();
                 t3.mark();
             }
 

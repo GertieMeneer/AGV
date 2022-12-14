@@ -33,9 +33,9 @@ public class CollisionController {
         if (pulseTranslation < 500) {
             drive.emergencyBrake();
         } else if (pulseTranslation < 1500) {
-            drive.slowStop();
+//            drive.slowStop();
         } else {
-            drive.driveForwardSlowSpeed();
+//            drive.driveForwardSlowSpeed();
         }
 
 

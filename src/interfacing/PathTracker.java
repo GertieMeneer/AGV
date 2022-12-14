@@ -18,14 +18,14 @@ public class PathTracker {
         Linesensor rightsensor = new Linesensor(0, "right");
         if ((leftsensor.checkLine() || rightsensor.checkLine())) {
             if (leftsensor.checkLine() && rightsensor.checkLine()) {
-                drive.setSpeedForward();
+//                drive.setSpeedForward();
             } else if (rightsensor.checkLine()) {
-                drive.turnRight();
+//                drive.turnRight();
             } else if (leftsensor.checkLine()) {
-                drive.turnLeft();
+//                drive.turnLeft();
             }
         } else {
-            drive.setSpeedForward();
+//            drive.setSpeedForward();
         }
     }
 }

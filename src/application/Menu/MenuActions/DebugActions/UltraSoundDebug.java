@@ -8,7 +8,6 @@ import java.awt.*;
 
 public class UltraSoundDebug {
     private Ultrasone us;
-    private int pulseTranslation;
 
     public UltraSoundDebug() {
         this.us = new Ultrasone(11,10);
@@ -17,7 +16,7 @@ public class UltraSoundDebug {
 
     public void debug() {
         NotificationsController nc = new NotificationsController();
-            this.pulseTranslation = us.checkDistance();
+        int pulseTranslation = us.checkDistance();
             if (pulseTranslation < 1000){
                 nc.allRed();
             }else if (pulseTranslation > 1000 && pulseTranslation < 2500){

@@ -2,28 +2,29 @@ package hardwaretests;
 
 import TI.BoeBot;
 import TI.Servo;
+import TI.Timer;
+import hardware.servos.Wheel;
+import interfacing.Drive;
 
 public class ServoWheelsTest {
-    Servo s1 = new Servo(12);
-    Servo s2 = new Servo(13);
+    private Drive drive;
     public static void main(String[] args) {
         new ServoWheelsTest();
     }
 
+
     private ServoWheelsTest() {
-        drive();
-        BoeBot.wait(1000);
-        stop();
-        BoeBot.wait(1000);
-    }
+        Timer t1 = new Timer(5000);
+        t1.mark();
 
-    private void drive() {
-        s1.update(2500);
-        s2.update(500);
-    }
-
-    private void stop() {
-        s1.update(1500);
-        s2.update(1500);
+        while(true) {
+            if(t1.timeout()) {
+                drive.setSpeedForward(500);
+                BoeBot.wait(5000);
+                t1.mark();
+            }
+            drive.setSpeedForward(1000);
+            BoeBot.wait(10);
+        }
     }
 }
