@@ -18,22 +18,20 @@ public class IR {
     }
 
     public int readIR() {
-        //returns value received by IR
-        int number = 0;
-        int pulselength = BoeBot.pulseIn(pin, false, 6000);
-//        System.out.println(pulselength);
-        if (pulselength < 2000){
-            System.out.println();
+        //IR ir = new IR(2);
+        int pulseLen = BoeBot.pulseIn(2, false, 6000);
+//        System.out.println(pulseLen);
+        if (pulseLen > 2000) {
             int lengths[] = new int[12];
             for (int i = 0; i < 12; i++) {
-                lengths[i] = BoeBot.pulseIn(pin, false, 20000);
+                lengths[i] = BoeBot.pulseIn(2, false, 20000);
             }
-//            number = translate(lengths);
-            System.out.println(lengths);
+
+            this.number = translate(lengths);
+            System.out.println(this.number);
             return number;
-        }else{
-            return 0;
-        }
+        } else {return 0;}
+
 
     }
 
@@ -42,6 +40,7 @@ public class IR {
         System.out.println("Listening....");
         while (true) {
             int pulseLen = BoeBot.pulseIn(2, false, 6000);
+            System.out.println(pulseLen);
             if (pulseLen > 2000) {
                 int lengths[] = new int[12];
                 for (int i = 0; i < 12; i++) {
@@ -50,35 +49,47 @@ public class IR {
 
                 number = ir.translate(lengths);
             }
+            BoeBot.wait(10);
         }
     }
 
-    private int translate (int values[]){
+//    private int translate (int values[]){
+//        int number = 0;
+//        int bitCounter = 1;
+//        ArrayList<Integer> names = new ArrayList<>();
+//        for (int value : values) {
+//            if (value > 1000){
+//                names.add(1);
+//            } else if (value < 1000 && value > 0){
+//                names.add(0);
+//            } else{
+//                names.add(-1);
+//            }
+//        }
+//
+//        for (Integer name : names) {
+//            number += name * bitCounter;
+//            bitCounter = bitCounter + 8;
+//        }
+//        if(number < 0) {
+//            return 0;
+//        }
+//
+//        return number;
+//    }
+
+    private int translate (int values[]) {
         int number = 0;
         int bitCounter = 1;
-        ArrayList<Integer> name = new ArrayList<>();
         for (int value : values) {
             if (value > 1000){
-                name.add(1);
-            } else if (value < 1000 && value > 0){
-                name.add(0);
-            } else{
-                name.add(-1);
+                number|=bitCounter;
             }
+            if (value < 0){
+                return 0;
+            }
+            bitCounter <<= 1;
         }
-        System.out.println(name);
-
-
-
-        for (Integer value : name) {
-            number += value * bitCounter;
-            bitCounter = bitCounter + 8;
-        }
-        if(number < 0) {
-            return 0;
-        }
-        System.out.println(number);
-
         return number;
     }
 }
