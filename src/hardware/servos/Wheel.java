@@ -2,7 +2,7 @@ package hardware.servos;
 
 import TI.*;
 
-public class Wheel {
+public class Wheel implements Updatelble{
     private final int pin;
     private final Servo servo;
     private int currentSpeed;
@@ -34,6 +34,7 @@ public class Wheel {
         update();
     }
 
+    @Override
     public void update() {
         if (!(targetSpeed == currentSpeed)) {
             if (targetSpeed > currentSpeed) {

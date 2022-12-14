@@ -23,8 +23,10 @@ public class Demo1 {
     }
 
     public Demo1() {
-        //put test code here
-        //lol
-        //yes
+        Drive drive = new Drive();
+
+        drive.left();
+        BoeBot.wait(5000);
+        drive.right();
     }
 }
