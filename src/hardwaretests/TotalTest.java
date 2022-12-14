@@ -5,6 +5,7 @@ import hardware.additional.Button;
 import hardware.sensors.Linesensor;
 import hardware.sensors.Ultrasone;
 import interfacing.Drive;
+import sun.management.snmp.jvmmib.JvmMemManagerEntryMeta;
 
 public class TotalTest {
     public static void main(String[] args) {
@@ -19,6 +20,7 @@ public class TotalTest {
         Timer linesensorcheck = new Timer(50);
         Timer remotecheck = new Timer(50);
         Button emergencyButton = new Button(0);
+        Button resetButton = new Button(1);
         Linesensor rightsensor = new Linesensor(0, "rechts");
         Linesensor leftsensor = new Linesensor(2, "links");
 
@@ -54,12 +56,16 @@ public class TotalTest {
                 remotecheck.mark();
             }
 
-            if(emergencyButton.check()) {
-                drive.emergencyBrake();
-                drive.open();
-            }
+            if (emergencyButton.check()) {
+                while (true) {
+                    drive.emergencyBrake();
+                    drive.open();
 
-            //ir pin 2,
+                    if (resetButton.check()) {
+                        break;
+                    }
+                }
+            }
         }
     }
 
