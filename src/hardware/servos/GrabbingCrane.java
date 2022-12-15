@@ -1,4 +1,5 @@
 package hardware.servos;
+
 import TI.BoeBot;
 import TI.PinMode;
 import TI.Servo;
@@ -18,17 +19,10 @@ public class GrabbingCrane {
     }
 
     public void update() {
-        if (targetAngle != currentAngle) {
-            while(currentAngle < targetAngle) {
-                currentAngle++;
-            }
-            while(currentAngle > targetAngle) {
-                currentAngle--;
-            }
-            servo.update(500 + currentAngle);
-            BoeBot.wait(1);
-        }
+        //Dit moet met een PWM gedaan worden, moet ik nog even naar kijken
+
     }
+
 
     public void setTargetAngle(int targetAngle) {
         if (targetAngle <= 0 || targetAngle > 2300) {

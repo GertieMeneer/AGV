@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class BluetoothPC {
     public static void main(String[] args) {
-        SerialPort serialPort = new SerialPort("COM8");
+        SerialPort serialPort = new SerialPort("COM5");
         try {
             serialPort.openPort();
             serialPort.setParams(SerialPort.BAUDRATE_115200,
@@ -35,7 +35,6 @@ public class BluetoothPC {
             public void actionPerformed(ActionEvent e) {
                 try {
                     serialPort.writeByte((byte) 100);
-                    System.out.println("button geklikt");
                 } catch (SerialPortException f) {
                     f.printStackTrace();
                 }
@@ -46,7 +45,6 @@ public class BluetoothPC {
             public void actionPerformed(ActionEvent e) {
                 try {
                     serialPort.writeByte((byte) 50);
-                    System.out.println("button geklikt");
 
                 } catch (SerialPortException g) {
                     g.printStackTrace();

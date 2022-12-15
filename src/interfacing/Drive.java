@@ -3,114 +3,57 @@ package interfacing;
 import TI.BoeBot;
 import TI.Servo;
 import hardware.servos.GrabbingCrane;
+import hardware.servos.Updatelble;
 import hardware.servos.Wheel;
 
-public class Drive {
+public class Drive implements Updatelble {
     private Wheel rightWheel;
     private Wheel leftWheel;
-    private GrabbingCrane crane;
-    private boolean isClosed = false;
+    private NotificationsController neopixels = new NotificationsController();
+    private Crane crane = new Crane(14);
 
     public Drive() {
         rightWheel = new Wheel(12);
         leftWheel = new Wheel(13);
-        crane = new GrabbingCrane(14);
-    }
-
-    public void driveForwardFullSpeed() {
-        rightWheel.setTargetSpeed(500);
-        leftWheel.setTargetSpeed(-500);
-        update();
-    }
-
-    public void driveForwardSlowSpeed() {
-        rightWheel.setTargetSpeed(20);
-        leftWheel.setTargetSpeed(-20);
-        update();
-    }
-
-    public void driveBackwardSlowSpeed() {
-        rightWheel.setTargetSpeed(-40);
-        leftWheel.setTargetSpeed(40);
-        update();
-    }
-
-    public void slowStop() {
-        rightWheel.setTargetSpeed(0);
-        leftWheel.setTargetSpeed(0);
-        update();
     }
 
 
-    public void emergencyBrake() {
-        rightWheel.emergencyBrake();
-        leftWheel.emergencyBrake();
+    public void setSpeedForward(int speed) {
+        rightWheel.setTargetSpeed(speed);
+        leftWheel.setTargetSpeed(-speed);
         update();
+    }
+
+    public void slowSpeedforward () {
+        rightWheel.setTargetSpeed(50);
+        leftWheel.setTargetSpeed(-50);
     }
 
     public void update() {
-        leftWheel.update();
         rightWheel.update();
-        crane.update();
+        leftWheel.update();
     }
 
-    public void close() {
-        crane.setTargetAngle(0);
-        if(crane.getCurrentAngle() == 0) {
-            isClosed = true;
-        }
-        crane.update();
+    public void emergencyBrake() {
+        rightWheel.setSpeed(0);
+        leftWheel.setSpeed(0);
+    }
+
+    public void right() {
+        rightWheel.setSpeed(50);
+        leftWheel.setSpeed(0);
+    }
+
+    public void left() {
+        rightWheel.setSpeed(0);
+        leftWheel.setSpeed(-50);
     }
 
     public void open() {
-        crane.setTargetAngle(1675);
-        if(crane.getCurrentAngle() == 1675) {
-            isClosed = false;
-        }
-        crane.update();
+        ;
     }
 
-    public void turnDegrees(int degree, int turnSpeed) {
+    public void close() {
 
-        if (turnSpeed < 0) {
-            leftWheel.setSpeed(turnSpeed);
-            rightWheel.setSpeed(turnSpeed);
-        } else {
-            rightWheel.setSpeed(turnSpeed);
-            leftWheel.setSpeed(turnSpeed);
-        }
-
-        if (degree == 90){
-            BoeBot.wait(2500);
-        }
-        if (degree == 180){
-            BoeBot.wait(5000);
-        }
-        emergencyBrake();
-    }
-
-    public boolean isClosed() {
-        return isClosed;
-    }
-
-    public void turnLeft() {
-        leftWheel.emergencyBrake();
-        rightWheel.slow();
-        update();
-//        BoeBot.wait(5);
-//        driveForwardSlowSpeed();
-    }
-
-    public void turnRight() {
-        rightWheel.emergencyBrake();
-        leftWheel.slow();
-        update();
-//        BoeBot.wait(5);
-//        driveForwardSlowSpeed();
-    }
-
-    public void setSpeedForward() {
-        rightWheel.setSpeed(1550);
-        leftWheel.setSpeed(1450);
     }
 }

@@ -9,6 +9,7 @@ public class Ultrasone {
 
     private int triggerPin;
     private int echoPin;
+    private int pulseTranslation;
 
     public Ultrasone(int triggerPin, int echoPin) {
 
@@ -18,7 +19,6 @@ public class Ultrasone {
         BoeBot.setMode(this.echoPin, Input);                        //setting pinmodes, doesnt work in constructor
         BoeBot.setMode(this.triggerPin, Output);
     }
-
 
     public int checkDistance() {
         BoeBot.digitalWrite(triggerPin, true);                  //generating pulse
@@ -30,11 +30,8 @@ public class Ultrasone {
         if (pulse < 30){
             pulse = 1501;
         }
-//        System.out.println(pulse);
+        System.out.println(pulse);
 
         return pulse;
     }
-
-
-
 }

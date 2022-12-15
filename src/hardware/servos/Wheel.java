@@ -2,7 +2,7 @@ package hardware.servos;
 
 import TI.*;
 
-public class Wheel {
+public class Wheel implements Updatelble{
     private final int pin;
     private final Servo servo;
     private int currentSpeed;
@@ -15,42 +15,39 @@ public class Wheel {
         this.targetSpeed = 0;
     }
 
-    public void update() {
-        if(targetSpeed != currentSpeed) {
-            if (currentSpeed < targetSpeed) {
-                currentSpeed++;
-            }
-
-            if (currentSpeed > targetSpeed) {
-                currentSpeed--;
-            }
-            servo.update(1500 + currentSpeed);
-        }
-
-    }
-
-    public void emergencyBrake(){
-        this.currentSpeed = 0;
+    public void driveforwardslowaccelerating() {
+        this.targetSpeed = 500;
         update();
     }
 
-    public void slow() {
-        if(this.pin == 12) {
-            this.currentSpeed = 25;
-        } else {
-            this.currentSpeed = -25;
-        }
-        update();
+    public void driveforwardfastaccelerting() {
+        this.targetSpeed = 1000;
     }
 
-
-    public void setSpeed(int speed) {
-        servo.update(speed);
-    }
 
     public void setTargetSpeed(int targetSpeed) {
         this.targetSpeed = targetSpeed;
     }
 
+    public void setSpeed(int speed) {
+        currentSpeed = speed;
+        update();
+    }
 
+    @Override
+    public void update() {
+        if (!(targetSpeed == currentSpeed)) {
+            if (targetSpeed > currentSpeed) {
+                currentSpeed++;
+            } else {
+                currentSpeed--;
+            }
+
+            if(currentSpeed < -1000 || currentSpeed > 1000) {
+                currentSpeed = 0;
+            }
+
+            servo.update(1500 + currentSpeed);
+        }
+    }
 }
