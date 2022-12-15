@@ -27,7 +27,7 @@ public class Ultrasone {
 
         int pulse = BoeBot.pulseIn(this.echoPin, true, 10000);//reading pulse, future update: calculating distance in cm
 
-        if (pulse < 30){
+        if (pulse == -2){
             pulse = 1501;
         }
         System.out.println(pulse);

@@ -1,11 +1,12 @@
 package hardwaretests;
 
+import TI.Servo;
 import TI.Timer;
 import hardware.additional.Button;
 import hardware.sensors.Linesensor;
 import hardware.sensors.Ultrasone;
+import hardware.servos.Wheel;
 import interfacing.Drive;
-import sun.management.snmp.jvmmib.JvmMemManagerEntryMeta;
 
 public class TotalTest {
     public static void main(String[] args) {
@@ -23,50 +24,59 @@ public class TotalTest {
         Button resetButton = new Button(1);
         Linesensor rightsensor = new Linesensor(0, "rechts");
         Linesensor leftsensor = new Linesensor(2, "links");
+        Servo s1 = new Servo(12);
+        Servo s2 = new Servo(13);
+        Wheel links = new Wheel(13);
+        Wheel rechts = new Wheel(12);
 
 
         while (true) {
             if (ultrasoneCheck.timeout()) {
-                if (ultrasone.checkDistance() < 500) {
+                int translate =  ultrasone.checkDistance();
+                if (translate < 500) {
                     drive.emergencyBrake();
-                } else if (ultrasone.checkDistance() < 1000) {
-                    drive.setSpeedForward(0);
+                } else if (translate < 1000) {
+                    drive.slowStop();
                 } else {
-                    drive.setSpeedForward(1000);
+                    drive.slowSpeedforward();
+//                    System.out.println("update");
                 }
                 ultrasoneCheck.mark();
             }
 
-            if (linesensorcheck.timeout()) {
-                if (leftsensor.checkLine() || rightsensor.checkLine()) {
-                    if (rightsensor.checkLine()) {
-                        drive.left();
-                    } else if (leftsensor.checkLine()) {
-                        drive.left();
-                    } else if (rightsensor.checkLine() && leftsensor.checkLine()) {
-                        //Dit betekent dat hij bij een kruispunt staat, hier is victor als het goed is mee bezig
-                    }
-                    drive.slowSpeedforward();
-                }
-                linesensorcheck.mark();
-            }
+//            if (linesensorcheck.timeout()) {
+//                if (leftsensor.checkLine() || rightsensor.checkLine()) {
+//                    if (rightsensor.checkLine()) {
+//                        drive.right();
+//                    } else if (leftsensor.checkLine()) {
+//                        drive.left();
+//                    } else if (rightsensor.checkLine() && leftsensor.checkLine()) {
+//                        //Dit betekent dat hij bij een kruispunt staat, hier is victor als het goed is mee bezig
+//                    }
+//                    drive.slowSpeedforward();
+//                    }
+//
+//                    drive.slowSpeedforward();
+//                    linesensorcheck.mark();
+//                }
+//            }
 
-            if (remotecheck.timeout()) {
-                //code met remote, ik weet niet precies hoe dat nu gaat
-                remotecheck.mark();
-            }
+//                if (remotecheck.timeout()) {
+//                    //code met remote, ik weet niet precies hoe dat nu gaat
+//                    remotecheck.mark();
+//                }
 
-            if (emergencyButton.check()) {
-                while (true) {
-                    drive.emergencyBrake();
-                    drive.open();
+                if (emergencyButton.check()) {
+                    while (true) {
+                        drive.emergencyBrake();
+                        drive.open();
 
-                    if (resetButton.check()) {
-                        break;
+                        if (resetButton.check()) {
+                            break;
+                        }
                     }
                 }
             }
         }
-    }
 
-}
+    }

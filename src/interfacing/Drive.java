@@ -17,6 +17,12 @@ public class Drive implements Updatelble {
         leftWheel = new Wheel(13);
     }
 
+    public void setSpeed(int speed) {
+        rightWheel.setSpeed(speed);
+        leftWheel.setSpeed(-speed);
+        update();
+    }
+
 
     public void setSpeedForward(int speed) {
         rightWheel.setTargetSpeed(speed);
@@ -27,6 +33,7 @@ public class Drive implements Updatelble {
     public void slowSpeedforward () {
         rightWheel.setTargetSpeed(50);
         leftWheel.setTargetSpeed(-50);
+        update();
     }
 
     public void update() {
@@ -37,20 +44,28 @@ public class Drive implements Updatelble {
     public void emergencyBrake() {
         rightWheel.setSpeed(0);
         leftWheel.setSpeed(0);
+        update();
     }
 
     public void right() {
-        rightWheel.setSpeed(50);
+        rightWheel.setSpeed(100);
         leftWheel.setSpeed(0);
+        update();
     }
 
     public void left() {
         rightWheel.setSpeed(0);
-        leftWheel.setSpeed(-50);
+        leftWheel.setSpeed(-1000);
+        update();
+    }
+
+    public void slowStop() {
+        rightWheel.setTargetSpeed(0);
+        leftWheel.setTargetSpeed(0);
     }
 
     public void open() {
-        ;
+
     }
 
     public void close() {

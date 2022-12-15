@@ -27,16 +27,16 @@ public class Wheel implements Updatelble{
 
     public void setTargetSpeed(int targetSpeed) {
         this.targetSpeed = targetSpeed;
+        update();
     }
 
     public void setSpeed(int speed) {
-        currentSpeed = speed;
-        update();
+        servo.update(1500 + speed);
     }
 
     @Override
     public void update() {
-        if (!(targetSpeed == currentSpeed)) {
+        if (targetSpeed != currentSpeed) {
             if (targetSpeed > currentSpeed) {
                 currentSpeed++;
             } else {
@@ -46,7 +46,6 @@ public class Wheel implements Updatelble{
             if(currentSpeed < -1000 || currentSpeed > 1000) {
                 currentSpeed = 0;
             }
-
             servo.update(1500 + currentSpeed);
         }
     }
