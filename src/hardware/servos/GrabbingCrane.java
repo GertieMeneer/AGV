@@ -19,7 +19,19 @@ public class GrabbingCrane {
     }
 
     public void update() {
-        //Dit moet met een PWM gedaan worden, moet ik nog even naar kijken
+        if (!(targetAngle == currentAngle)) {
+            if (targetAngle > currentAngle) {
+                currentAngle++;
+            } else {
+                currentAngle--;
+            }
+
+            if(currentAngle < -1000 || currentAngle > 1000) {
+                currentAngle = 0;
+            }
+
+            servo.update(1500 + currentAngle);
+        }
 
     }
 

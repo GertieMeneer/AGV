@@ -48,12 +48,4 @@ public class Drive implements Updatelble {
         rightWheel.setSpeed(0);
         leftWheel.setSpeed(-50);
     }
-
-    public void open() {
-        ;
-    }
-
-    public void close() {
-
-    }
 }
