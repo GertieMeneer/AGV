@@ -1,3 +1,5 @@
+package userinterface;
+
 import hardware.additional.Bluetooth;
 import jssc.SerialPort;
 import jssc.SerialPortException;
@@ -7,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class BluetoothPC {
+public class BluetoothPCTest {
     public static void main(String[] args) {
         SerialPort serialPort = new SerialPort("COM5");
         try {

@@ -23,10 +23,11 @@ public class Demo1 {
     }
 
     public Demo1() {
-        Drive drive = new Drive();
+        Bluetooth bluetooth = new Bluetooth();
 
-        drive.left();
-        BoeBot.wait(5000);
-        drive.right();
+        while(true) {
+            bluetooth.readBluetoothModule();
+            BoeBot.wait(10);
+        }
     }
 }

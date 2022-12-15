@@ -23,13 +23,13 @@ public class IR {
         int pulselength = BoeBot.pulseIn(pin, false, 6000);
 //        System.out.println(pulselength);
         if (pulselength < 2000){
-            System.out.println();
+//            System.out.println();
             int lengths[] = new int[12];
             for (int i = 0; i < 12; i++) {
                 lengths[i] = BoeBot.pulseIn(pin, false, 20000);
             }
-//            number = translate(lengths);
-            System.out.println(lengths);
+            number = translate(lengths);
+//            System.out.println(lengths);
             return number;
         }else{
             return 0;
