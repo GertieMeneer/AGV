@@ -59,7 +59,7 @@ public class TotalTest {
             if (emergencyButton.check()) {
                 while (true) {
                     drive.emergencyBrake();
-                    drive.open();
+//                    drive.open();
 
                     if (resetButton.check()) {
                         break;
