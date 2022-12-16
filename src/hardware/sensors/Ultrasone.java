@@ -25,17 +25,6 @@ public class Ultrasone implements Updatable {
         timer = new Timer(50);
     }
 
-    public int checkDistance() {
-
-//        if (pulse < 30){
-//            pulse = 1501;
-//        }
-//        System.out.println(pulse);
-//
-//        return pulse;
-        return 0;
-    }
-
     @Override
     public void update() {
 
