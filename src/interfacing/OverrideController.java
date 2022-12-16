@@ -15,14 +15,14 @@ public class OverrideController {
 
     public OverrideController(int brakePin, int irPin) {
         this.brakePin = brakePin;
-        this.button = new Button(this.brakePin);
+//        this.button = new Button(this.brakePin);
         this.irPin = irPin;
     }
 
     public void checkButton() {
-        if(button.check()) {
-            emergencyStop();
-        }
+//        if(button.check()) {
+//            emergencyStop();
+//        }
     }
 
     private void emergencyStop() {
