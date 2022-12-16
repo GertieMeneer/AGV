@@ -1,22 +1,46 @@
 package hardwaretests;
 
 import TI.BoeBot;
-import TI.PinMode;
+import hardware.CollisionCallback;
+import hardware.sensors.Ultrasone;
+import interfacing.CollisionController;
+import interfacing.NotificationsController;
 
-public class UltrasonicTest {
+public class UltrasonicTest implements CollisionCallback {
+    private Ultrasone ultrasone;
+    private NotificationsController nc;
+
     public static void main(String[] args) {
-        BoeBot.setMode(11, PinMode.Input);
-        BoeBot.setMode(10, PinMode.Output);
+        UltrasonicTest main = new UltrasonicTest();
+        main.run();
+    }
 
-        System.out.println("Starting...");
-        while(true) {
-            BoeBot.digitalWrite(10, true);
-            BoeBot.wait(10); //or uwait if it dont work
-            BoeBot.digitalWrite(10, false);
+    public UltrasonicTest() {
 
-            int pulse = BoeBot.pulseIn(11, true, 10000);
-            System.out.println("Pulse: " + pulse);
-            BoeBot.wait(50);
+        CollisionController collisionController = new CollisionController(this);
+        nc = new NotificationsController();
+        ultrasone = new Ultrasone(11,10, collisionController);
+    }
+
+    private void run(){
+        while(true){
+            ultrasone.update();  // there are going to be more devices in the application. So an ArrayList needs to be made then.
+            BoeBot.wait(1);
         }
+    }
+
+    @Override
+    public void onAlmostCollision() {
+        nc.allBlue();
+    }
+
+    @Override
+    public void onNearCollision() {
+        nc.allRed();
+    }
+
+    @Override
+    public void isSafe() {
+        nc.allOff();
     }
 }
