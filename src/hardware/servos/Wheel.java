@@ -1,8 +1,9 @@
 package hardware.servos;
 
 import TI.*;
+import hardware.Updatable;
 
-public class Wheel implements Updatelble{
+public class Wheel implements Updatable {
     private final int pin;
     private final Servo servo;
     private int currentSpeed;

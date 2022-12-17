@@ -1,43 +1,24 @@
 package interfacing;
 
-import TI.BoeBot;
-import application.Menu.MenuActions.DebugActions.Fixer;
-import application.Menu.MenuActions.DebugActions.UltraSoundDebug;
-import hardware.sensors.Ultrasone;
-import TI.*;
-import sun.security.util.Debug;
+import hardware.CollisionCallback;
+import hardware.UltrasonCallback;
 
-import static TI.PinMode.Input;
-import static TI.PinMode.Output;
+public class CollisionController implements UltrasonCallback {
 
-public class CollisionController {
-    private Ultrasone ultrasone;
-    private Drive drive = new Drive();
-    private int pulseTranslation;
-    private Fixer debug;
-    private UltraSoundDebug usd;
+    private CollisionCallback callback;
 
-    public CollisionController() {
-        this.ultrasone = new Ultrasone(11, 10);
-        debug = new Fixer();
-        usd = new UltraSoundDebug();
+    public CollisionController(CollisionCallback callback) {
+        this.callback = callback;
     }
 
-    public void checkDistance() {
-//        debug.turnOn();
-        if (debug.debugMode()) {
-            usd.debug();
+    @Override
+    public void onMeasure(int time) {
+        if ( time >= 500 && time < 1000){
+            callback.onAlmostCollision();
+        }else if (time >= 0 && time < 500){
+            callback.onNearCollision();
+        }else{
+            callback.isSafe();
         }
-
-        this.pulseTranslation = ultrasone.checkDistance();
-        if (pulseTranslation < 500) {
-            drive.emergencyBrake();
-        } else if (pulseTranslation < 1500) {
-//            drive.slowStop();
-        } else {
-//            drive.driveForwardSlowSpeed();
-        }
-
-
     }
 }

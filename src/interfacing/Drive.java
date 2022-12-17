@@ -1,12 +1,9 @@
 package interfacing;
 
-import TI.BoeBot;
-import TI.Servo;
-import hardware.servos.GrabbingCrane;
-import hardware.servos.Updatelble;
+import hardware.Updatable;
 import hardware.servos.Wheel;
 
-public class Drive implements Updatelble {
+public class Drive implements Updatable {
     private Wheel rightWheel;
     private Wheel leftWheel;
     private NotificationsController neopixels = new NotificationsController();
