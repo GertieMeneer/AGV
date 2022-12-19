@@ -3,48 +3,41 @@ package hardware.servos;
 import TI.BoeBot;
 import TI.PinMode;
 import TI.Servo;
+import hardware.GripperCallback;
+import hardware.Updatable;
 
-public class GrabbingCrane {
+public class GrabbingCrane implements Updatable {
     private final Servo servo;
     private int pin;
-    private int currentAngle;
-    private int targetAngle;
+    private int currentState;
+    private int targetState;
+    private GripperCallback callback;
 
-    public GrabbingCrane(int pin) {
+    public GrabbingCrane(int pin, GripperCallback callback) {
         this.pin = pin;
         this.servo = new Servo(pin);
-        this.currentAngle = 0;
-        this.targetAngle = 0;
+        this.currentState = 0;
+        this.targetState = 0;
         BoeBot.setMode(this.pin, PinMode.Output);
     }
 
     public void update() {
-        if (!(targetAngle == currentAngle)) {
-            if (targetAngle > currentAngle) {
-                currentAngle++;
-            } else {
-                currentAngle--;
-            }
-
-            if(currentAngle < -1000 || currentAngle > 1000) {
-                currentAngle = 0;
-            }
-
-            servo.update(1500 + currentAngle);
+        if(this.currentState != this.targetState) {
+            if (this.currentState < this.targetState)
+                this.currentState++;
+            if (this.currentState > this.targetState)
+                this.currentState--;
+            servo.update(currentState);
+            if(this.currentState == this.targetState)
+                callback.onTarget();
         }
-
     }
 
-
-    public void setTargetAngle(int targetAngle) {
-        if (targetAngle <= 0 || targetAngle > 2300) {
-            targetAngle = currentAngle;
-        }
-        this.targetAngle = targetAngle;
-        update();
+    public void open(){
+        targetState = 2300;
     }
 
-    public int getCurrentAngle() {
-        return currentAngle;
+    public void close(){
+        targetState = 1675;
     }
 }

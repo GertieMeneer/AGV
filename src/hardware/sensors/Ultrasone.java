@@ -34,7 +34,7 @@ public class Ultrasone implements Updatable {
             BoeBot.digitalWrite(triggerPin, false);
 
             int pulse = BoeBot.pulseIn(this.echoPin, true, 10000);//reading pulse, future update: calculating distance in cm
-            System.out.println(pulse);
+//            System.out.println(pulse);
             callback.onMeasure(pulse);
         }
     }
