@@ -35,6 +35,14 @@ public class Wheel implements Updatable {
         servo.update(1500 + speed);
     }
 
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public int getTargetSpeed() {
+        return targetSpeed;
+    }
+
     @Override
     public void update() {
         if (targetSpeed != currentSpeed) {

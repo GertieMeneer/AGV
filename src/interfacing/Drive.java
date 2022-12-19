@@ -17,20 +17,22 @@ public class Drive implements Updatable {
     public void setSpeed(int speed) {
         rightWheel.setSpeed(speed);
         leftWheel.setSpeed(-speed);
-        update();
+    }
+
+    public void setTargetSpeed(int speed) {
+        rightWheel.setTargetSpeed(speed);
+        leftWheel.setTargetSpeed(-speed);
     }
 
 
     public void setSpeedForward(int speed) {
         rightWheel.setTargetSpeed(speed);
         leftWheel.setTargetSpeed(-speed);
-        update();
     }
 
     public void slowSpeedforward () {
         rightWheel.setTargetSpeed(50);
         leftWheel.setTargetSpeed(-50);
-        update();
     }
 
     public void update() {
@@ -41,24 +43,25 @@ public class Drive implements Updatable {
     public void emergencyBrake() {
         rightWheel.setSpeed(0);
         leftWheel.setSpeed(0);
-        update();
     }
 
     public void right() {
         rightWheel.setSpeed(100);
         leftWheel.setSpeed(0);
-        update();
     }
 
     public void left() {
         rightWheel.setSpeed(0);
         leftWheel.setSpeed(-1000);
-        update();
     }
 
     public void slowStop() {
         rightWheel.setTargetSpeed(0);
         leftWheel.setTargetSpeed(0);
+    }
+
+    public boolean checkTargetSpeed() {
+        return rightWheel.getTargetSpeed() == rightWheel.getCurrentSpeed() && leftWheel.getCurrentSpeed() == leftWheel.getTargetSpeed();
     }
 
     public void open() {

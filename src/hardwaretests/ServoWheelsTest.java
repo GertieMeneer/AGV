@@ -4,6 +4,7 @@ import TI.BoeBot;
 import TI.Servo;
 import TI.Timer;
 import hardware.servos.Wheel;
+import interfacing.CollisionController;
 import interfacing.Drive;
 
 public class ServoWheelsTest {
@@ -16,22 +17,24 @@ public class ServoWheelsTest {
 
     private ServoWheelsTest() {
         Drive drive = new Drive();
-        Wheel leftWheel = new Wheel(12);
-        Timer t1 = new Timer(5000);
-        Servo servo = new Servo(12);
-        t1.mark();
+        boolean check = false;
+        Timer t1 = new Timer(3000);
+        Timer t2 = new Timer(3000);
+//        CollisionController collisionController = new CollisionController();
 
         while (true) {
-            drive.slowSpeedforward();
-
-            if (t1.timeout()){
-                drive.slowStop();
-            }
             BoeBot.wait(50);
+            if (drive.checkTargetSpeed() && check) {
+                drive.emergencyBrake();
+                check = false;
+                System.out.println("somehow works first try");
+                drive.setTargetSpeed(100);
+            } else {
+                drive.setTargetSpeed(100);
+                System.out.println("move");
+                check = true;
+            }
+            drive.update();
         }
-    }
-
-    public void update() {
-
     }
 }

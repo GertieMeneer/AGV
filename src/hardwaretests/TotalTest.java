@@ -1,72 +1,54 @@
 package hardwaretests;
 
+import TI.BoeBot;
 import TI.Timer;
 import hardware.additional.Button;
 import hardware.sensors.Linesensor;
 import hardware.sensors.Ultrasone;
+import interfacing.CollisionController;
 import interfacing.Drive;
-import sun.management.snmp.jvmmib.JvmMemManagerEntryMeta;
+import interfacing.NotificationsController;
 
-//public class TotalTest {
-//    public static void main(String[] args) {
-//        new TotalTest();
-//    }
-//
-//    Drive drive = new Drive();
-//    Ultrasone ultrasone = new Ultrasone(11, 10);
-//
-//    private TotalTest() {
-//        Timer ultrasoneCheck = new Timer(50);
-//        Timer linesensorcheck = new Timer(50);
-//        Timer remotecheck = new Timer(50);
-//        Button emergencyButton = new Button(0);
-//        Button resetButton = new Button(1);
-//        Linesensor rightsensor = new Linesensor(0, "rechts");
-//        Linesensor leftsensor = new Linesensor(2, "links");
-//
-//
-//        while (true) {
-//            if (ultrasoneCheck.timeout()) {
-//                if (ultrasone.checkDistance() < 500) {
+public class TotalTest {
+    public static void main(String[] args ) {
+        new TotalTest();
+
+    }
+
+
+    private TotalTest () {
+        Drive drive = new Drive();
+        NotificationsController nc = new NotificationsController();
+        Timer ultrasoneCheck = new Timer(50);
+        Timer linesensorcheck = new Timer(50);
+        Timer remotecheck = new Timer(50);
+        boolean redlighton = false;
+
+
+        while (true) {
+            if( ultrasoneCheck.timeout()) {
+                UltrasonicTest main = new UltrasonicTest();
+                main.run();
+//                if() {          //check voor de afstand ultrasone close
 //                    drive.emergencyBrake();
-//                } else if (ultrasone.checkDistance() < 1000) {
-//                    drive.setSpeedForward(0);
+//                    nc.allRed();
+//                    redlighton = true;
+//                } else if() {   //check voor afstand ultrasone sortofclose
+//                    drive.slowStop();
+//                    nc.allRed();
+//                    redlighton = true;
 //                } else {
-//                    drive.setSpeedForward(1000);
-//                }
-//                ultrasoneCheck.mark();
-//            }
-//
-//            if (linesensorcheck.timeout()) {
-//                if (leftsensor.checkLine() || rightsensor.checkLine()) {
-//                    if (rightsensor.checkLine()) {
-//                        drive.left();
-//                    } else if (leftsensor.checkLine()) {
-//                        drive.left();
-//                    } else if (rightsensor.checkLine() && leftsensor.checkLine()) {
-//                        //Dit betekent dat hij bij een kruispunt staat, hier is victor als het goed is mee bezig
-//                    }
-//                    drive.slowSpeedforward();
-//                }
-//                linesensorcheck.mark();
-//            }
-//
-//            if (remotecheck.timeout()) {
-//                //code met remote, ik weet niet precies hoe dat nu gaat
-//                remotecheck.mark();
-//            }
-//
-//            if (emergencyButton.check()) {
-//                while (true) {
-//                    drive.emergencyBrake();
-////                    drive.open();
-//
-//                    if (resetButton.check()) {
-//                        break;
+//                    if(redlighton) {
+//                        BoeBot.wait(1000);
+//                        nc.forwardWhite();
+//                        drive.slowSpeedforward();
+//                        redlighton = false;
 //                    }
 //                }
-//            }
-//        }
-//    }
-//
-//}
+            }
+
+            BoeBot.wait(1);
+        }
+    }
+
+}
