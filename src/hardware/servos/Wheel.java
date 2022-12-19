@@ -2,29 +2,22 @@ package hardware.servos;
 
 import TI.*;
 import hardware.Updatable;
+import hardware.WheelCallback;
 
 public class Wheel implements Updatable {
     private final int pin;
     private final Servo servo;
     private int currentSpeed;
     private int targetSpeed;
+    private WheelCallback callback;
 
-    public Wheel(int pin) {
+    public Wheel(int pin, WheelCallback callback) {
         this.pin = pin;
         this.servo = new Servo(pin);
-        this.currentSpeed = 0;
-        this.targetSpeed = 0;
+        this.currentSpeed = 1500;
+        this.targetSpeed = 1500;
+        this.callback = callback;
     }
-
-    public void driveforwardslowaccelerating() {
-        this.targetSpeed = 500;
-        update();
-    }
-
-    public void driveforwardfastaccelerting() {
-        this.targetSpeed = 1000;
-    }
-
 
     public void setTargetSpeed(int targetSpeed) {
         this.targetSpeed = targetSpeed;
@@ -51,11 +44,10 @@ public class Wheel implements Updatable {
             } else {
                 currentSpeed--;
             }
-
-            if(currentSpeed < -1000 || currentSpeed > 1000) {
-                currentSpeed = 0;
+            servo.update(currentSpeed);
+            if (currentSpeed == targetSpeed) {
+                callback.onTarget();
             }
-            servo.update(1500 + currentSpeed);
         }
     }
 }

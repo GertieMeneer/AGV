@@ -1,17 +1,19 @@
 package interfacing;
 
 import hardware.Updatable;
+import hardware.WheelCallback;
 import hardware.servos.Wheel;
 
-public class Drive implements Updatable {
+import java.util.Timer;
+
+public class Drive implements WheelCallback {
     private Wheel rightWheel;
     private Wheel leftWheel;
     private NotificationsController neopixels = new NotificationsController();
-    private Crane crane = new Crane(14);
 
     public Drive() {
-        rightWheel = new Wheel(12);
-        leftWheel = new Wheel(13);
+        rightWheel = new Wheel(12, this);
+        leftWheel = new Wheel(13, this);
     }
 
     public void setSpeed(int speed) {
@@ -64,11 +66,8 @@ public class Drive implements Updatable {
         return rightWheel.getTargetSpeed() == rightWheel.getCurrentSpeed() && leftWheel.getCurrentSpeed() == leftWheel.getTargetSpeed();
     }
 
-    public void open() {
-
-    }
-
-    public void close() {
-
+    @Override
+    public void onTarget() {
+        System.out.println("reached targerSpeed");
     }
 }

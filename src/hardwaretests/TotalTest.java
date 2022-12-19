@@ -2,10 +2,7 @@ package hardwaretests;
 
 import TI.BoeBot;
 import TI.Timer;
-import hardware.ButtonCallback;
-import hardware.CollisionCallback;
-import hardware.GripperCallback;
-import hardware.Updatable;
+import hardware.*;
 import hardware.additional.Button;
 import hardware.sensors.Linesensor;
 import hardware.sensors.Ultrasone;
@@ -18,7 +15,7 @@ import javax.crypto.spec.DESedeKeySpec;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class TotalTest implements CollisionCallback, ButtonCallback, GripperCallback {
+public class TotalTest implements CollisionCallback, ButtonCallback, GripperCallback, WheelCallback {
     private NotificationsController nc;
     private Ultrasone ultrasone;
     private ArrayList<Updatable> devices;
@@ -86,6 +83,11 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
     @Override
     public void onTarget() {
         System.out.println("reached targetState");
+    }
+
+    @Override
+    public void inResaurant() {
+        drive.slowSpeedforward();
     }
 }
 
