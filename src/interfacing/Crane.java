@@ -10,16 +10,16 @@ public class Crane {
 
     public Crane(int pin) {
         this.pin = pin;
-        this.crane = new GrabbingCrane(this.pin);
+//        this.crane = new GrabbingCrane(this.pin);
     }
 
     public void open() {
-        crane.setTargetAngle(1000);
+//        crane.setTargetAngle(1000);
         open = true;
     }
 
     public void close() {
-        crane.setTargetAngle(1);
+//        crane.setTargetAngle(1);
         open = false;
     }
 

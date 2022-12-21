@@ -28,7 +28,6 @@ public class Ultrasone implements Updatable {
     @Override
     public void update() {
         if (timer.timeout()){
-
             BoeBot.digitalWrite(triggerPin, true);                  //generating pulse
             BoeBot.uwait(1);
             BoeBot.digitalWrite(triggerPin, false);

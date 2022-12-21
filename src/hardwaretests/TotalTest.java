@@ -85,7 +85,7 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
         System.out.println("reached targetState");
     }
 
-    @Override
+//    @Override
     public void inResaurant() {
         drive.slowSpeedforward();
     }

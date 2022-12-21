@@ -22,7 +22,7 @@ public class UserInterface extends Application {
 
         //default view
         BorderPane borderPane = new BorderPane();
-        borderPane.setPrefSize(400, 300);
+        borderPane.setPrefSize(450, 450);
 
         VBox selectTableVBox = new VBox();
         selectTableVBox.setSpacing(15);
