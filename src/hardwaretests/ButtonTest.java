@@ -2,6 +2,7 @@ package hardwaretests;
 
 import TI.BoeBot;
 import hardware.ButtonCallback;
+import hardware.OverrideCallback;
 import hardware.Updatable;
 import hardware.additional.Button;
 import interfacing.NotificationsController;

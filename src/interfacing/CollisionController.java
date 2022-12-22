@@ -1,9 +1,9 @@
 package interfacing;
 
 import hardware.CollisionCallback;
-import hardware.UltrasonCallback;
+import hardware.SensorCallback;
 
-public class CollisionController implements UltrasonCallback {
+public class CollisionController implements SensorCallback {
 
     private CollisionCallback callback;
 
@@ -12,10 +12,10 @@ public class CollisionController implements UltrasonCallback {
     }
 
     @Override
-    public void onMeasure(int time) {
-        if ( time >= 500 && time < 1000){
+    public void onMeasure(int value) {
+        if ( value >= 500 && value < 1000){
             callback.onAlmostCollision();
-        }else if (time >= 0 && time < 500){
+        }else if (value >= 0 && value < 500){
             callback.onNearCollision();
         }else{
             callback.isSafe();

@@ -1,31 +1,15 @@
 package interfacing;
 
+import hardware.LineCallback;
+import hardware.PathTrackerCallback;
+import hardware.SensorCallback;
 import hardware.sensors.Linesensor;
 
 public class PathTracker {
-    private int pin;
-    private Linesensor linesensor;
-    private String position;
-    private Drive drive;
 
-    public PathTracker() {
+    private PathTrackerCallback callback;
 
-        drive = new Drive();
-    }
-
-    public void checkLine() {
-        Linesensor leftsensor = new Linesensor(2, "left");
-        Linesensor rightsensor = new Linesensor(0, "right");
-        if ((leftsensor.checkLine() || rightsensor.checkLine())) {
-            if (leftsensor.checkLine() && rightsensor.checkLine()) {
-//                drive.setSpeedForward();
-            } else if (rightsensor.checkLine()) {
-//                drive.turnRight();
-            } else if (leftsensor.checkLine()) {
-//                drive.turnLeft();
-            }
-        } else {
-//            drive.setSpeedForward();
-        }
+    public PathTracker(PathTrackerCallback callback) {
+        this.callback = callback;
     }
 }

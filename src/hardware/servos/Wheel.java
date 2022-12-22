@@ -10,8 +10,10 @@ public class Wheel implements Updatable {
     private int currentSpeed;
     private int targetSpeed;
     private WheelCallback callback;
+    private Timer timer;
 
     public Wheel(int pin, WheelCallback callback) {
+        this.timer = new Timer(20);
         this.pin = pin;
         this.servo = new Servo(pin);
         this.currentSpeed = 1500;
@@ -38,15 +40,18 @@ public class Wheel implements Updatable {
 
     @Override
     public void update() {
-        if (targetSpeed != currentSpeed) {
-            if (targetSpeed > currentSpeed) {
-                currentSpeed++;
-            } else {
-                currentSpeed--;
-            }
-            servo.update(currentSpeed);
-            if (currentSpeed == targetSpeed) {
-                callback.onTarget();
+
+        if (timer.timeout()) {
+            if (targetSpeed != currentSpeed) {
+                if (targetSpeed > currentSpeed) {
+                    currentSpeed++;
+                } else {
+                    currentSpeed--;
+                }
+                servo.update(currentSpeed);
+                if (currentSpeed == targetSpeed) {
+                    callback.onTarget();
+                }
             }
         }
     }

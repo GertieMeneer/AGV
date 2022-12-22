@@ -3,7 +3,7 @@ package hardware.sensors;
 import TI.BoeBot;
 import TI.PinMode;
 import TI.Timer;
-import hardware.UltrasonCallback;
+import hardware.SensorCallback;
 import hardware.Updatable;
 
 
@@ -12,9 +12,9 @@ public class Ultrasone implements Updatable {
     private int triggerPin;
     private int echoPin;
     private Timer timer;
-    private UltrasonCallback callback;
+    private SensorCallback callback;
 
-    public Ultrasone(int triggerPin, int echoPin, UltrasonCallback callback) {
+    public Ultrasone(int triggerPin, int echoPin, SensorCallback callback) {
 
         this.callback = callback;
         this.triggerPin = triggerPin;
