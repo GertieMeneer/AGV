@@ -20,11 +20,9 @@ public class Linesensor implements Updatable {
     public void update() {
 
         int sensorValue = BoeBot.analogRead(this.pin); //reads the sensor value from given pin
-
+        System.out.println(sensorValue);
         if (sensorValue > 900){ // if the value of the sensor is higher than 900, the sensor sees a line.
             seesLine = true;
-        }else{
-            seesLine = false;
         }
 
         if (seesLine) {

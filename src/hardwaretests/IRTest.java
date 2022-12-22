@@ -21,7 +21,7 @@ public class IRTest implements OverrideCallback {
     private IRTest() {
         nc = new NotificationsController();
         overrideController = new OverrideController(this);
-        ir = new IR(4, overrideController);
+        ir = new IR(2, overrideController);
     }
 
     private void run() {
@@ -54,6 +54,11 @@ public class IRTest implements OverrideCallback {
     @Override
     public void OverrideOff() {
         nc.allOff();
+    }
+
+    @Override
+    public void OverrideOn() {
+
     }
 
 }

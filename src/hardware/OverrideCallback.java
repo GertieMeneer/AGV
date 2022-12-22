@@ -6,5 +6,6 @@ public interface OverrideCallback {
     void turnLeft();
     void turnRight();
     void OverrideOff();
+    void OverrideOn();
 
 }

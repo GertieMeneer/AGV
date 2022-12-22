@@ -22,11 +22,11 @@ public class IR implements Updatable {
     @Override
     public void update() {
             if (timer.timeout()) {
-                int pulseIn = BoeBot.pulseIn(2, false, 6000);
+                int pulseIn = BoeBot.pulseIn(pin, false, 6000);
                 if (pulseIn > 2000) {
                     int lengths[] = new int[7];
                     for (int i = 0; i < 7; i++) {
-                        lengths[i] = BoeBot.pulseIn(2, false, 20000);
+                        lengths[i] = BoeBot.pulseIn(pin, false, 20000);
                     }
 
                     int number = 0;
@@ -42,7 +42,7 @@ public class IR implements Updatable {
                         }
                         bitCounter *= 2;
                     }
-//                    System.out.println(number);
+                    System.out.println(number);
                     this.callback.onMeasure(number); // this is what the Callback will use to measure the signal
                 }
             }

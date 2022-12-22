@@ -11,9 +11,8 @@ public class GrabbingCrane implements Updatable {
     private int pin;
     private int currentState;
     private int targetState;
-    private GripperCallback callback;
 
-    public GrabbingCrane(int pin, GripperCallback callback) {
+    public GrabbingCrane(int pin) {
         this.pin = pin;
         this.servo = new Servo(pin);
         this.currentState = 0;
@@ -22,22 +21,20 @@ public class GrabbingCrane implements Updatable {
     }
 
     public void update() {
-        if(this.currentState != this.targetState) {
+        if (this.currentState != this.targetState) {
             if (this.currentState < this.targetState)
                 this.currentState++;
             if (this.currentState > this.targetState)
                 this.currentState--;
             servo.update(currentState);
-            if(this.currentState == this.targetState)
-                callback.onTarget();
         }
     }
 
-    public void open(){
+    public void open() {
         targetState = 2300;
     }
 
-    public void close(){
+    public void close() {
         targetState = 1675;
     }
 }
