@@ -15,14 +15,14 @@ public class UltrasonicTest implements CollisionCallback {
         main.run();
     }
 
-    public UltrasonicTest() {
+    private UltrasonicTest() {
 
         CollisionController collisionController = new CollisionController(this);
         nc = new NotificationsController();
         ultrasone = new Ultrasone(11,10, collisionController);
     }
 
-    public void run(){
+    private void run(){
         while(true){
             ultrasone.update();  // there are going to be more devices in the application. So an ArrayList needs to be made then.
             BoeBot.wait(1);
