@@ -16,12 +16,12 @@ public class Drive implements WheelCallback {
         leftWheel = new Wheel(13, this);
     }
 
-    public void setSpeed(int speed) {
+    private void setSpeed(int speed) {
         rightWheel.setSpeed(speed);
         leftWheel.setSpeed(-speed);
     }
 
-    public void setTargetSpeed(int speed) {
+    private void setTargetSpeed(int speed) {
         rightWheel.setTargetSpeed(speed);
         leftWheel.setTargetSpeed(-speed);
     }
@@ -33,13 +33,20 @@ public class Drive implements WheelCallback {
     }
 
     public void slowSpeedforward () {
-        rightWheel.setTargetSpeed(50);
-        leftWheel.setTargetSpeed(-50);
+        rightWheel.setTargetSpeed(20);
+        leftWheel.setTargetSpeed(-20);
+    }
+
+    public void slowSpeedbackward () {
+        rightWheel.setTargetSpeed(-20);
+        leftWheel.setTargetSpeed(20);
     }
 
     public void update() {
         rightWheel.update();
+        System.out.println(rightWheel.getCurrentSpeed());
         leftWheel.update();
+        System.out.println(leftWheel.getCurrentSpeed());
     }
 
     public void emergencyBrake() {

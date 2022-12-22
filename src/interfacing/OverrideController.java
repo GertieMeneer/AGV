@@ -26,6 +26,9 @@ public class OverrideController implements SensorCallback {
             callback.turnRight();
         }
         if (value == 21){
+            callback.OverrideOn();
+        }
+        if (value == 73){
             callback.OverrideOff();
         }
     }

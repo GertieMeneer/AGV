@@ -11,7 +11,7 @@ public class Crane implements GripperCallback {
 
     public Crane(int pin) {
         this.pin = pin;
-        this.crane = new GrabbingCrane(14,this);
+        this.crane = new GrabbingCrane(14);
     }
 
     public void open() {
