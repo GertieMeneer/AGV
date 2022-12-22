@@ -28,10 +28,8 @@ public class IR implements Updatable {
                     for (int i = 0; i < 7; i++) {
                         lengths[i] = BoeBot.pulseIn(pin, false, 20000);
                     }
-
                     int number = 0;
                     int bitCounter = 1;
-
                     for (int length : lengths) {        //  this turns the binary number into a decimal number
                         if (length > 1000) {
                             length = bitCounter;

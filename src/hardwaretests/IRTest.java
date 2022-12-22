@@ -61,4 +61,19 @@ public class IRTest implements OverrideCallback {
 
     }
 
+    @Override
+    public void brake() {
+
+    }
+
+    @Override
+    public void gripperOpen() {
+
+    }
+
+    @Override
+    public void gripperClose() {
+
+    }
+
 }

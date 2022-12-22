@@ -15,8 +15,8 @@ public class GrabbingCrane implements Updatable {
     public GrabbingCrane(int pin) {
         this.pin = pin;
         this.servo = new Servo(pin);
-        this.currentState = 0;
-        this.targetState = 0;
+        this.currentState = 1495;
+        this.targetState = 1500;
         BoeBot.setMode(this.pin, PinMode.Output);
     }
 
@@ -31,10 +31,10 @@ public class GrabbingCrane implements Updatable {
     }
 
     public void open() {
-        targetState = 2300;
+        targetState = 2500;
     }
 
     public void close() {
-        targetState = 1675;
+        targetState = 1400;
     }
 }

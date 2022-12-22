@@ -41,6 +41,7 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
                 resumeButton.update();
             }
             drive.update();
+            grabbingCrane.update();
             BoeBot.wait(1);
         }
     }
@@ -84,12 +85,12 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
         if (stopButton == button) {
             drive.emergencyBrake();
             override = true;
-//            grabbingCrane.open();
+            grabbingCrane.open();
         }
         if (resumeButton == button) {
             drive.slowSpeedforward();
             override = false;
-//            grabbingCrane.close();
+            grabbingCrane.close();
         }
     }
 
@@ -125,6 +126,20 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
         drive.emergencyBrake();
     }
 
+    @Override
+    public void brake() {
+        drive.emergencyBrake();
+    }
+
+    @Override
+    public void gripperOpen() {
+        grabbingCrane.open();
+    }
+
+    @Override
+    public void gripperClose() {
+        grabbingCrane.close();
+    }
 
 
 //    @Override

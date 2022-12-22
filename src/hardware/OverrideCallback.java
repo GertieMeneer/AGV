@@ -7,5 +7,8 @@ public interface OverrideCallback {
     void turnRight();
     void OverrideOff();
     void OverrideOn();
+    void brake();
+    void gripperOpen();
+    void gripperClose();
 
 }

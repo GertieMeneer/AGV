@@ -4,7 +4,7 @@ import TI.Servo;
 import hardware.GripperCallback;
 import hardware.servos.GrabbingCrane;
 
-public class Crane implements GripperCallback {
+public class Crane{
     private GrabbingCrane crane;
     private int pin;
     private boolean open;
@@ -14,28 +14,7 @@ public class Crane implements GripperCallback {
         this.crane = new GrabbingCrane(14);
     }
 
-    public void open() {
-        crane.open();
-        open = true;
+    public void update(){
+        crane.update();
     }
-
-    public void close() {
-        crane.close();
-        open = false;
-    }
-
-    public boolean getStatus() {
-        return open;
-    }
-
-    @Override
-    public void onTarget() {
-
-    }
-
-//    public void setOpen() {
-//        Servo s1 = new Servo(14);
-//        s1.update(0);
-//
-//    }
 }
