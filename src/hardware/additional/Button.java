@@ -26,8 +26,4 @@ public class Button implements Updatable {
 
         isPressed = newIsPressed;
     }
-
-    public boolean isPressed(){
-        return this.isPressed;
-    }
 }

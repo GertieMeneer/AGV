@@ -17,7 +17,7 @@ import javax.crypto.spec.DESedeKeySpec;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class TotalTest implements CollisionCallback, ButtonCallback, GripperCallback, WheelCallback, OverrideCallback {
+public class TotalTest implements CollisionCallback, ButtonCallback, GripperCallback, WheelCallback, OverrideCallback, LineCallback {
     private NotificationsController nc;
     private Ultrasone ultrasone;
     private ArrayList<Updatable> devices;
@@ -26,6 +26,8 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
     private Drive drive;
     private GrabbingCrane grabbingCrane;
     private IR ir;
+    private Linesensor leftsensor;
+    private Linesensor rightsensor;
     private boolean override = false;
 
     public static void main(String[] args) {
@@ -35,11 +37,11 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
 
     private void run() {
         while (true) {
-            if (!override){
+            if (!override) {
                 for (Updatable devices : this.devices) {
                     devices.update();
                 }
-            }else{
+            } else {
                 ir.update();
                 resumeButton.update();
             }
@@ -55,9 +57,11 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
         drive = new Drive();
 
         ir = new IR(2, overrideController);
-        resumeButton = new Button(0, this)
-;
+        resumeButton = new Button(0, this);
+
         this.devices = new ArrayList<>();
+        this.devices.add(leftsensor = new Linesensor(2, this));
+        this.devices.add(rightsensor = new Linesensor(0, this));
         this.devices.add(grabbingCrane = new GrabbingCrane(14, this));
         this.devices.add(ultrasone = new Ultrasone(11, 10, collisionController));
         this.devices.add(stopButton = new Button(1, this));
@@ -65,7 +69,7 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
 
     @Override
     public void onAlmostCollision() {
-        BoeBot.rgbSet(4, Color.ORANGE);
+        BoeBot.rgbSet(4, Color.YELLOW);
         BoeBot.rgbShow();
     }
 
@@ -90,8 +94,7 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
 //            grabbingCrane.open();
         }
         if (resumeButton == button) {
-            BoeBot.rgbSet(1, Color.green);
-            BoeBot.rgbShow();
+            nc.allOff();
             override = false;
 //            grabbingCrane.close();
         }
@@ -130,6 +133,28 @@ public class TotalTest implements CollisionCallback, ButtonCallback, GripperCall
     public void OverrideOff() {
         nc.allOff();
         override = false;
+    }
+
+
+    @Override
+    public void onMeasure(Linesensor linesensor) {
+        if (leftsensor == linesensor){
+            BoeBot.rgbSet(3, Color.orange);
+            BoeBot.rgbShow();
+        }else{
+            BoeBot.rgbSet(3, Color.BLACK);
+            BoeBot.rgbSet(5, Color.BLACK);
+            BoeBot.rgbShow();
+        }
+
+        if (rightsensor == linesensor){
+            BoeBot.rgbSet(5, Color.orange);
+            BoeBot.rgbShow();
+        }else{
+            BoeBot.rgbSet(3, Color.BLACK);
+            BoeBot.rgbSet(5, Color.BLACK);
+            BoeBot.rgbShow();
+        }
     }
 }
 
