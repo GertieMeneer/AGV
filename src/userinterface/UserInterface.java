@@ -17,6 +17,10 @@ public class UserInterface extends Application {
     private ArrayList<CheckBox> allCheckBoxes = new ArrayList<>();
     private String selection;
 
+    public UserInterface() {
+
+    }
+
     public static void main(String[] args) {
         launch(UserInterface.class);
     }
@@ -214,8 +218,8 @@ public class UserInterface extends Application {
 
     }
 
-    public void getCoords() {
-        //get the boeobooboboboboboboboo  cords
+    public ArrayList getTableCoords() {
+        return this.tableCoords;
     }
 }
 
