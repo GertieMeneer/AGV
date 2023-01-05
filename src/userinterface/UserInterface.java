@@ -10,6 +10,12 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class UserInterface extends Application {
+    private ArrayList<String> tableCoords = new ArrayList<>();
+    private ArrayList<CheckBox> tableCheckbox = new ArrayList<>();
+    private ArrayList<String> kitchenCoords = new ArrayList<>();
+    private ArrayList<String> cartCoords = new ArrayList<>();
+    private ArrayList<CheckBox> allCheckBoxes = new ArrayList<>();
+    private String selection;
 
     public static void main(String[] args) {
         launch(UserInterface.class);
@@ -17,98 +23,105 @@ public class UserInterface extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ArrayList<String> tableCoordinates = new ArrayList<>();
-        ArrayList<String> cartCoordinates = new ArrayList<>();
-
         //default view
         BorderPane borderPane = new BorderPane();
-        borderPane.setPrefSize(450, 450);
+        borderPane.setPrefSize(550, 350);
 
         VBox selectTableVBox = new VBox();
         selectTableVBox.setSpacing(15);
 
-        GridPane tableGrid = new GridPane();
-        tableGrid.setHgap(10);
-        tableGrid.setVgap(10);
+        GridPane checkboxGrid = new GridPane();
+        GridPane buttonGrid = new GridPane();
+
+        checkboxGrid.setHgap(10);
+        checkboxGrid.setVgap(10);
+
+        buttonGrid.setHgap(10);
+        buttonGrid.setVgap(10);
 
         MenuBar menuBar = new MenuBar();
         Menu actionMenu = new Menu("Acties");
 
-        menuBar.getMenus().addAll(actionMenu);
+        menuBar.getMenus().add(actionMenu);
 
+        MenuItem mainMenu = new MenuItem("Hoofdmenu");
         MenuItem selectTable = new MenuItem("Tafel positie");
-        MenuItem selectRoute = new MenuItem("Selecteer route");
         MenuItem selectCart = new MenuItem("Kar positie");
         MenuItem selectKitchen = new MenuItem("Keuken positie");
 
-        actionMenu.getItems().addAll(selectTable, selectRoute, selectCart, selectKitchen);
+        actionMenu.getItems().addAll(mainMenu, selectTable, selectCart, selectKitchen);
 
-        selectTableVBox.getChildren().addAll(new Label("Tafel positie"));
-        selectTableVBox.getChildren().add(tableGrid);
+        selectTableVBox.getChildren().add(checkboxGrid);
 
-        tableCoordinates = makeCheckGridPane(tableGrid, 8,6);
+        makeCheckGridPane(checkboxGrid, 8,6);
+        makeGridPane(buttonGrid, 8, 6);
 
         Label welcome = new Label("Welkom!");
 
         borderPane.setTop(menuBar);
         borderPane.setCenter(welcome);
 
-        selectTable.setOnAction(e -> {
-            System.out.println("Selecteer tafel");
-
+        mainMenu.setOnAction(e -> {
+            mainMenu.setDisable(true);
             selectKitchen.setDisable(false);
             selectCart.setDisable(false);
-            selectRoute.setDisable(false);
-            selectTable.setDisable(true);
-
-            borderPane.setCenter(tableGrid);
+            selectTable.setDisable(false);
+            System.out.println("Hoofdmenu");
+            borderPane.setCenter(buttonGrid);
         });
 
-        selectRoute.setOnAction(e -> {
-            System.out.println("Selecteer route");
-
+        selectTable.setOnAction(e -> {
+            System.out.println("Selecteer tafel");
+            this.selection = "table";
+            clearCheckBoxes();
+//            for (CheckBox coords : this.tableCheckbox) {
+//                if(coords.isSelected()) {
+//
+//                }
+//            }
+            mainMenu.setDisable(false);
             selectKitchen.setDisable(false);
             selectCart.setDisable(false);
-            selectRoute.setDisable(true);
-            selectTable.setDisable(false);
+            selectTable.setDisable(true);
 
-//            borderPane.setCenter();
+            borderPane.setCenter(checkboxGrid);
         });
 
         selectCart.setOnAction(e -> {
             System.out.println("Selecteer kar");
-
+            this.selection = "cart";
+            clearCheckBoxes();
+            mainMenu.setDisable(false);
             selectKitchen.setDisable(false);
             selectCart.setDisable(true);
-            selectRoute.setDisable(false);
             selectTable.setDisable(false);
 
-//            borderPane.setCenter();
+            borderPane.setCenter(checkboxGrid);
         });
 
         selectKitchen.setOnAction(e -> {
             System.out.println("Selecteer keuken");
-
+            this.selection = "kitchen";
+            clearCheckBoxes();
+            mainMenu.setDisable(false);
             selectKitchen.setDisable(true);
             selectCart.setDisable(false);
-            selectRoute.setDisable(false);
             selectTable.setDisable(false);
 
-//            borderPane.setCenter();
+            borderPane.setCenter(checkboxGrid);
         });
 
         Scene Scene = new Scene(borderPane);
 
         primaryStage.setScene(Scene);
+        primaryStage.setTitle("BoeBot GUI :)");
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
 
 
     private ArrayList<String> makeCheckGridPane(GridPane gridPane, int x, int y){
-        ArrayList<CheckBox> allCheckBoxes = new ArrayList<>();
-        ArrayList<String> tableCoords = new ArrayList<>();
-
         for (int i = 0; i < y; i++)
         {
             for (int j = 0; j < x; j++)
@@ -123,19 +136,40 @@ public class UserInterface extends Application {
                 Button submit = new Button("Submit");
                 gridPane.add(submit, x-x, y+1);
                 submit.setOnAction(e -> {
-                    tableCoords.clear();
-                    for(CheckBox checkBox1 : allCheckBoxes) {
-                        if(checkBox1.isSelected()) {
-                            int xCoord = (int)checkBox1.getProperties().get('x');
-                            int yCoord = (int)checkBox1.getProperties().get('y');
-                            tableCoords.add(xCoord + "" + yCoord);
+                    if(this.selection.equals("table")) {
+                        this.tableCoords.clear();
+                        for(CheckBox checkBox1 : allCheckBoxes) {
+                            if(checkBox1.isSelected()) {
+                                int xCoord = (int)checkBox1.getProperties().get('x');
+                                int yCoord = (int)checkBox1.getProperties().get('y');
+                                this.tableCoords.add(xCoord + "" + yCoord);
+                                this.tableCheckbox.add(checkBox1);
+                            }
                         }
                     }
-                    System.out.println(tableCoords);
-//                    CheckBox c = (CheckBox) e.getSource();
-//                    int xb = (int) c.getProperties().get('x');
-//                    int yb = (int) c.getProperties().get('y');
-//                    System.out.printf("%d, %d\n", xb, yb);
+                    if(this.selection.equals("cart")) {
+                        this.cartCoords.clear();
+                        for(CheckBox checkBox1 : allCheckBoxes) {
+                            if(checkBox1.isSelected()) {
+                                int xCoord = (int)checkBox1.getProperties().get('x');
+                                int yCoord = (int)checkBox1.getProperties().get('y');
+                                this.cartCoords.add(xCoord + "" + yCoord);
+                            }
+                        }
+                    }
+                    if(this.selection.equals("kitchen")) {
+                        this.kitchenCoords.clear();
+                        for(CheckBox checkBox1 : allCheckBoxes) {
+                            if(checkBox1.isSelected()) {
+                                int xCoord = (int)checkBox1.getProperties().get('x');
+                                int yCoord = (int)checkBox1.getProperties().get('y');
+                                this.kitchenCoords.add(xCoord + "" + yCoord);
+                            }
+                        }
+                    }
+                    System.out.println(this.tableCoords);
+                    System.out.println(this.cartCoords);
+                    System.out.println(this.kitchenCoords);
                 });
                 gridPane.add(checkBox, j, i);
                 allCheckBoxes.add(checkBox);
@@ -144,33 +178,44 @@ public class UserInterface extends Application {
         return tableCoords;
     }
 
-    //    private ArrayList<Button> makeGridPane(GridPane gridPane, int x, int y){
-//        ArrayList<Button> btnList = new ArrayList<>();
-//
-//        for (int i = 0; i < y; i++)
-//        {
-//            for (int j = 0; j < x; j++)
-//            {
-//                Button button = new Button(j + ", " + i );
-//                button.setMaxSize(50, 50);
-//
-//                button.getProperties().put('x', j);
-//                button.getProperties().put('y', i);
-//                button.setOnAction(e -> {
-//                    Button b = (Button) e.getSource();
-//                    int xb = (int) b.getProperties().get('x');
-//                    int yb = (int) b.getProperties().get('y');
-//                    System.out.printf("%d, %d\n", xb, yb);
-//
-//                });
-//                gridPane.add(button, j, i);
-//                btnList.add(button);
-//            }
-//        }
-//        return btnList;
-//    }
+        private ArrayList<Button> makeGridPane(GridPane gridPane, int x, int y){
+        ArrayList<Button> btnList = new ArrayList<>();
 
-    public void printCoords(ArrayList<String> coords) {
-        System.out.println(coords);
+        for (int i = 0; i < y; i++)
+        {
+            for (int j = 0; j < x; j++)
+            {
+                Button button = new Button(j + ", " + i );
+                button.setMaxSize(50, 50);
+
+                button.getProperties().put('x', j);
+                button.getProperties().put('y', i);
+                button.setOnAction(e -> {
+                    Button b = (Button) e.getSource();
+                    int xb = (int) b.getProperties().get('x');
+                    int yb = (int) b.getProperties().get('y');
+                    System.out.printf("%d, %d\n", xb, yb);
+
+                });
+                gridPane.add(button, j, i);
+                btnList.add(button);
+            }
+        }
+        return btnList;
+    }
+
+    public void clearCheckBoxes() {
+        for(CheckBox checkBox : this.allCheckBoxes) {
+            checkBox.setSelected(false);
+        }
+    }
+
+    public void selectTable() {
+
+    }
+
+    public void getCoords() {
+        //get the boeobooboboboboboboboo  cords
     }
 }
+

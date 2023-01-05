@@ -2,89 +2,47 @@ package hardware.sensors;
 
 import TI.BoeBot;
 import TI.PinMode;
+import TI.Timer;
+import hardware.SensorCallback;
+import hardware.Updatable;
 
-import java.util.ArrayList;
-
-public class IR {
-    private int number;
-
+public class IR implements Updatable {
     private int pin;
+    private SensorCallback callback;
+    private Timer timer;
 
-    public IR(int pin1) {
+    public IR(int pin1, SensorCallback callback) {
         this.pin = pin1;
         BoeBot.setMode(pin1, PinMode.Input);
         BoeBot.setMode(6, PinMode.Output);
-
+        this.callback = callback;
+        this.timer = new Timer(10);
     }
 
-    public int readIR() {
-        //returns value received by IR
-        int number = 0;
-        int pulselength = BoeBot.pulseIn(pin, false, 6000);
-//        System.out.println(pulselength);
-        if (pulselength < 2000){
-//            System.out.println();
-            int lengths[] = new int[12];
-            for (int i = 0; i < 12; i++) {
-                lengths[i] = BoeBot.pulseIn(pin, false, 20000);
-            }
-            number = translate(lengths);
-//            System.out.println(lengths);
-            return number;
-        }else{
-            return 0;
-        }
-
-    }
-
-    public int readIRLes() {
-        IR ir = new IR(2);
-        while (true) {
-            int pulseLen = BoeBot.pulseIn(2, false, 6000);
-            if (pulseLen > 2000) {
-                int lengths[] = new int[12];
-                for (int i = 0; i < 12; i++) {
-                    lengths[i] = BoeBot.pulseIn(2, false, 20000);
+    @Override
+    public void update() {
+            if (timer.timeout()) {
+                int pulseIn = BoeBot.pulseIn(pin, false, 6000);
+                if (pulseIn > 2000) {
+                    int lengths[] = new int[7];
+                    for (int i = 0; i < 7; i++) {
+                        lengths[i] = BoeBot.pulseIn(pin, false, 20000);
+                    }
+                    int number = 0;
+                    int bitCounter = 1;
+                    for (int length : lengths) {        //  this turns the binary number into a decimal number
+                        if (length > 1000) {
+                            length = bitCounter;
+                            number = number + length;
+                        }
+                        if (length < 0) {
+                            number = -1;
+                        }
+                        bitCounter *= 2;
+                    }
+                    System.out.println(number);
+                    this.callback.onMeasure(number); // this is what the Callback will use to measure the signal
                 }
-
-                number = ir.translate(lengths);
             }
         }
     }
-
-    private int translate (int values[]){
-        int number = 0;
-        int bitCounter = 1;
-        for (int value : values) {
-            if(value > 1000) {
-                number|=bitCounter;
-            }
-            if(value < 0) {
-                return 0;
-            }
-            bitCounter <<= 1;
-        }
-        return number;
-//        ArrayList<Integer> name = new ArrayList<>();
-//        for (int value : values) {
-//            if (value > 1000){
-//                name.add(1);
-//            } else if (value < 1000 && value > 0){
-//                name.add(0);
-//            } else{
-//                name.add(-1);
-//            }
-//        }
-//
-//        for (Integer value : name) {
-//            number += value * bitCounter;
-//            bitCounter = bitCounter + 8;
-//        }
-//        if(number < 0) {
-//            return 0;
-//        }
-//        System.out.println(number);
-//
-//        return number;
-    }
-}

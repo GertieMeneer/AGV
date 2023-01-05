@@ -11,33 +11,30 @@ public class GrabbingCrane implements Updatable {
     private int pin;
     private int currentState;
     private int targetState;
-    private GripperCallback callback;
 
-    public GrabbingCrane(int pin, GripperCallback callback) {
+    public GrabbingCrane(int pin) {
         this.pin = pin;
         this.servo = new Servo(pin);
-        this.currentState = 0;
-        this.targetState = 0;
+        this.currentState = 1495;
+        this.targetState = 1500;
         BoeBot.setMode(this.pin, PinMode.Output);
     }
 
     public void update() {
-        if(this.currentState != this.targetState) {
+        if (this.currentState != this.targetState) {
             if (this.currentState < this.targetState)
                 this.currentState++;
             if (this.currentState > this.targetState)
                 this.currentState--;
             servo.update(currentState);
-            if(this.currentState == this.targetState)
-                callback.onTarget();
         }
     }
 
-    public void open(){
-        targetState = 2300;
+    public void open() {
+        targetState = 2500;
     }
 
-    public void close(){
-        targetState = 1675;
+    public void close() {
+        targetState = 1400;
     }
 }

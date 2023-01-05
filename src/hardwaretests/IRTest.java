@@ -2,27 +2,78 @@ package hardwaretests;
 
 import TI.BoeBot;
 import TI.PinMode;
+import TI.Timer;
+import hardware.OverrideCallback;
+import hardware.sensors.IR;
+import interfacing.NotificationsController;
+import interfacing.OverrideController;
 
-public class IRTest {
+public class IRTest implements OverrideCallback {
+    private IR ir;
+    private NotificationsController nc;
+    private OverrideController overrideController;
+
     public static void main(String[] args) {
-        BoeBot.setMode(0, PinMode.Input);
-        BoeBot.setMode(6, PinMode.Output);
+        IRTest ir = new IRTest();
+        ir.run();
+    }
 
-        System.out.println("Listening...");
-        while(true) {
-            int pulseIn = BoeBot.pulseIn(0, false, 6000);
-            if (pulseIn > 2000) {
-                int lengths[] = new int[12];
-                for (int i = 0; i < 12; i++) {
-                    lengths[i] = BoeBot.pulseIn(0, false, 20000);
-                }
+    private IRTest() {
+        nc = new NotificationsController();
+        overrideController = new OverrideController(this);
+        ir = new IR(2, overrideController);
+    }
 
-                for (int length: lengths) {
-                    System.out.println(length + ", ");
-                }
-                System.out.println("");
-            }
-            BoeBot.wait(10);
+    private void run() {
+        while(true){
+            ir.update();
+            BoeBot.wait(1);
         }
     }
+
+    @Override
+    public void driveForward() {
+        nc.forwardWhite();
+    }
+
+    @Override
+    public void driveBackward() {
+        nc.backwardsWhite();
+    }
+
+    @Override
+    public void turnLeft() {
+        nc.leftWhite();
+    }
+
+    @Override
+    public void turnRight() {
+        nc.rightWhite();
+    }
+
+    @Override
+    public void OverrideOff() {
+        nc.allOff();
+    }
+
+    @Override
+    public void OverrideOn() {
+
+    }
+
+    @Override
+    public void brake() {
+
+    }
+
+    @Override
+    public void gripperOpen() {
+
+    }
+
+    @Override
+    public void gripperClose() {
+
+    }
+
 }

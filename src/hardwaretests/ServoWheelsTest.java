@@ -28,9 +28,9 @@ public class ServoWheelsTest {
                 drive.emergencyBrake();
                 check = false;
                 System.out.println("somehow works first try");
-                drive.setTargetSpeed(100);
+                drive.slowSpeedforward();
             } else {
-                drive.setTargetSpeed(100);
+                drive.slowSpeedforward();
                 System.out.println("move");
                 check = true;
             }
