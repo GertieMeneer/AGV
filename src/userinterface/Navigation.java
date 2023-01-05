@@ -146,6 +146,8 @@ public class Navigation {
 
         }
         System.out.println(route);
+        boebotX = currentX;
+        boebotY = currentY;
         return route;
     }
 
