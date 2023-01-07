@@ -15,14 +15,12 @@ public class NotificationsController {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.red);
         }
-        BoeBot.rgbShow();
     }
 
     public void allOff() {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.black);
         }
-        BoeBot.rgbShow();
     }
 
     public void forwardWhite() {
@@ -30,7 +28,6 @@ public class NotificationsController {
         for (int i = 3; i < 6; i++) {
             BoeBot.rgbSet(i, Color.white);
         }
-        BoeBot.rgbShow();
     }
 
     public void backwardsWhite() {
@@ -38,21 +35,18 @@ public class NotificationsController {
         BoeBot.rgbSet(0, Color.white);
         BoeBot.rgbSet(1, Color.white);
         BoeBot.rgbSet(2, Color.white);
-        BoeBot.rgbShow();
     }
 
     public void leftWhite() {
         allOff();
         BoeBot.rgbSet(3, Color.white);
         BoeBot.rgbSet(2, Color.white);
-        BoeBot.rgbShow();
     }
 
     public void rightWhite() {
         allOff();
         BoeBot.rgbSet(5, Color.white);
         BoeBot.rgbSet(0, Color.white);
-        BoeBot.rgbShow();
     }
 
     public void allBlue() {
@@ -60,7 +54,6 @@ public class NotificationsController {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.blue);
         }
-        BoeBot.rgbShow();
     }
 
     public void allWhite() {
@@ -68,7 +61,6 @@ public class NotificationsController {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.white);
         }
-        BoeBot.rgbShow();
     }
 
     public void allGreen(){
@@ -76,7 +68,6 @@ public class NotificationsController {
         for (int i = 0; i < 6; i++) {
             BoeBot.rgbSet(i, Color.GREEN);
         }
-        BoeBot.rgbShow();
     }
 
 }

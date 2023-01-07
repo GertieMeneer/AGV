@@ -12,7 +12,7 @@ import interfacing.OverrideController;
 
 import java.util.ArrayList;
 
-public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCallback {
+public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCallback, LineCallback {
     private NotificationsController nc;
     private Ultrasone ultrasone;
     private ArrayList<Updatable> devices;
@@ -40,6 +40,7 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
                 ir.update();
                 resumeButton.update();
             }
+            BoeBot.rgbShow();
             drive.update();
             grabbingCrane.update();
             BoeBot.wait(1);
@@ -57,8 +58,8 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
         resumeButton = new Button(0, this);
 
         this.devices = new ArrayList<>();
-//        this.devices.add(leftsensor = new Linesensor(2, this));
-//        this.devices.add(rightsensor = new Linesensor(0, this));
+        this.devices.add(leftsensor = new Linesensor(2, this));
+        this.devices.add(rightsensor = new Linesensor(0, this));
         this.devices.add(ir = new IR(2, overrideController));
         this.devices.add(grabbingCrane = new GrabbingCrane(14));
         this.devices.add(ultrasone = new Ultrasone(11, 10, collisionController));
@@ -96,21 +97,25 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
 
     @Override
     public void driveForward() {
+        nc.forwardWhite();
         drive.slowSpeedforward();
     }
 
     @Override
     public void driveBackward() {
+        nc.backwardsWhite();
         drive.slowSpeedbackward();
     }
 
     @Override
     public void turnLeft() {
+        nc.leftWhite();
         drive.left();
     }
 
     @Override
     public void turnRight() {
+        nc.rightWhite();
         drive.right();
     }
 
@@ -128,6 +133,7 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
 
     @Override
     public void brake() {
+        nc.allRed();
         drive.emergencyBrake();
     }
 
@@ -142,13 +148,24 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
     }
 
 
-//    @Override
-//    public void onMeasure(Linesensor linesensor) {
-//        if (leftsensor == linesensor){ drive.left();}
-//        else{drive.slowSpeedforward();}
-//
-//        if (rightsensor == linesensor){drive.right();}
-//        else{drive.slowSpeedforward();}
-//    }
+    @Override
+    public void onMeasure(Linesensor linesensor) {
+        if (leftsensor == linesensor) {
+            nc.leftWhite();
+            drive.left();
+        } else {
+            nc.forwardWhite();
+            drive.slowSpeedforward();
+        }
+
+        if (rightsensor == linesensor) {
+            nc.rightWhite();
+            drive.right();
+        } else {
+            nc.forwardWhite();
+            drive.slowSpeedforward();
+        }
+    }
+
 }
 

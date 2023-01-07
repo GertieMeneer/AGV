@@ -25,6 +25,7 @@ public class UltrasonicTest implements CollisionCallback {
     private void run(){
         while(true){
             ultrasone.update();  // there are going to be more devices in the application. So an ArrayList needs to be made then.
+            BoeBot.rgbShow();
             BoeBot.wait(1);
         }
     }

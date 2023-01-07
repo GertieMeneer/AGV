@@ -4,16 +4,18 @@ import hardware.Updatable;
 import hardware.WheelCallback;
 import hardware.servos.Wheel;
 
+import java.text.Normalizer;
 import java.util.Timer;
 
 public class Drive implements WheelCallback {
     private Wheel rightWheel;
     private Wheel leftWheel;
-    private NotificationsController neopixels = new NotificationsController();
+    private NotificationsController neopixels;
 
     public Drive() {
         rightWheel = new Wheel(12, this);
         leftWheel = new Wheel(13, this);
+        neopixels = new NotificationsController();
     }
 
     private void setSpeed(int speed) {
@@ -22,22 +24,25 @@ public class Drive implements WheelCallback {
     }
 
     private void setTargetSpeed(int speed) {
-        rightWheel.setTargetSpeed(speed);
-        leftWheel.setTargetSpeed(-speed);
-    }
-
-
-    public void setSpeedForward(int speed) {
+        if(speed < 0) {
+            neopixels.backwardsWhite();
+        } else if(speed > 0) {
+            neopixels.forwardWhite();
+        } else {
+            neopixels.allRed();
+        }
         rightWheel.setTargetSpeed(speed);
         leftWheel.setTargetSpeed(-speed);
     }
 
     public void slowSpeedforward () {
+        neopixels.forwardWhite();
         rightWheel.setTargetSpeed(20);
         leftWheel.setTargetSpeed(-20);
     }
 
     public void slowSpeedbackward () {
+        neopixels.backwardsWhite();
         rightWheel.setTargetSpeed(-20);
         leftWheel.setTargetSpeed(20);
     }
@@ -50,21 +55,25 @@ public class Drive implements WheelCallback {
     }
 
     public void emergencyBrake() {
+        neopixels.allRed();
         rightWheel.setSpeed(0);
         leftWheel.setSpeed(0);
     }
 
     public void right() {
+        neopixels.rightWhite();
         rightWheel.setSpeed(100);
         leftWheel.setSpeed(0);
     }
 
     public void left() {
+        neopixels.leftWhite();
         rightWheel.setSpeed(0);
-        leftWheel.setSpeed(-1000);
+        leftWheel.setSpeed(-100);
     }
 
     public void slowStop() {
+        neopixels.allRed();
         rightWheel.setTargetSpeed(0);
         leftWheel.setTargetSpeed(0);
     }

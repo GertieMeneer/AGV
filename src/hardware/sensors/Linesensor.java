@@ -13,7 +13,7 @@ public class Linesensor implements Updatable {
     public Linesensor(int pin, LineCallback callback) {
         this.pin = pin;
         this.callback = callback;
-    } //linkerlijnvolger ADC 2 , middelste ADC 1 , rechter ADC 0.
+    } //linkerlijnvolger ADC 2, rechter ADC 0.
 
 
     @Override
