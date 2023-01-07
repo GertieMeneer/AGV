@@ -1,5 +1,6 @@
 package userinterface;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Navigation {
@@ -9,7 +10,7 @@ public class Navigation {
     private int destinationRotation = 0;
     private int boebotRotation = 0;
 
-    UserInterface ui = new UserInterface();
+
     private ArrayList<String> blockades;
 
     private int navigationX;
@@ -22,9 +23,11 @@ public class Navigation {
 
 
     public Navigation() {
+
     }
 
     public String calculate(int destinationX, int destinationY, boolean useRotation) {
+        UserInterface ui = new UserInterface();
         boolean navigating = true;
         route = "";
         this.blockades = ui.getTableCoords();
@@ -142,7 +145,9 @@ public class Navigation {
             }
 
         }
-
+        System.out.println(route);
+        boebotX = currentX;
+        boebotY = currentY;
         return route;
     }
 

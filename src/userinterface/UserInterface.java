@@ -16,6 +16,7 @@ public class UserInterface extends Application {
     private ArrayList<String> cartCoords = new ArrayList<>();
     private ArrayList<CheckBox> allCheckBoxes = new ArrayList<>();
     private String selection;
+    private Navigation bob = new Navigation();
 
     public UserInterface() {
 
@@ -146,7 +147,7 @@ public class UserInterface extends Application {
                             if(checkBox1.isSelected()) {
                                 int xCoord = (int)checkBox1.getProperties().get('x');
                                 int yCoord = (int)checkBox1.getProperties().get('y');
-                                this.tableCoords.add(xCoord + "" + yCoord);
+                                this.tableCoords.add(xCoord + "," + yCoord);
                                 this.tableCheckbox.add(checkBox1);
                             }
                         }
@@ -198,6 +199,7 @@ public class UserInterface extends Application {
                     Button b = (Button) e.getSource();
                     int xb = (int) b.getProperties().get('x');
                     int yb = (int) b.getProperties().get('y');
+                    bob.calculate(xb, yb, false);
                     System.out.printf("%d, %d\n", xb, yb);
 
                 });
