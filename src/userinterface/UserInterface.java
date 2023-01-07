@@ -10,12 +10,13 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class UserInterface extends Application {
-    private ArrayList<String> tableCoords = new ArrayList<>();
+    private ArrayList<String> tableCoords = new ArrayList<String>();
     private ArrayList<CheckBox> tableCheckbox = new ArrayList<>();
     private ArrayList<String> kitchenCoords = new ArrayList<>();
     private ArrayList<String> cartCoords = new ArrayList<>();
     private ArrayList<CheckBox> allCheckBoxes = new ArrayList<>();
     private String selection;
+//    private UserInterface userInterface = new UserInterface();
     private Navigation bob = new Navigation();
 
     public UserInterface() {
@@ -28,7 +29,6 @@ public class UserInterface extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //default view
         BorderPane borderPane = new BorderPane();
         borderPane.setPrefSize(550, 350);
 
@@ -180,10 +180,11 @@ public class UserInterface extends Application {
                 allCheckBoxes.add(checkBox);
             }
         }
+        bob.copyTableCoords(this.tableCoords);
         return tableCoords;
     }
 
-        private ArrayList<Button> makeGridPane(GridPane gridPane, int x, int y){
+        private void makeGridPane(GridPane gridPane, int x, int y){
         ArrayList<Button> btnList = new ArrayList<>();
 
         for (int i = 0; i < y; i++)
@@ -207,7 +208,6 @@ public class UserInterface extends Application {
                 btnList.add(button);
             }
         }
-        return btnList;
     }
 
     public void clearCheckBoxes() {
@@ -216,12 +216,8 @@ public class UserInterface extends Application {
         }
     }
 
-    public void selectTable() {
-
-    }
-
-    public ArrayList getTableCoords() {
-        return this.tableCoords;
+    public ArrayList<String> getTableCoords() {
+        return tableCoords;
     }
 }
 
