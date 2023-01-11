@@ -59,13 +59,19 @@ public class Navigation {
                         i--;
                     }
                     if (test == 'o') {
-                        test = driveRight();
+                        test = driveLeft();
+                        while (test == 'o'){
+                            test = driveUp();
+                            route += test;
+                            test = driveLeft();
+                        }
                         route += test;
                         if (test != 'W') {
-                            test = driveRight();
+                            test = driveLeft();
                             route += test;
+                            navigationX--;
                         }
-                        navigationX--;
+
                     } else {
                         route += test;
                     }
@@ -77,6 +83,11 @@ public class Navigation {
                     }
                     if (test == 'o') {
                         test = driveRight();
+                        while (test == 'o'){
+                            test = driveDown();
+                            route += test;
+                            test = driveRight();
+                        }
                         route += test;
                         if (test != 'W') {
                             test = driveRight();
@@ -98,6 +109,11 @@ public class Navigation {
                     }
                     if (test == 'o') {
                         test = driveUp();
+                        while (test == 'o'){
+                            test = driveRight();
+                            route += test;
+                            test = driveUp();
+                        }
                         route += test;
                         if (test != 'W') {
                             test = driveUp();
@@ -114,6 +130,11 @@ public class Navigation {
                     }
                     if (test == 'o') {
                         test = driveDown();
+                        while (test == 'o'){
+                            test = driveLeft();
+                            route += test;
+                            test = driveDown();
+                        }
                         route += test;
                         if (test != 'W') {
                             test = driveDown();
@@ -144,7 +165,7 @@ public class Navigation {
             } else {
                 route += 'S';
             }
-
+            boebotRotation = destinationRotation;
         }
         System.out.println(route);
         boebotX = currentX;
@@ -181,7 +202,7 @@ public class Navigation {
     }
 
     private char driveRight() {
-        if (blockades.contains((currentX + 1) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY))) {
+        if ((blockades.contains((currentX + 1) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY))) || currentX < 0 || currentY < 0) {
             return 'o';
         } else {
             if (boebotRotation == 3) {
@@ -199,7 +220,7 @@ public class Navigation {
     }
 
     private char driveLeft() {
-        if (blockades.contains((currentX) + "," + (currentY + 1)) && blockades.contains((currentX) + "," + (currentY))) {
+        if ((blockades.contains((currentX) + "," + (currentY + 1)) && blockades.contains((currentX) + "," + (currentY))) || currentX < 0 || currentY < 0) {
             return 'o';
         } else {
             if (boebotRotation == 1) {
@@ -217,7 +238,7 @@ public class Navigation {
     }
 
     private char driveDown() {
-        if (blockades.contains((currentX) + "," + (currentY)) && blockades.contains((currentX + 1) + "," + (currentY))) {
+        if ((blockades.contains((currentX) + "," + (currentY)) && blockades.contains((currentX + 1) + "," + (currentY))) || currentX < 0 || currentY < 0) {
             return 'o';
 
         } else {
@@ -235,7 +256,7 @@ public class Navigation {
     }
 
     private char driveUp() {
-        if (blockades.contains((currentX) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY + 1))) {
+        if ((blockades.contains((currentX) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY + 1))) || currentX < 0 || currentY < 0) {
             return 'o';
         } else {
             if (boebotRotation == 2) {
