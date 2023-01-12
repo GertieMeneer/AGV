@@ -1,5 +1,6 @@
 package interfacing;
 
+import TI.BoeBot;
 import hardware.Updatable;
 import hardware.WheelCallback;
 import hardware.servos.Wheel;
@@ -18,7 +19,14 @@ public class Drive implements WheelCallback {
         neopixels = new NotificationsController();
     }
 
-    private void setSpeed(int speed) {
+    public void setSpeed(int speed) {
+        if(speed > 0) {
+            neopixels.forwardWhite();
+        } else if(speed < 0) {
+            neopixels.backwardsWhite();
+        } else {
+            neopixels.allRed();
+        }
         rightWheel.setSpeed(speed);
         leftWheel.setSpeed(-speed);
     }
@@ -49,9 +57,11 @@ public class Drive implements WheelCallback {
 
     public void update() {
         rightWheel.update();
-        System.out.println(rightWheel.getCurrentSpeed());
+        System.out.println("Right currentspeed: " + rightWheel.getCurrentSpeed());
+        System.out.println("Right targetspeed: " + rightWheel.getTargetSpeed());
         leftWheel.update();
-        System.out.println(leftWheel.getCurrentSpeed());
+        System.out.println("Left currentspeed: " + -leftWheel.getCurrentSpeed());
+        System.out.println("Left targetspeed: " + -leftWheel.getTargetSpeed() +  "\n");
     }
 
     public void emergencyBrake() {
@@ -62,14 +72,14 @@ public class Drive implements WheelCallback {
 
     public void right() {
         neopixels.rightWhite();
-        rightWheel.setSpeed(100);
+        rightWheel.setSpeed(20);
         leftWheel.setSpeed(0);
     }
 
     public void left() {
         neopixels.leftWhite();
         rightWheel.setSpeed(0);
-        leftWheel.setSpeed(-100);
+        leftWheel.setSpeed(-20);
     }
 
     public void slowStop() {
@@ -82,8 +92,31 @@ public class Drive implements WheelCallback {
         return rightWheel.getTargetSpeed() == rightWheel.getCurrentSpeed() && leftWheel.getCurrentSpeed() == leftWheel.getTargetSpeed();
     }
 
+    public void syncWheels() {
+        if(rightWheel.getCurrentSpeed() > leftWheel.getCurrentSpeed()) {
+            leftWheel.setSpeed(rightWheel.getCurrentSpeed());
+        } else if(leftWheel.getCurrentSpeed() > rightWheel.getCurrentSpeed()) {
+            rightWheel.setSpeed(leftWheel.getCurrentSpeed());
+        }
+    }
+
+    public void turnLeft() {
+        leftWheel.setSpeed(-20);
+        rightWheel.setSpeed(0);
+        BoeBot.wait(4200);
+        emergencyBrake();
+    }
+
+    public void turnRight() {
+        leftWheel.setSpeed(0);
+        rightWheel.setSpeed(20);
+        BoeBot.wait(4200);
+        emergencyBrake();
+    }
+
     @Override
     public void onTarget() {
-        System.out.println("reached targerSpeed");
+        System.out.println("reached targetSpeed");
     }
+
 }

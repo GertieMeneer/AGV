@@ -28,7 +28,7 @@ public class Wheel implements Updatable {
 
     public void setSpeed(int speed) {
         currentSpeed = speed;
-        targetSpeed = 0;
+        targetSpeed = speed;
     }
 
     public int getCurrentSpeed() {

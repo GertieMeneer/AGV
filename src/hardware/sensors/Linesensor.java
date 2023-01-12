@@ -4,11 +4,10 @@ import TI.BoeBot;
 import hardware.LineCallback;
 import hardware.Updatable;
 
-public class Linesensor implements Updatable {
+public class Linesensor {
 
     private int pin;
     private LineCallback callback;
-    private boolean seesLine;
 
     public Linesensor(int pin, LineCallback callback) {
         this.pin = pin;
@@ -16,17 +15,8 @@ public class Linesensor implements Updatable {
     } //linkerlijnvolger ADC 2, rechter ADC 0.
 
 
-    @Override
-    public void update() {
-
-        int sensorValue = BoeBot.analogRead(this.pin); //reads the sensor value from given pin
-        System.out.println(sensorValue);
-        if (sensorValue > 900){ // if the value of the sensor is higher than 900, the sensor sees a line.
-            seesLine = true;
-        }
-
-        if (seesLine) {
-            this.callback.onMeasure(this);
-        }
+    public int update() {
+        //reads the sensor value from given pin and sends it to the pathtracker
+        return BoeBot.analogRead(this.pin);
     }
 }

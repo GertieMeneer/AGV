@@ -5,14 +5,11 @@ import hardware.sensors.IR;
 import hardware.sensors.Linesensor;
 import hardware.sensors.Ultrasone;
 import hardware.servos.GrabbingCrane;
-import interfacing.CollisionController;
-import interfacing.Drive;
-import interfacing.NotificationsController;
-import interfacing.OverrideController;
+import interfacing.*;
 
 import java.util.ArrayList;
 
-public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCallback, LineCallback {
+public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCallback, PathTrackerCallback {
     private NotificationsController nc;
     private Ultrasone ultrasone;
     private ArrayList<Updatable> devices;
@@ -21,8 +18,7 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
     private Drive drive;
     private GrabbingCrane grabbingCrane;
     private IR ir;
-    private Linesensor leftsensor;
-    private Linesensor rightsensor;
+    private PathTracker pathTracker;
     private boolean override = false;
 
     public static void main(String[] args) {
@@ -32,19 +28,28 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
 
     private void run() {
         while (true) {
-            if (!override) {
-                for (Updatable devices : this.devices) {
-                    devices.update();
-                }
-            } else {
+            for (Updatable devices : this.devices) {
+                devices.update();
+            }
+
+
+            while (override) {
                 ir.update();
                 resumeButton.update();
+
+                BoeBot.rgbShow();
+                drive.update();
+                grabbingCrane.update();
+                BoeBot.wait(1);
             }
+
             BoeBot.rgbShow();
+            System.out.println(pathTracker.isLineSensorChanged());
             drive.update();
             grabbingCrane.update();
-            BoeBot.wait(1);
+            BoeBot.wait(500);
         }
+
     }
 
     public BillyBob() {
@@ -58,8 +63,7 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
         resumeButton = new Button(0, this);
 
         this.devices = new ArrayList<>();
-        this.devices.add(leftsensor = new Linesensor(2, this));
-        this.devices.add(rightsensor = new Linesensor(0, this));
+        this.devices.add(pathTracker = new PathTracker(drive, this));
         this.devices.add(ir = new IR(2, overrideController));
         this.devices.add(grabbingCrane = new GrabbingCrane(14));
         this.devices.add(ultrasone = new Ultrasone(11, 10, collisionController));
@@ -78,7 +82,7 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
 
     @Override
     public void isSafe() {
-        drive.slowSpeedforward();
+
     }
 
     @Override
@@ -147,25 +151,9 @@ public class BillyBob implements CollisionCallback, ButtonCallback, OverrideCall
         grabbingCrane.close();
     }
 
-
     @Override
-    public void onMeasure(Linesensor linesensor) {
-        if (leftsensor == linesensor) {
-            nc.leftWhite();
-            drive.left();
-        } else {
-            nc.forwardWhite();
-            drive.slowSpeedforward();
-        }
+    public void seeLine() {
 
-        if (rightsensor == linesensor) {
-            nc.rightWhite();
-            drive.right();
-        } else {
-            nc.forwardWhite();
-            drive.slowSpeedforward();
-        }
     }
-
 }
 

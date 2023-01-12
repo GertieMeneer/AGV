@@ -1,10 +1,6 @@
 package hardwaretests;
 
 import TI.BoeBot;
-import TI.Servo;
-import TI.Timer;
-import hardware.servos.Wheel;
-import interfacing.CollisionController;
 import interfacing.Drive;
 
 public class ServoWheelsTest {
@@ -16,25 +12,11 @@ public class ServoWheelsTest {
 
 
     private ServoWheelsTest() {
-        Drive drive = new Drive();
-        boolean check = false;
-        Timer t1 = new Timer(3000);
-        Timer t2 = new Timer(3000);
-//        CollisionController collisionController = new CollisionController();
+        drive = new Drive();
 
-        while (true) {
-            BoeBot.wait(50);
-            if (drive.checkTargetSpeed() && check) {
-                drive.emergencyBrake();
-                check = false;
-                System.out.println("somehow works first try");
-                drive.slowSpeedforward();
-            } else {
-                drive.slowSpeedforward();
-                System.out.println("move");
-                check = true;
-            }
-            drive.update();
-        }
+        drive.turnLeft();
+        drive.turnRight();
+
+
     }
 }
