@@ -10,6 +10,8 @@ public class Navigation {
     private int boebotRotation = 0;
 
     private ArrayList<String> blockades;
+    private int topBorder = 5;
+    private int rightBorder = 7;
 
     private int navigationX;
     private int navigationY;
@@ -35,10 +37,13 @@ public class Navigation {
         currentY = boebotY;
         currentX = boebotX;
 
+//      first i calulate the distances of the route, this will be used to calculate the rest.
         navigationY = destinationY - boebotY;
         navigationX = destinationX - boebotX;
 
         while (navigating == true) {
+//          before i start the calculation i look in what direction the destination is by looking if it's negative,
+//          i then use a boolean to remember that. i then make the integer positive to keep the program working.
             if (navigationY < 0) {
                 navigationY *= -1;
                 negativeY = true;
@@ -52,16 +57,25 @@ public class Navigation {
                 negativeX = false;
             }
 
+//            here begins the actual calculation of where the robot has to go.
+//            simply said this algorithm tries to drive in two straight lines unless there is something blocking it's way.
+
             for (int i = 0; i < navigationY; i++) {
                 if (negativeY == true) {
                     char test = driveDown();
                     if (test != 'W') {
                         i--;
                     }
+//                  if there is something blocking the way it goes through all it's movement options until it's possible
                     if (test == 'o') {
                         test = driveLeft();
                         while (test == 'o'){
                             test = driveUp();
+                            while (test == 'o'){
+                                test = driveRight();
+                                route += test;
+                                test = driveUp();
+                            }
                             route += test;
                             test = driveLeft();
                         }
@@ -81,10 +95,16 @@ public class Navigation {
                     if (test != 'W') {
                         i--;
                     }
+//                  if there is something blocking the way it goes through all it's movement options until it's possible
                     if (test == 'o') {
                         test = driveRight();
                         while (test == 'o'){
                             test = driveDown();
+                            while (test == 'o'){
+                                test = driveLeft();
+                                route += test;
+                                test = driveDown();
+                            }
                             route += test;
                             test = driveRight();
                         }
@@ -107,11 +127,18 @@ public class Navigation {
                     if (test != 'W') {
                         i--;
                     }
+//                    if there is something blocking the way it goes through all it's movement options until it's possible
                     if (test == 'o') {
                         test = driveUp();
                         while (test == 'o'){
                             test = driveRight();
+                            while (test == 'o'){
+                                test = driveDown();
+                                route += test;
+                                test = driveRight();
+                            }
                             route += test;
+
                             test = driveUp();
                         }
                         route += test;
@@ -119,7 +146,6 @@ public class Navigation {
                             test = driveUp();
                             route += test;
                         }
-//                        navigationY++;
                     } else {
                         route += test;
                     }
@@ -128,10 +154,16 @@ public class Navigation {
                     if (test != 'W') {
                         i--;
                     }
+//                    if there is something blocking the way it goes through all it's movement options until it's possible
                     if (test == 'o') {
                         test = driveDown();
                         while (test == 'o'){
                             test = driveLeft();
+                            while (test == 'o'){
+                                test = driveUp();
+                                route += test;
+                                test = driveLeft();
+                            }
                             route += test;
                             test = driveDown();
                         }
@@ -140,7 +172,6 @@ public class Navigation {
                             test = driveDown();
                             route += test;
                         }
-//                        navigationY--;
                     } else {
                         route += test;
                     }
@@ -148,7 +179,8 @@ public class Navigation {
 
 
             }
-
+//            when the program has gone through both it's x and y commands it checks if it's arrived
+//            and if not it recalculates from it's current position to get to the final destination.
             if (destinationX == currentX && destinationY == currentY) {
                 navigating = false;
             } else{
@@ -157,6 +189,8 @@ public class Navigation {
             }
         }
 
+//        lastly if the user put in a rotation he wanted the robot to be in at the end, then this last if-statement checks if
+//        that rotation is correct and rotates the robot to the correct rotation if not.
         if (boebotRotation != destinationRotation && useRotation == true) {
             if (boebotRotation + 1 == destinationRotation || (boebotRotation == 3 && destinationRotation == 0)) {
                 route += 'D';
@@ -172,6 +206,8 @@ public class Navigation {
         boebotY = currentY;
         return route;
     }
+
+//    the turn functions are simple and merely used to always update the rotation and send the correct character.
 
     private char turnLeft() {
 
@@ -195,14 +231,24 @@ public class Navigation {
         for (int j = 0; j < 2; j++) {
             boebotRotation--;
             if (boebotRotation < 0) {
-                boebotRotation = 3;
+                if (boebotRotation == -1){
+                    boebotRotation = 3;
+                }else {
+                    boebotRotation = 2;
+                }
             }
         }
         return 'S';
     }
 
+//    the drive methods are used give back the right characters to drive in the given direction, though you have to keep in mind
+//    that they can only give one character at a time and need to be called twice to move actually move in that direction.
+
     private char driveRight() {
-        if ((blockades.contains((currentX + 1) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY))) || currentX < 0 || currentY < 0) {
+//        first this method checks for blockades or the border of the grid and returns an 'o' to tell the calculation to "reroute".
+//        if no blockades are found it checks what rotation the robot is in (during the calculation) to turn towards the right direction.
+//        if the rotation is correct it drives forward
+        if ((blockades.contains((currentX + 1) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY))) || currentX > rightBorder || currentY > topBorder) {
             return 'o';
         } else {
             if (boebotRotation == 3) {
@@ -220,6 +266,9 @@ public class Navigation {
     }
 
     private char driveLeft() {
+//        first this method checks for blockades or the border of the grid and returns an 'o' to tell the calculation to "reroute".
+//        if no blockades are found it checks what rotation the robot is in (during the calculation) to turn towards the right direction.
+//        if the rotation is correct it drives forward
         if ((blockades.contains((currentX) + "," + (currentY + 1)) && blockades.contains((currentX) + "," + (currentY))) || currentX < 0 || currentY < 0) {
             return 'o';
         } else {
@@ -238,6 +287,9 @@ public class Navigation {
     }
 
     private char driveDown() {
+//        first this method checks for blockades or the border of the grid and returns an 'o' to tell the calculation to "reroute".
+//        if no blockades are found it checks what rotation the robot is in (during the calculation) to turn towards the right direction.
+//        if the rotation is correct it drives forward
         if ((blockades.contains((currentX) + "," + (currentY)) && blockades.contains((currentX + 1) + "," + (currentY))) || currentX < 0 || currentY < 0) {
             return 'o';
 
@@ -256,7 +308,10 @@ public class Navigation {
     }
 
     private char driveUp() {
-        if ((blockades.contains((currentX) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY + 1))) || currentX < 0 || currentY < 0) {
+//        first this method checks for blockades or the border of the grid and returns an 'o' to tell the calculation to "reroute".
+//        if no blockades are found it checks what rotation the robot is in (during the calculation) to turn towards the right direction.
+//        if the rotation is correct it drives forward
+        if ((blockades.contains((currentX) + "," + (currentY + 1)) && blockades.contains((currentX + 1) + "," + (currentY + 1))) || currentX > rightBorder || currentY > topBorder) {
             return 'o';
         } else {
             if (boebotRotation == 2) {
@@ -278,7 +333,7 @@ public class Navigation {
     }
 
     private String getBotCoords() {
-        //
-        return "";
+        String coords = boebotX + "," + boebotY;
+        return coords;
     }
 }
