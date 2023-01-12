@@ -16,7 +16,6 @@ public class UserInterface extends Application {
     private ArrayList<String> cartCoords = new ArrayList<>();
     private ArrayList<CheckBox> allCheckBoxes = new ArrayList<>();
     private String selection;
-//    private UserInterface userInterface = new UserInterface();
     private Navigation bob = new Navigation();
 
     public UserInterface() {

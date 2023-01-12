@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1640d9c-aaad-4d84-9097-7f048c8a34ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/userinterface/BoeBotConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/BillyBob.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/BillyBob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/LineCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardware/LineCallback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/Linesensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardware/sensors/Linesensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardware/servos/Wheel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardware/servos/Wheel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardwaretests/LineSensorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardwaretests/LineSensorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/hardwaretests/ServoWheelsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/hardwaretests/ServoWheelsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/interfacing/Drive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/interfacing/Drive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/interfacing/PathTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/interfacing/PathTracker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGV/userinterface/Navigation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/userinterface/Navigation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BillyBob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BillyBob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardware/LineCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/LineCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardware/sensors/Linesensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/sensors/Linesensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardware/servos/Wheel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardware/servos/Wheel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardwaretests/LineSensorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardwaretests/LineSensorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hardwaretests/ServoWheelsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hardwaretests/ServoWheelsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfacing/Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfacing/Drive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfacing/PathTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfacing/PathTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGV/userinterface/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGV/userinterface/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userinterface/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userinterface/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/UserInterface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,55 +23,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
+        <entry file="file://$PROJECT_DIR$/src/userinterface/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="44" column="32" lean-forward="true" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BillyBob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="777">
+              <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
               <folding>
-                <element signature="e#2251#2252#0" expanded="true" />
-                <element signature="e#2340#2341#0" expanded="true" />
-                <element signature="e#3587#3588#0" expanded="true" />
-                <element signature="e#3672#3673#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
+        <entry file="file://$PROJECT_DIR$/src/userinterface/Navigation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+            <state relative-caret-position="311">
+              <caret line="206" column="42" selection-start-line="206" selection-start-column="42" selection-end-line="206" selection-end-column="42" />
               <folding>
-                <element signature="e#3320#3321#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#12758#12759#0" expanded="true" />
+                <element signature="e#12820#12821#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/interfacing/PathTracker.java">
+        <entry file="file://$PROJECT_DIR$/src/userinterface/BoeBotConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hardwaretests/ServoWheelsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="527">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,19 +64,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hardwaretests/LineSensorTest.java">
+        <entry file="file://$PROJECT_DIR$/src/userinterface/BluetoothPCTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+            <state relative-caret-position="595">
+              <caret line="41" column="17" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="41" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Linesensor.java">
+        <entry file="file://$PROJECT_DIR$/src/BillyBob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            <state relative-caret-position="935">
+              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/interfacing/OverrideController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hardware/OverrideCallback.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hardware/additional/Button.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -132,8 +136,7 @@
       <find>MenuBar menuBar = new MenuBar();</find>
       <find>ce</find>
       <find>D</find>
-      <find>sync</find>
-      <find>update</find>
+      <find>wait</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,6 +146,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/servos/GrijpArm.java" />
         <option value="$PROJECT_DIR$/src/servos/grabingCrane.java" />
         <option value="$PROJECT_DIR$/src/servos/Wheel.java" />
         <option value="$PROJECT_DIR$/src/additional/Speaker.java" />
@@ -163,14 +167,20 @@
         <option value="$PROJECT_DIR$/src/application/Menu/MenuActions/DebugActions/DebugServoActions/GrabbingTest.java" />
         <option value="$PROJECT_DIR$/src/interfacing/NotificationsController.java" />
         <option value="$PROJECT_DIR$/src/BluetoothPC.java" />
+        <option value="$PROJECT_DIR$/src/hardwaretests/ServoWheelsTest.java" />
         <option value="$PROJECT_DIR$/src/hardwaretests/NeopixelsTest.java" />
         <option value="$PROJECT_DIR$/src/hardwaretests/BluetoothTest.java" />
         <option value="$PROJECT_DIR$/src/hardwaretests/BluetoothBoeBotTest.java" />
         <option value="$PROJECT_DIR$/src/hardwaretests/GrabbingCraneTest.java" />
         <option value="$PROJECT_DIR$/src/hardwaretests/IRTest.java" />
+        <option value="$PROJECT_DIR$/src/hardwaretests/LineSensorTest.java" />
         <option value="$PROJECT_DIR$/src/interfacing/BluetoothController.java" />
+        <option value="$PROJECT_DIR$/src/hardware/sensors/Linesensor.java" />
+        <option value="$PROJECT_DIR$/src/interfacing/PathTracker.java" />
+        <option value="$PROJECT_DIR$/src/hardware/servos/Wheel.java" />
         <option value="$PROJECT_DIR$/src/hardwaretests/BluetoothPCTest.java" />
         <option value="$PROJECT_DIR$/src/application/Menu/MenuActions/FinalCode.java" />
+        <option value="$PROJECT_DIR$/src/interfacing/Drive.java" />
         <option value="$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java" />
         <option value="$PROJECT_DIR$/src/hardware/sensors/IR.java" />
         <option value="$PROJECT_DIR$/src/Demo1.java" />
@@ -185,23 +195,16 @@
         <option value="$PROJECT_DIR$/src/interfacing/Crane.java" />
         <option value="$PROJECT_DIR$/src/userinterface/navigation.java" />
         <option value="$PROJECT_DIR$/src/userinterface/UserInterface.java" />
+        <option value="$PROJECT_DIR$/src/userinterface/BoeBotConnection.java" />
         <option value="$PROJECT_DIR$/src/userinterface/Navigation.java" />
-        <option value="$PROJECT_DIR$/src/hardware/LineCallback.java" />
-        <option value="$PROJECT_DIR$/src/hardware/sensors/Linesensor.java" />
-        <option value="$PROJECT_DIR$/src/hardware/servos/Wheel.java" />
-        <option value="$PROJECT_DIR$/src/hardwaretests/ServoWheelsTest.java" />
-        <option value="$PROJECT_DIR$/src/hardwaretests/LineSensorTest.java" />
-        <option value="$PROJECT_DIR$/src/interfacing/PathTracker.java" />
-        <option value="$PROJECT_DIR$/src/BillyBob.java" />
-        <option value="$PROJECT_DIR$/src/interfacing/Drive.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="432" />
-    <option name="y" value="-18" />
-    <option name="width" value="975" />
-    <option name="height" value="741" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -213,7 +216,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,24 +226,24 @@
             <path>
               <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
               <item name="AGV" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
               <item name="AGV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AGV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hardware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
               <item name="AGV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="hardwaretests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AGV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="interfacing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AGV" type="b2602c69:ProjectViewProjectNode" />
@@ -257,13 +259,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1673524855499" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1673529437238" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../IdeaProjects/TMCProjects/2017_avans_ti_breda-OGP1-2022/boeobeobot" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -363,13 +365,6 @@
       <option name="presentableId" value="Default" />
       <updated>1668684264164</updated>
       <workItem from="1669033297828" duration="58000" />
-    </task>
-    <task id="LOCAL-00003" summary="created test method">
-      <created>1669134732520</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1669134732520</updated>
     </task>
     <task id="LOCAL-00004" summary="created test method">
       <created>1669134852192</created>
@@ -707,11 +702,15 @@
       <option name="project" value="LOCAL" />
       <updated>1672931931626</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="made ui work better with navigation">
+      <created>1673098653135</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1673098653136</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,9 +722,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="687" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910873" visible="true" weight="0.14251012" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910873" visible="true" weight="0.14818764" />
       <window_info id="Structure" order="1" sideWeight="0.50089127" side_tool="true" weight="0.16950959" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -734,19 +734,19 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49200428" weight="0.34594595" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.21801803" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49200428" weight="0.24918033" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.21857923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32896176" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.70682305" weight="0.22702703" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.70682305" weight="0.2273224" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49093816" weight="0.20765027" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5079957" side_tool="true" weight="0.368306" />
       <window_info anchor="bottom" id="TMC Test Results" order="10" sideWeight="0.49733475" weight="0.32896176" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info active="true" anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.78678036" visible="true" weight="0.36756757" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.48720682" weight="0.32252252" />
+      <window_info anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.78678036" weight="0.38688526" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.48720682" weight="0.32560706" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -759,6 +759,41 @@
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5006878" side_tool="true" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910873" visible="true" weight="0.14179105" />
+      <window_info id="Structure" order="1" sideWeight="0.50089127" side_tool="true" weight="0.16950959" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49200428" visible="true" weight="0.368306" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.21857923" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32896176" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.70682305" weight="0.2273224" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49093816" weight="0.20765027" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5079957" side_tool="true" visible="true" weight="0.368306" />
+      <window_info anchor="bottom" id="TMC Test Results" order="10" sideWeight="0.49733475" weight="0.32896176" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Boebot Uploader" order="13" sideWeight="0.78678036" weight="0.38688526" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.48720682" weight="0.32568306" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="TMC Project List" order="4" sideWeight="0.49931225" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5006878" side_tool="true" weight="0.32995737" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -839,9 +874,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="made ui work better with navigation" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../BoeBotLib.jar!/TI/Servo.class" />
-    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/MenuStop.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/DebugActions/DebugServoActions/GrabbingTest.java" />
     <entry file="file://$PROJECT_DIR$/src/hardwaretests/GrabbingCraneTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -868,6 +900,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardwaretests/LineSensorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardwaretests/ServoWheelsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/AGV/application/Menu/Menu.class" />
     <entry file="file://$PROJECT_DIR$/src/hardware/additional/LED.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -887,7 +938,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/interfacing/IRController.java" />
-    <entry file="jar://$PROJECT_DIR$/../BoeBotLib.jar!/TI/SerialConnection.class" />
+    <entry file="jar://$PROJECT_DIR$/../BoeBotLib.jar!/TI/SerialConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hardwaretests/BluetoothPCTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -908,12 +965,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/NotificationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Menu/MenuActions/FinalCode.java" />
+    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Linesensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/userinterface/SelectTableUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/interfacing/CollisionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hardwaretests/UltrasonicTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -946,6 +1045,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/PathTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hardware/ButtonCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -975,16 +1081,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hardwaretests/TotalTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/userinterface/BluetoothPCTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AGV.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1005,10 +1101,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/CollisionCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_261/javafx-src.zip!/javafx/event/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/LineCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1040,13 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/additional/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/AGV/interfacing/NotificationsController.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1056,149 +1159,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/userinterface/Navigation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding>
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="jar://$PROJECT_DIR$/.idea/libraries/BoeBotLib.jar!/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/NotificationsController.java">
+    <entry file="jar://$PROJECT_DIR$/.idea/libraries/BoeBotLib.jar!/TI/BoeBot.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userinterface/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#332#340#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#7732#7733#0" expanded="true" />
-            <element signature="e#7766#7767#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/CollisionCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/LineCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/CollisionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/OverrideController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_261/src.zip!/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="733" column="16" selection-start-line="733" selection-start-column="16" selection-end-line="733" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/sensors/Linesensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardwaretests/ServoWheelsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardwaretests/LineSensorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/servos/GrabbingCrane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/PathTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hardware/servos/Wheel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="44" column="32" lean-forward="true" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+        <state relative-caret-position="306">
+          <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BillyBob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="935">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfacing/OverrideController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
-            <element signature="e#2251#2252#0" expanded="true" />
-            <element signature="e#2340#2341#0" expanded="true" />
-            <element signature="e#3587#3588#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacing/Drive.java">
+    <entry file="file://$PROJECT_DIR$/src/hardware/OverrideCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hardware/additional/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userinterface/BluetoothPCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="41" column="17" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="41" selection-end-column="17" />
           <folding>
-            <element signature="e#3320#3321#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userinterface/BoeBotConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userinterface/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userinterface/Navigation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="206" column="42" selection-start-line="206" selection-start-column="42" selection-end-line="206" selection-end-column="42" />
+          <folding>
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#12758#12759#0" expanded="true" />
+            <element signature="e#12820#12821#0" expanded="true" />
           </folding>
         </state>
       </provider>

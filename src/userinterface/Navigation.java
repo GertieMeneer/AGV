@@ -21,6 +21,8 @@ public class Navigation {
     int currentY;
     private String route = "";
 
+    private BoeBotConnection boeBotConnection = new BoeBotConnection();
+
     public Navigation() {
         this.blockades = new ArrayList<>();
     }
@@ -202,6 +204,7 @@ public class Navigation {
             boebotRotation = destinationRotation;
         }
         System.out.println(route);
+        boeBotConnection.sendRoute(route);
         boebotX = currentX;
         boebotY = currentY;
         return route;
@@ -335,5 +338,9 @@ public class Navigation {
     private String getBotCoords() {
         String coords = boebotX + "," + boebotY;
         return coords;
+    }
+
+    public void sendRoute() {
+
     }
 }
