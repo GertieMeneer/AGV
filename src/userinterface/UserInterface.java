@@ -214,9 +214,5 @@ public class UserInterface extends Application {
             checkBox.setSelected(false);
         }
     }
-
-    public ArrayList<String> getTableCoords() {
-        return tableCoords;
-    }
 }
 

@@ -20,7 +20,7 @@ public class Navigation {
     int currentX;
     int currentY;
     private String route = "";
-
+    private UserInterface ui;
     private BoeBotConnection boeBotConnection = new BoeBotConnection();
 
     public Navigation() {
