@@ -25,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userinterface/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
+            <state relative-caret-position="681">
               <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -34,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userinterface/Navigation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/userinterface/BoeBotConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,9 +194,9 @@
         <option value="$PROJECT_DIR$/src/hardwaretests/TotalTest.java" />
         <option value="$PROJECT_DIR$/src/interfacing/Crane.java" />
         <option value="$PROJECT_DIR$/src/userinterface/navigation.java" />
+        <option value="$PROJECT_DIR$/src/userinterface/Navigation.java" />
         <option value="$PROJECT_DIR$/src/userinterface/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/userinterface/BoeBotConnection.java" />
-        <option value="$PROJECT_DIR$/src/userinterface/Navigation.java" />
       </list>
     </option>
   </component>
@@ -263,7 +263,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1673529437238" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1673529531105" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../IdeaProjects/TMCProjects/2017_avans_ti_breda-OGP1-2022/boeobeobot" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -365,13 +365,6 @@
       <option name="presentableId" value="Default" />
       <updated>1668684264164</updated>
       <workItem from="1669033297828" duration="58000" />
-    </task>
-    <task id="LOCAL-00004" summary="created test method">
-      <created>1669134852192</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1669134852192</updated>
     </task>
     <task id="LOCAL-00005" summary="updated GrabingCrane class">
       <created>1669135186816</created>
@@ -709,7 +702,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673098653136</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="made stuff for sending route to bot">
+      <created>1673529520976</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1673529520977</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -725,7 +725,7 @@
     <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910873" visible="true" weight="0.14818764" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910873" visible="true" weight="0.14818764" />
       <window_info id="Structure" order="1" sideWeight="0.50089127" side_tool="true" weight="0.16950959" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -734,7 +734,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49200428" weight="0.24918033" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49200428" visible="true" weight="0.24918033" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.21857923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -846,7 +846,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed ultrasonic sensor" />
     <MESSAGE value="new update" />
     <MESSAGE value="made it working!!!!!!" />
     <MESSAGE value="made lightsensor class" />
@@ -871,7 +870,8 @@
     <MESSAGE value="made getter for tablecoords" />
     <MESSAGE value="made ui work with navigation" />
     <MESSAGE value="made ui work better with navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="made ui work better with navigation" />
+    <MESSAGE value="made stuff for sending route to bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="made stuff for sending route to bot" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/hardwaretests/GrabbingCraneTest.java">
@@ -1210,26 +1210,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/userinterface/BoeBotConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userinterface/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/userinterface/Navigation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -1241,6 +1221,26 @@
             <element signature="e#682#683#0" expanded="true" />
             <element signature="e#12758#12759#0" expanded="true" />
             <element signature="e#12820#12821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userinterface/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userinterface/BoeBotConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
